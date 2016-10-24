@@ -397,8 +397,9 @@
     .header-bottom .ab-down span {
       display: block;
       font-family: "RobotoBold";
-      font-size: 38px;
-      text-transform: uppercase; }
+      font-size: 30px;
+      text-transform: uppercase;
+      padding-top: 10px; }
     .header-bottom .ab-down a {
       display: inline-block;
       font-family: "RobotoBold";
@@ -551,7 +552,7 @@
   .ab-down {
     margin-top: 322px !important; }
     .ab-down span {
-      font-size: 46px; } }
+      font-size: 46px !important; } }
 @media only screen and (min-width: 1248px) {
   .header-bottom {
     height: 960px !important; }
