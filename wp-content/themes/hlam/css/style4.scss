@@ -507,15 +507,15 @@
 			display: block;
 			font-family: "RobotoBold";
 			//font-size: 46px;
-			font-size: 30px;
+			font-size: 27px;
 			text-transform: uppercase;
-			padding-top:10px;
+			padding-top:5px;
 		}
 		a{
 			display: inline-block;
 			font-family: "RobotoBold";
 			//font-size: 20px;
-			font-size: 14px;
+			font-size: 10px;
 			text-transform: uppercase;
 			padding:17px 19px;
 			background:#FFC600;
@@ -706,6 +706,9 @@
 		margin-top: 322px !important;
 		span{
 			font-size: 46px !important;
+		}
+		a{
+			font-size: 20px !important;
 		} 
 	}	
 }

@@ -397,13 +397,13 @@
     .header-bottom .ab-down span {
       display: block;
       font-family: "RobotoBold";
-      font-size: 30px;
+      font-size: 27px;
       text-transform: uppercase;
-      padding-top: 10px; }
+      padding-top: 5px; }
     .header-bottom .ab-down a {
       display: inline-block;
       font-family: "RobotoBold";
-      font-size: 14px;
+      font-size: 10px;
       text-transform: uppercase;
       padding: 17px 19px;
       background: #FFC600;
@@ -552,7 +552,9 @@
   .ab-down {
     margin-top: 322px !important; }
     .ab-down span {
-      font-size: 46px !important; } }
+      font-size: 46px !important; }
+    .ab-down a {
+      font-size: 20px !important; } }
 @media only screen and (min-width: 1248px) {
   .header-bottom {
     height: 960px !important; }
