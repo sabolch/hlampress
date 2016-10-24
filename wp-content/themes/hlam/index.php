@@ -541,7 +541,8 @@
 	    <div class="row">
 		    <div class="col-md-12 col-sm-12 col-xs-12">
 				<span class="ah-zakaz-span">Закажите обратный звонок</span>
-				<a href="<?php echo get_template_directory_uri(); ?>/#" class="ah-zakaz-link">Заказать звонок</a>
+<!-- 				<a href="<?php echo get_template_directory_uri(); ?>/#" class="ah-zakaz-link">Заказать звонок</a> -->
+				<a href="#zvonok" name="modal" class="ah-zakaz-link">Заказать звонок</a>
 			</div>
 		</div>
 	</div>
@@ -776,7 +777,7 @@
 						<span class="ah-contakt-span1">8 (495) 502-93-30</span>
 					</div>
 					<div class="ah-contakt-bottom">
-						<!-- <div id="map"></div> -->
+						<div id="map"></div>
 					</div>
 				</div>
 			</div>
@@ -787,7 +788,7 @@
 						<span class="ah-contakt-span1">8 (812) 012-12-12</span>
 					</div>
 					<div class="ah-contakt-bottom">
-						<!-- <div id="map1"></div> -->
+						<div id="map1"></div>
 					</div>
 				</div>
 			</div>
@@ -801,7 +802,7 @@
 						<span class="ah-contakt-span1">8 (495) 502-93</span>
 					</div>
 					<div class="ah-contakt-bottom">
-						<!-- <div id="map2"></div> -->
+						<div id="map2"></div>
 					</div>
 				</div>
 			</div>
@@ -812,7 +813,7 @@
 						<span class="ah-contakt-span1">8 (554) 054-45-45</span>
 					</div>
 					<div class="ah-contakt-bottom">
-						<!-- <div id="map3"></div> -->
+						<div id="map3"></div>
 					</div>
 				</div>
 			</div>
@@ -823,7 +824,7 @@
 <div class="clearfix"></div>
 
 
-<script src="<?php echo get_template_directory_uri(); ?>///api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
  <script type="text/javascript">
    ymaps.ready(init);
      var myMap,
@@ -916,11 +917,42 @@
 			</div>
 		</div>
 	</div>
-	
 </footer>
+
 <div class="xa-topbox">
 	<a href="<?php echo get_template_directory_uri(); ?>/#"><img src="<?php echo get_template_directory_uri(); ?>/img/top.png" alt=""></a>
 </div>
+
+<div id="mask"></div>
+
+<div id="zvonok" class="window">
+	<section class="ah-myup">
+		<div class="ah-close"></div>
+		<div class="ah-myup-wrapper">
+			<span class="ah-myup-span1">Закажите звонок</span>
+			<span class="ah-myup-span2">На получение расчета стоимости и консультацию</span>
+			<form action="" class="ah-common-form ah-form1">
+				<input type="text" name="uname" placeholder="Ваше имя" class="ah-uname">
+				<input type="text" name="tel" placeholder="Телефон" class="ah-tel phone">
+				<input type="submit" value="Заказать звонок" class="ah-submit" id="ah-form1-submit">
+			</form>
+		</div>
+	</section>
+</div>
+
+<div id="thanks" class="window"> 
+	<a href="#" class="close"></a>
+	<div class="thanks">
+		<span class="title">Спасибо!</span>
+		<p>Наши специалисты с Вами свяжутся в ближайшее время.</p>	
+	</div>
+</div>
+<a  href="#thanks" name="modal"></a>
+
+
+
+
+
 	
 </body>
 </html>

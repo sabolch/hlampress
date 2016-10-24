@@ -4,6 +4,44 @@
 @import url(style3.css);
 @import url(style4.css);
 @import url(fonts.css);
+#mask {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 9000;
+  background-color: #000; }
+
+.window {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 9998; }
+
+.common-form {
+  display: block;
+  width: 380px;
+  padding: 38px;
+  background: #fff;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  box-sizing: border-box;
+  font-family: "RobotoRegular"; }
+  .common-form .form-title {
+    display: block;
+    color: #303030;
+    font-size: 20px;
+    font-family: "RobotoBold";
+    line-height: 22px; }
+  .common-form .form-subtitle {
+    display: block;
+    color: #929292;
+    font-size: 14px;
+    margin-top: 18px;
+    margin-bottom: 15px; }
+
 .ah-myup-body {
   background-color: #5b5c59; }
 

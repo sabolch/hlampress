@@ -15,7 +15,6 @@
 			</div>
 		</div>
 	</div>
-	
 </footer>
 <div class="xa-topbox">
 	<a href="#"><img src="img/top.png" alt=""></a>
