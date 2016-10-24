@@ -115,44 +115,43 @@
 	<div class="row">
 		<div class="col-md-12">
 			<div class="zk_we_export_all">
-				<h3 class="zk_ex_caption">
+				<h3 class="zk_ex_caption">Мы вывозим
 
 				 <?php wp_reset_query(); ?>
 				 <?php $wp_query = new WP_Query('page_id=1'); ?>
 				 <?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
-				 <?php $telefon = get_field('zagolovok1'); ?>
-				 
+				 <?php $telefon = get_field('zagolovok1'); ?>		 
 				     
 				 <?php endwhile; ?>
 				 <?php wp_reset_query(); ?>
 
 				</h3>
-				<div class="zk_export_one">
-					<div class="zk_img_ex_box">
+				<div class="zk_export_one  wow bounceInDown " data-animated-duration="30.5s">
+					<div class="zk_img_ex_box  wow pulse animated" data-wow-iteration="2"  data-wow-duration="2.5s" data-wow-delay="2s">
 						<img src="<?php echo get_template_directory_uri(); ?>/img/zk_export.png" alt="">
 				    </div>
 					<div class="zk_first_child">Старую мебель вещи и книги</div>
 				</div>
-				<div class="zk_export_one">
-					<div class="zk_img_ex_box"> 
+				<div class="zk_export_one  wow bounceInDown " data-animated-duration="30.5s">
+					<div class="zk_img_ex_box  wow pulse animated" data-wow-iteration="2"  data-wow-duration="2.5s" data-wow-delay="2s"> 
 						<img src="<?php echo get_template_directory_uri(); ?>/img/zk_export2.png" alt="">
 					</div>
 					<div>Строительный мусор, ванны и радиаторы</div>
 				</div>
-				<div class="zk_export_one">
-					<div class="zk_img_ex_box">
+				<div class="zk_export_one  wow bounceInDown " data-animated-duration="30.5s">
+					<div class="zk_img_ex_box  wow pulse animated" data-wow-iteration="2"  data-wow-duration="2.5s" data-wow-delay="2s">
 					 	<img src="<?php echo get_template_directory_uri(); ?>/img/zk_export3.png" alt="">
 					 </div>
 					<div>Пианино</div>
 				</div>
-				<div class="zk_export_one">
-					<div class="zk_img_ex_box">
+				<div class="zk_export_one  wow bounceInDown " data-animated-duration="30.5s">
+					<div class="zk_img_ex_box  wow pulse animated" data-wow-iteration="2"  data-wow-duration="2.5s" data-wow-delay="2s">
 						<img src="<?php echo get_template_directory_uri(); ?>/img/zk_export4.png" alt="">
 					</div>
 					<div>Старые окна</div>
 				</div>
-				<div class="zk_export_one">
-					<div class="zk_img_ex_box">
+				<div class="zk_export_one  wow bounceInDown " data-animated-duration="30.5s">
+					<div class="zk_img_ex_box  wow pulse animated" data-wow-iteration="2"  data-wow-duration="2.5s" data-wow-delay="2s">
 						<img src="<?php echo get_template_directory_uri(); ?>/img/zk_export5.png" alt="">
 					</div>
 					<div>Бытовую технику</div>
@@ -424,59 +423,71 @@
 			<div class="clearfix"></div>
 		</div>
 	</div>
-</section>	<div class="container">
+</section>	
+<div class="container">
 	<div class="row">
-		<div class="col-md-12">
-			<div class="zk_preim_all">
-				<h3 class="zk_caption">Наши преимущества</h3>	
-					<div class="zk_preim">
+		<div class="col-md-12">			
+				<h3 class="zk_caption">Наши преимущества</h3>
+		</div>
+		<div class="clearfix"></div>			
+					<div class="col-md-3">
 						<div class="zk_pr_ph">	
 							<div class="zk-img-box">
 								<img src="<?php echo get_template_directory_uri(); ?>/img/zk_pre_1.png" alt="">
 							</div>			
-							<div>Вывоз мусора из всей квартиры от 2 до 6 часов (зависит от захламленности). </div>				
+							<div>Вывоз мусора из всей квартиры от 2 до 6 часов (зависит от захламленности). </div>		
 						</div>
+					</div>
+					<div class="col-md-3">	
 						<div class="zk_pr_ph">
 							<div class="zk-img-box">			
 								<img src="<?php echo get_template_directory_uri(); ?>/img/zk_pre_2.png" alt="">
 							</div>	
 								<div>Ваше нахождение в квартире не обязательно</div>
-
 						</div>
+					</div>
+					<div class="col-md-3">	
 						<div class="zk_pr_ph">
 							<div class="zk-img-box">				
 								<img src="<?php echo get_template_directory_uri(); ?>/img/zk_pre_3.png" alt="">
 							</div>	
 								<div>Самые профессиональные менеджеры</div>				
 						</div>
+					</div>
+					<div class="col-md-3">	
 						<div class="zk_pr_ph">
 							<div class="zk-img-box">				
 								<img src="<?php echo get_template_directory_uri(); ?>/img/zk_pre_4.png" alt="">
 							</div>	
 								<div>Собственный парк техники</div>				
 						</div>
-						
-						<div class="zk_second_line">
-							<div class="zk_pr_ph">
-								<div class="zk-img-box">
-							 	<img src="<?php echo get_template_directory_uri(); ?>/img/zk_pre_5.png" alt="">
-							 	</div>
-							 	<div>Постоянно растущее количество бригад</div>
-							</div>
-							<div class="zk_pr_ph">
-								<div class="zk-img-box">
-							 	<img src="<?php echo get_template_directory_uri(); ?>/img/zk_pre_6.png" alt="">
-							 	</div>
-							 	<div>Зона обслуживания Москва и до 50 км вокруг Москвы</div>
-							</div>
-							<div class="zk_pr_ph">
-								<div class="zk-img-box">
-							 	<img src="<?php echo get_template_directory_uri(); ?>/img/zk_pre_7.png" alt="">
-							 	</div>
-							 	<div>Официальные договора со свалками ТБО (мусор не выкинут в соседний лес)</div>
-							</div>
+					</div>	
+						<div class="clearfix"></div>
+					<div class="col-md-4">
+						<div class="zk_pr_ph">
+							<div class="zk-img-box">
+						 	<img src="<?php echo get_template_directory_uri(); ?>/img/zk_pre_5.png" alt="">
+						 	</div>
+						 	<div>Постоянно растущее количество бригад</div>
 						</div>
 					</div>
+					<div class="col-md-4">	
+						<div class="zk_pr_ph">
+							<div class="zk-img-box">
+						 	<img src="<?php echo get_template_directory_uri(); ?>/img/zk_pre_6.png" alt="">
+						 	</div>
+						 	<div>Зона обслуживания Москва и до 50 км вокруг Москвы</div>
+						</div>
+					</div>
+					<div class="col-md-4">	
+						<div class="zk_pr_ph">
+							<div class="zk-img-box">
+						 	<img src="<?php echo get_template_directory_uri(); ?>/img/zk_pre_7.png" alt="">
+						 	</div>
+						 	<div>Официальные договора со свалками ТБО (мусор не выкинут в соседний лес)</div>
+						</div>
+					</div>	
+					
 				<div class="clear"></div>
 			</div>
 		</div>

@@ -1,3 +1,6 @@
+@media only screen and (min-width: 480px) {
+  .zk_export_one {
+    width: 50% !important; } }
 @media only screen and (min-width: 768px) {
   .zk_caption {
     font-size: 40px !important; }
@@ -6,7 +9,9 @@
     text-align: left !important; }
 
   .zk_we_export_all .zk_ex_caption {
-    font-size: 48px !important; } }
+    font-size: 48px !important; }
+  .zk_we_export_all .zk_export_one {
+    width: 33.2% !important; } }
 @media only screen and (min-width: 992px) {
   .zk_caption {
     font-size: 45px !important; }
@@ -35,10 +40,6 @@
 @media only screen and (min-width: 1248px) {
   .zk_preim_all .zk_caption {
     font-size: 48px !important; }
-  .zk_preim_all .zk_second_line {
-    padding-left: 145px; }
-    .zk_preim_all .zk_second_line .zk_pr_ph:last-child {
-      width: 330px !important; }
 
   .zk_vivoz .zk_vivoz_caption {
     font-size: 48px !important;
@@ -61,45 +62,43 @@
   .zk_vivoz ul {
     margin-right: 55px; }
 
-  .zk_we_export_all {
-    margin-bottom: 25px !important; }
-    .zk_we_export_all .zk_ex_caption {
-      font-size: 48px !important; } }
+  .zk_we_export_all .zk_ex_caption {
+    font-size: 48px !important; }
+  .zk_we_export_all .zk_export_one {
+    width: 20% !important; }
+  .zk_we_export_all .zk_first_child {
+    width: 150px;
+    margin-left: 35px; } }
 .clear {
   clear: both; }
 
-.zk_preim_all {
-  width: 100%;
-  height: auto;
-  text-align: center;
+.zk_caption {
+  font-size: 35px;
+  font-family: "RobotoBold";
+  color: #31343b;
+  margin-top: 110px;
+  margin-bottom: 50px;
+  text-align: center; }
+
+.zk_pr_ph {
+  margin-top: 48px;
   font-family: "RobotoRegular";
   font-size: 16px;
-  margin-bottom: 110px;
-  color: #646464; }
-  .zk_preim_all .zk_caption {
-    font-size: 28px;
-    font-family: "RobotoBold";
-    color: #31343b;
-    margin-top: 110px; }
-  .zk_preim_all .zk_preim {
-    text-align: center;
-    margin-top: 48px; }
-    .zk_preim_all .zk_preim .zk_pr_ph {
-      margin-right: 10px;
-      padding-bottom: 70px;
-      float: left;
-      width: 270px; }
-      .zk_preim_all .zk_preim .zk_pr_ph div:last-child {
-        height: 40px;
-        margin-top: 20px; }
-      .zk_preim_all .zk_preim .zk_pr_ph .zk-img-box {
-        margin: 0 auto;
-        height: 141px;
-        width: 140px;
-        border: 3px solid white;
-        border-radius: 70px;
-        box-shadow: 0px 5px 15px rgba(255, 0, 0, 0.2);
-        margin-bottom: 20px; }
+  color: #646464;
+  text-align: center;
+  padding-bottom: 65px;
+  width: 270px;
+  margin: 0 auto; }
+  .zk_pr_ph div:last-child {
+    padding: 10px 12px; }
+  .zk_pr_ph .zk-img-box {
+    height: 141px;
+    width: 140px;
+    border: 3px solid white;
+    border-radius: 70px;
+    box-shadow: 0px 5px 15px rgba(255, 0, 0, 0.2);
+    margin: 0 auto;
+    padding-bottom: 20px; }
 
 .zk_vivoz {
   padding: 50px 0px;
@@ -124,21 +123,23 @@
     padding-left: 40px; }
 
 .zk_we_export_all {
-  color: #31343b;
-  font-size: 16px;
-  font-family: "RobotoBold";
-  text-align: center;
-  margin: 0 auto;
-  height: auto; }
+  width: 100%; }
   .zk_we_export_all .zk_ex_caption {
     font-size: 33px;
     color: #212121;
-    margin-top: 70px; }
+    margin-top: 50px;
+    font-family: "RobotoBold";
+    text-align: center; }
   .zk_we_export_all .zk_export_one {
+    color: #31343b;
+    font-size: 16px;
+    font-family: "RobotoBold";
+    text-align: center;
     float: left;
-    width: 220px;
-    margin: 42px 0px 20px 0;
-    height: 170px; }
+    width: 100%;
+    min-width: 220px;
+    height: 190px;
+    margin: 42px 0 20px 0; }
     .zk_we_export_all .zk_export_one .zk_img_ex_box img {
       width: 185px;
       height: 140px; }
