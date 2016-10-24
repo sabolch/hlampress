@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Главная</title>
+	<title><?php the_title() ?></title>
 	
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/libs/bootstrap/bootstrap-grid-3.3.1.min.css" />
 	<link href="<?php echo get_template_directory_uri(); ?>///netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet">
@@ -49,17 +49,17 @@
         </div>
         <div class="navbar-collapse collapse">
           <div class="col-md-3 col-sm-12 xa-logo">
-            <a href="<?php echo get_template_directory_uri(); ?>//">
+            <a href="/">
               <img src="<?php echo get_template_directory_uri(); ?>/img/xa-logo.png" alt="">
             </a>
           </div>
           <div class="col-md-6 col-sm-12 xa-menu">
             <ul class="nav navbar-nav">
-              <li class=""><a href="<?php echo get_template_directory_uri(); ?>/#">Наши услуги</a></li>
-              <li class=""><a href="<?php echo get_template_directory_uri(); ?>/#">Почему мы</a></li>
-              <li class=""><a href="<?php echo get_template_directory_uri(); ?>/#">Акции</a></li>
-              <li class=""><a href="<?php echo get_template_directory_uri(); ?>/#">Отзывы</a></li>
-              <li class=""><a href="<?php echo get_template_directory_uri(); ?>/#">Контакты</a></li>
+              <li class=""><a href="#uslugi">Наши услуги</a></li>
+              <li class=""><a href="#prichina">Почему мы</a></li>
+              <li class=""><a href="#sales">Акции</a></li>
+              <li class=""><a href="#review">Отзывы</a></li>
+              <li class=""><a href="#contact">Контакты</a></li>
               
             </ul>
           </div>
@@ -92,26 +92,27 @@
 			</div>
 			<div class="col-md-3">
 				<div class="ab-top-txt">
-					<a href="<?php echo get_template_directory_uri(); ?>/#">Выберите город:</a><a href="<?php echo get_template_directory_uri(); ?>/#">Москва</a>
+					<a href="#">Выберите город:</a><a href="#">Москва</a>
 				</div>
 			</div>
 			<div class="col-md-4">
 				<div class="ab-top-right">
 					<span><?php the_field('tel01'); ?></span>
 					<span>Прием заказов: с 9 до 23</span>
-					<a href="<?php echo get_template_directory_uri(); ?>/#">Заказать звонок</a>
+					<a href="#">Заказать звонок</a>
 				</div>
 			</div>
 			<div class="clearfix"></div>
 			<div class="col-md-12">
 				<div class="ab-down">
 					<span>Вывоз старой мебели</span>
-					<a class="wow pulse" data-wow-iteration="100" data-wow-duration="2.5s" href="<?php echo get_template_directory_uri(); ?>/#"><?php the_field('zag01'); ?></a>
+					<a class="wow pulse"  data-wow-iteration="100" data-wow-duration="2.5s" href="<?php echo get_template_directory_uri(); ?>/#"><?php the_field('zag01'); ?></a>
 				</div>
 			</div>
 		</div>
 	</div>
-</section>	<div class="container">
+</section>	
+<div class="container" id="uslugi">
 	<div class="row">
 		<div class="col-md-12">
 			<div class="zk_we_export_all">
@@ -232,7 +233,7 @@
 		<div class="col-md-12">
 			<div class="zk_vivoz">	
 				<div class="zk_vivoz_man"><?php if($my_img=get_field("kar-pr")){echo '<img src="'.$my_img.'"/>';}?></div>
-				<h3 class="zk_vivoz_caption"><?php the_field('zagpr'); ?></h3>
+				<h3 class="zk_vivoz_caption"><?php the_field('zag-pr'); ?></h3>
 				<div class="first_v">
 				<ul>
 					<li><?php the_field('pri1'); ?></li>
@@ -256,7 +257,7 @@
 	</div>
 </div>			
 
-	<section class="ab-pochemy-mi">
+	<section class="ab-pochemy-mi" id="prichina">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
@@ -472,7 +473,7 @@
 	<div class="clearfix"></div>
 <section class="ah-ceni">
 
-    <div class="container">
+    <div class="container" id="sales">
 	    <div class="row">
 		    <div class="col-md-12 col-sm-12 col-xs-12">
 		    <div class="ah-ceniiimg">
@@ -505,13 +506,13 @@
 	    <div class="row">
 		    <div class="col-md-12 col-sm-12 col-xs-12">
 				<span class="ah-zakaz-span">Закажите обратный звонок</span>
-				<a href="<?php echo get_template_directory_uri(); ?>/#" class="ah-zakaz-link">Заказать звонок</a>
+				<a href="#" class="ah-zakaz-link">Заказать звонок</a>
 			</div>
 		</div>
 	</div>
 </section>
 
-<div class="clearfix"></div>	<section class="ab-otziv">
+<div class="clearfix"></div>	<section class="ab-otziv" id="review">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
@@ -635,7 +636,7 @@
 								<input class="ab-in-put" type="text" placeholder="">
 							</div>
 							<div class="ab-last-block-button">
-								<a href="<?php echo get_template_directory_uri(); ?>/#">Отправить</a>
+								<a href="#">Отправить</a>
 							</div>
 							<div class="clearfix"></div>
 							<div class="ab-last-block-txt-bottom">
@@ -723,7 +724,7 @@
 	</div>
 </section>	<div class="clearfix"></div>
 
-<section class="ah-contakt">
+<section class="ah-contakt" id="contact">
     <div class="container">
 	    <div class="row">
 	    <span class="ah-contakt-span2"><?php the_field('zag-gor'); ?></span>
@@ -878,7 +879,7 @@
 				</div>
 			</div>
 			<div class="col-md-4">
-				<span class="xa-right">Создание сайта <a href="<?php echo get_template_directory_uri(); ?>/#">www.multiplex.su</a></span>
+				<span class="xa-right">Создание сайта <a href="#">www.multiplex.su</a></span>
 			</div>
 		</div>
 	</div>
