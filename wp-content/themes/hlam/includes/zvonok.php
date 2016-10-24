@@ -38,7 +38,7 @@
 			</div>
 			<div class="clearfix"></div>
 			<div class="col-md-12">
-				<div class="ab-zvonok-tel wow pulse" data-wow-duration="3.5s" data-wow-iteration="3";>
+				<div class="ab-zvonok-tel wow pulse" data-wow-duration="3.5s" data-wow-iteration="infinite";>
 					<span>8 (499) 502-93-30</span>
 				</div>	
 			</div>

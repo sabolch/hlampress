@@ -507,8 +507,9 @@
 			display: block;
 			font-family: "RobotoBold";
 			//font-size: 46px;
-			font-size: 38px;
+			font-size: 30px;
 			text-transform: uppercase;
+			padding-top:10px;
 		}
 		a{
 			display: inline-block;
@@ -704,7 +705,7 @@
 	.ab-down{
 		margin-top: 322px !important;
 		span{
-			font-size: 46px;
+			font-size: 46px !important;
 		} 
 	}	
 }
