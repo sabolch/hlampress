@@ -96,8 +96,11 @@
 	.search-box{
 	    width: 250px;
 	    margin: 0 auto;
+	    //outline: 1px solid red;
 	    .ab-first-input{
 	    	position:relative;
+	    	// display: inline-block;
+	    	//outline: 1px solid red;
 	    }
 	    .ab-first-input:after{
 			position:absolute;
@@ -108,22 +111,21 @@
 			top: 0;
 			left: 10px;
 	    }
-	    @media all and (-webkit-min-device-pixel-ratio:0){
-			.ab-first-input:after{
-				position:absolute;
-				content:" ";
-				background: url(../img/ab-chel.png) no-repeat left;
-				width: 20px;
-				height: 20px;
-				top: -33px;
-				right: 94px;
-		    }
-	    }	
+	  //   @media all and (-webkit-min-device-pixel-ratio:0){
+			// .ab-first-input:after{
+			// 	position:absolute;
+			// 	content:" ";
+			// 	background: url(../img/ab-chel.png) no-repeat left;
+			// 	width: 20px;
+			// 	height: 20px;
+			// 	top: -34px;
+			// 	right: 94px;
+		 //    }
+	  //   }	
 	    .ab-second-input{
 	    	position:relative;
 	    }
 	    .ab-second-input:after{
-
 			position:absolute;
 			content:" ";
 			background: url(../img/ab-tel.png) no-repeat left;
@@ -132,17 +134,17 @@
 			top: 0px;
 			left: 10px;
 	    }
-    @media all and (-webkit-min-device-pixel-ratio:0){
-		.ab-second-input:after{
-			position:absolute;
-			content:" ";
-			background: url(../img/ab-tel.png) no-repeat left;
-			width: 19px;
-			height: 20px;
-			top: -33px;
-			right: 94px;
-		}
-    }
+  //   @media all and (-webkit-min-device-pixel-ratio:0){
+		// .ab-second-input:after{
+		// 	position:absolute;
+		// 	content:" ";
+		// 	background: url(../img/ab-tel.png) no-repeat left;
+		// 	width: 19px;
+		// 	height: 20px;
+		// 	top: -34px;
+		// 	right: 94px;
+		// }
+  //   }
 }
 	.ab-form{
 	    display: block;
