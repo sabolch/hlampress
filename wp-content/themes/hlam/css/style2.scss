@@ -24,32 +24,27 @@
   top: 0;
   z-index: 9998; 
 }
-.common-form{
-    display: block;
-    width: 380px;
-    padding: 38px;
-    background: #fff;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
+#thanks{
+	margin-top: 100px;
+}
+.ah-thanks{
+	position: relative;
+    background-color: #fff;
+    padding: 50px;
+    text-align: center;
     border-radius: 3px;
-    box-sizing: border-box;
-    font-family: "RobotoRegular";
-    .form-title{
-        display: block;
-        color: #303030;
-        font-size: 20px;
-        font-family: "RobotoBold";
-        line-height: 22px;
-    }
-    .form-subtitle{
-        display: block;
-        color: #929292;
-        font-size: 14px;
-        margin-top: 18px;
-        margin-bottom: 15px;
-        
+    p{
+	    font-size: 18px;
+	    margin-top: 20px;
+	    font-family: "RobotoRegular";
     }
 }
+.ah-title{
+	display: block;
+    font-size: 40px;
+    font-family: "RobotoBold";
+}
+
 // MYUP****************************************
 
 .ah-myup-body{
@@ -364,7 +359,7 @@
 	font-size: 14px;
 	line-height: 22px;
 	margin-bottom: 30px;
-	span{
+	a{
 		color: #d22c00;
 		font-family: "RobotoRegular";
 		font-size: 14px;

@@ -47,7 +47,7 @@ $(document).ready(function(){
         var winH = $(window).height();
         var winW = $(window).width();
         posTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
-        $(id).css('top',  posTop+150);
+        $(id).css('top',  posTop+0); //posTop+10 например это регулировка отображения окна по высоте можно больше можно меньше
         $(id).css('left', winW/2-$(id).width()/2);
         $(id).fadeIn(500); 
     });
@@ -63,7 +63,7 @@ $(document).ready(function(){
         $('.window').hide();
     }); 
 
-    $(".ah-form1-submit").click(function () {
+    $("#ah-form1-submit").click(function () {
         var empty = true;
         $('.ah-form1  input[name="tel"]').each(function(o){
             if ($(this).val() == ""){empty = false;}
@@ -79,7 +79,7 @@ $(document).ready(function(){
             }
           });
           $('.window').hide();
-          $('a[href=#thanks]').trigger('click');
+          $('a[href="#thanks"]').trigger('click');
         }
         var empty = true;
         return false;
