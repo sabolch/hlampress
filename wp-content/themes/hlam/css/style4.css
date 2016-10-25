@@ -71,11 +71,9 @@
     padding-top: 20px; }
   .ab-zvonok .search-box {
     width: 250px;
-    margin: 0 auto;
-    outline: 1px solid red; }
+    margin: 0 auto; }
     .ab-zvonok .search-box .ab-first-input {
-      position: relative;
-      outline: 1px solid red; }
+      position: relative; }
     .ab-zvonok .search-box .ab-first-input:after {
       position: absolute;
       content: " ";
