@@ -105,8 +105,8 @@
 			background: url(../img/ab-chel.png) no-repeat left;
 			width: 20px;
 			height: 20px;
-			top: 29px;
-			right: 94px;
+			top: 0;
+			left: 10px;
 	    }
 	    @media all and (-webkit-min-device-pixel-ratio:0){
 			.ab-first-input:after{
@@ -129,8 +129,8 @@
 			background: url(../img/ab-tel.png) no-repeat left;
 			width: 19px;
 			height: 20px;
-			top: 29px;
-			right: 94px;
+			top: 0px;
+			left: 10px;
 	    }
     @media all and (-webkit-min-device-pixel-ratio:0){
 		.ab-second-input:after{

@@ -376,7 +376,61 @@
 			<div class="clearfix"></div>
 		</div>
 	</div>
-</section>	<section class="ab-zvonok">
+</section>	
+
+<section class="ab-zvonok">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="ab-zvonok-title wow bounceInDown" data-animated-duration="20.5s">
+					<span>Позвоните для оценки стоимости вызова<br> или оставьте заявку</span>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+			<form class="" action="#">
+				<div class="col-md-4">
+					<div class="vhod-bottom">
+						<div class="search-box">
+							<div class="ab-form">
+								<label class="ab-first-input">
+									<input type="text" name="yourname" placeholder="Ваше имя">
+								</label>
+							</div>	
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="vhod-bottom">
+						<div class="search-box">
+						<div class="ab-form">
+							<label class="ab-second-input">
+								<input type="text" name="tel" placeholder="Телефон">
+							</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<label class="ab-second-input">
+						<div class="ab-zvonok-button">
+							<a class="ab-button" href="#">Оставить заявку</a>
+						</div>
+					</label>	
+				</div>
+				<div class="clearfix"></div>
+				<div class="col-md-12">
+					<div class="ab-zvonok-tel wow pulse" data-wow-duration="3.5s" data-wow-iteration="infinite";>
+						<span>8 (499) 502-93-30</span>
+					</div>	
+				</div>
+			</form>	
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</section>
+
+
+<!-- <section class="ab-zvonok">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
@@ -423,7 +477,13 @@
 			<div class="clearfix"></div>
 		</div>
 	</div>
-</section>	
+</section> -->	
+
+
+
+
+
+
 <div class="container">
 	<div class="row">
 		<div class="col-md-12">			
@@ -602,86 +662,89 @@
 				</div>
 			</div>
 			<div class="clearfix"></div>
-			<div class="col-md-12">
-				<div class="ab-comments-wrap">
-					<div class="ab-comments-txt">
-						<span>Мы ввели систему отзывов, она работает для того,<br>
-						чтобы улучшить наш сервис.</span>
-						<span>Все отзывы просматриваются и тщательно нами разбираются.<br>
-						Даже в положительном отзыве вы можете указать нам ваши положения.<br>
-						Укажите, что нравиться или не нравиться в нашем сайте или в работе нашего персонала.<br>
-						Любой ваш отзыв нам очень важен.</span>
-					</div>
-					<div class="ab-comform-wrap">
-						<form class="ab-comform" action="#">
-							<label>
-								<textarea class="ab-text-area" placeholder="*Комментарий"></textarea>
-							</label>
-						</form>
-					</div>
-					<div class="ab-chekbox-wrap">
-						<div class="ab-chekbos-title">
-							<span>Выберите отзыв</span>
+
+			<form class="" action="#">
+				<div class="col-md-12">
+					<div class="ab-comments-wrap">
+						<div class="ab-comments-txt">
+							<span>Мы ввели систему отзывов, она работает для того,<br>
+							чтобы улучшить наш сервис.</span>
+							<span>Все отзывы просматриваются и тщательно нами разбираются.<br>
+							Даже в положительном отзыве вы можете указать нам ваши положения.<br>
+							Укажите, что нравиться или не нравиться в нашем сайте или в работе нашего персонала.<br>
+							Любой ваш отзыв нам очень важен.</span>
 						</div>
-						<div class="ab-my-chekbox-wrap">	
-							<div class="ab-my-chekbox">
+						<div class="ab-comform-wrap">
+							<div class="ab-comform" action="#">
 								<label>
-								    <input class="checkbox" type="radio" name="checkbox-test" checked>
-								    <span class="checkbox-custom"></span>
-								    <span class="label"></span>
+									<textarea class="ab-text-area" placeholder="*Комментарий"></textarea>
 								</label>
 							</div>
-							<div class="ab-chekbox-span">
-								<span>Положительный</span>
+						</div>
+						<div class="ab-chekbox-wrap">
+							<div class="ab-chekbos-title">
+								<span>Выберите отзыв</span>
+							</div>
+							<div class="ab-my-chekbox-wrap">	
+								<div class="ab-my-chekbox">
+									<label>
+									    <input class="checkbox" type="radio" name="checkbox-test" checked>
+									    <span class="checkbox-custom"></span>
+									    <span class="label"></span>
+									</label>
+								</div>
+								<div class="ab-chekbox-span">
+									<span>Положительный</span>
+								</div>
+							</div>
+							<div class="ab-my-chekbox-wrap margin-left20">	
+								<div class="ab-my-chekbox ab-my-chekbox-2">
+									<label>
+									    <input class="checkbox" type="radio" name="checkbox-test">
+									    <span class="checkbox-custom"></span>
+									    <span class="label"></span>
+									</label>
+								</div>
+								<div class="ab-chekbox-span">
+									<span>Нейтральный</span>
+								</div>
+							</div>	
+							<div class="ab-my-chekbox-wrap margin-left20">	
+								<div class="ab-my-chekbox ab-my-chekbox-3">
+									<label>
+									    <input class="checkbox" type="radio" name="checkbox-test">
+									    <span class="checkbox-custom"></span>
+									    <span class="label"></span>
+									</label>
+								</div>
+								<div class="ab-chekbox-span">
+									<span>Отрецательный</span>
+								</div>
+							</div>
+							<div class="clearfix"></div>		
+						</div>
+						<div class="clearfix"></div>
+						<div class="col-md-12 col-padding-left-0">
+							<div class="ab-last-block-comments-wrap">
+								<div class="ab-last-block-txt">
+									<span>Введите код полученный после<br> выполнения заказа</span>
+								</div>
+								<div class="ab-last-block-input">
+									<input class="ab-in-put" type="text" placeholder="">
+								</div>
+								<div class="ab-last-block-button">
+									<a href="<?php echo get_template_directory_uri(); ?>/#">Отправить</a>
+								</div>
+								<div class="clearfix"></div>
+								<div class="ab-last-block-txt-bottom">
+									Если забыли или потеряли код, позвоните в диспетчерскую службу
+								</div>
 							</div>
 						</div>
-						<div class="ab-my-chekbox-wrap margin-left20">	
-							<div class="ab-my-chekbox ab-my-chekbox-2">
-								<label>
-								    <input class="checkbox" type="radio" name="checkbox-test">
-								    <span class="checkbox-custom"></span>
-								    <span class="label"></span>
-								</label>
-							</div>
-							<div class="ab-chekbox-span">
-								<span>Нейтральный</span>
-							</div>
-						</div>	
-						<div class="ab-my-chekbox-wrap margin-left20">	
-							<div class="ab-my-chekbox ab-my-chekbox-3">
-								<label>
-								    <input class="checkbox" type="radio" name="checkbox-test">
-								    <span class="checkbox-custom"></span>
-								    <span class="label"></span>
-								</label>
-							</div>
-							<div class="ab-chekbox-span">
-								<span>Отрецательный</span>
-							</div>
-						</div>
-						<div class="clearfix"></div>		
+						<div class="clearfix"></div>	
 					</div>
-					<div class="clearfix"></div>
-					<div class="col-md-12 col-padding-left-0">
-						<div class="ab-last-block-comments-wrap">
-							<div class="ab-last-block-txt">
-								<span>Введите код полученный после<br> выполнения заказа</span>
-							</div>
-							<div class="ab-last-block-input">
-								<input class="ab-in-put" type="text" placeholder="">
-							</div>
-							<div class="ab-last-block-button">
-								<a href="<?php echo get_template_directory_uri(); ?>/#">Отправить</a>
-							</div>
-							<div class="clearfix"></div>
-							<div class="ab-last-block-txt-bottom">
-								Если забыли или потеряли код, позвоните в диспетчерскую службу
-							</div>
-						</div>
-					</div>
-					<div class="clearfix"></div>	
 				</div>
-			</div>
+			</form>	
 			<div class="clearfix"></div>
 		</div>
 	</div>
@@ -704,7 +767,9 @@
 	</div>
 </section>
 
-<div class="clearfix"></div>	<section class="ab-zvonok ab-zvonok2">
+<div class="clearfix"></div>	
+
+<section class="ab-zvonok ab-zvonok2">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
@@ -713,25 +778,31 @@
 				</div>
 			</div>
 			<div class="clearfix"></div>
+			<form class="" action="#">
+
 			<div class="col-md-4">
 				<div class="vhod-bottom">
 					<div class="search-box">
-						<label class="ab-first-input">
-							<form class="ab-form" action="#">
+					<div class="ab-form" name="yourname">
+						<label class="ab-first-input ab-first-input2">
+							
 								<input type="text" placeholder="Ваше имя">
-							</form>
+							
 						</label>
+						</div>
 					</div>
 				</div>
 			</div>
 			<div class="col-md-4">
 				<div class="vhod-bottom">
 					<div class="search-box">
+					<div class="ab-form">
 						<label class="ab-second-input">
-							<form class="ab-form" action="#">
-								<input type="text" placeholder="Телефон">
-							</form>
+							
+								<input type="text" name="tel" placeholder="Телефон">
+							
 						</label>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -742,7 +813,10 @@
 					</div>
 				</label>	
 			</div>
+			</form>
+
 			<div class="clearfix"></div>
+
 			<div class="col-md-12">
 				<div class="ab-zvonok-tel-3">
 					<span>8 (499) 502-93-30</span>
