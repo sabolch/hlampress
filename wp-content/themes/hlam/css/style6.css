@@ -30,8 +30,10 @@
 	text-align: center;
 }
 footer{
+    font-family: "RobotoRegular";
 	padding-top: 20px;
 	min-height: 270px;
+    font-size: 14px;
 	background: url('../img/footer-bg.jpg') no-repeat bottom;
 }
 .xa-imgbox{

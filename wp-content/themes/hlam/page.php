@@ -875,7 +875,7 @@
 			</div>
 			<div class="col-md-4">
 				<div class="xa-imgbox">
-					<img src="<?php echo get_template_directory_uri(); ?>/img/footer-logo.png" alt="">
+					<img class="wow pulse" data-wow-iteration="100" data-wow-duration="2.5s" src="<?php echo get_template_directory_uri(); ?>/img/footer-logo.png" alt="">
 				</div>
 			</div>
 			<div class="col-md-4">
