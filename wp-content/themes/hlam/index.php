@@ -413,7 +413,7 @@
 				<div class="col-md-4">
 					<label class="ab-second-input">
 						<div class="ab-zvonok-button">
-							<a class="ab-button" href="#">Оставить заявку</a>
+							<a class="ab-button" href="#thanks" name="modal">Оставить заявку</a>
 						</div>
 					</label>	
 				</div>
@@ -778,7 +778,7 @@
 				</div>
 			</div>
 			<div class="clearfix"></div>
-			<form class="" action="#">
+			<form class="ah-form2" action="#">
 
 			<div class="col-md-4">
 				<div class="vhod-bottom">
@@ -809,7 +809,7 @@
 			<div class="col-md-4">
 				<label class="ab-second-input">
 					<div class="ab-zvonok-button">
-						<a class="ab-button" href="<?php echo get_template_directory_uri(); ?>/#">Оставить заявку</a>
+						<a class="ab-button" href="#thanks" name="modal" id="ah-form2-submit">Оставить заявку</a>
 					</div>
 				</label>	
 			</div>
