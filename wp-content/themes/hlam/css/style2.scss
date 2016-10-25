@@ -320,29 +320,30 @@
 
 // comptext***************************************
 .ah-comptext{
+	background: #fff;
 	position: relative;
 	padding: 70px 0px;
 }
-.ah-comptext:after{
-	display: none;
-	position: absolute;
-    content: "";
-    width: 440px;
-    height: 290px;
-    bottom: 0px;
-    left: -340px;
-    background: none;
-}
-.ah-comptext:before{
-	display: none;
-	position: absolute;
-    content: "";
-    width: 305px;
-    height: 222px;
-    bottom: 0px;
-    right: -300px;
-    background: none;
-}
+// .ah-comptext:after{
+// 	display: none;
+// 	position: absolute;
+//     content: "";
+//     width: 440px;
+//     height: 290px;
+//     bottom: 0px;
+//     left: -340px;
+//     background: none;
+// }
+// .ah-comptext:before{
+// 	display: none;
+// 	position: absolute;
+//     content: "";
+//     width: 305px;
+//     height: 222px;
+//     bottom: 0px;
+//     right: -300px;
+//     background: none;
+// }
 .ah-comptext-title{
 	display: block;
 	color: #31343b;
@@ -414,29 +415,35 @@
 }
 
 @media only screen and (min-width : 992px) {
+	.ah-comptext{
+		background: url(../img/ah-seofon.jpg) bottom center no-repeat;
+		position: relative;
+		padding: 70px 0px;
+	}
 	.ah-comptext2{
-		width: 82%;
+	    width: 95%;
+	    padding-left: 80px;
 	}
-	.ah-comptext:after{
-		display: block;
-		position: absolute;
-	    content: "";
-	    width: 440px;
-	    height: 290px;
-	    bottom: 0px;
-	    left: -330px;
-	    background: url(../img/ah-text1.png) top center no-repeat;
-	}
-	.ah-comptext:before{
-		display: block;
-		position: absolute;
-	    content: "";
-	    width: 305px;
-	    height: 222px;
-	    bottom: 0px;
-	    right: 0px;
-	    background: url(../img/ah-text2.png) top center no-repeat;
-	}
+	// .ah-comptext:after{
+	// 	display: block;
+	// 	position: absolute;
+	//     content: "";
+	//     width: 440px;
+	//     height: 290px;
+	//     bottom: 0px;
+	//     left: -330px;
+	//     background: url(../img/ah-text1.png) top center no-repeat;
+	// }
+	// .ah-comptext:before{
+	// 	display: block;
+	// 	position: absolute;
+	//     content: "";
+	//     width: 305px;
+	//     height: 222px;
+	//     bottom: 0px;
+	//     right: 0px;
+	//     background: url(../img/ah-text2.png) top center no-repeat;
+	// }
 	.ah-item-span{
 		font-size: 24px;
 	}
