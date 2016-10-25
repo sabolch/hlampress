@@ -6,7 +6,7 @@ $(document).ready(function(){
         var option = select.find('select option');
         var str = '<div class="az-options">';
         select.find('option').each(function(){
-            str+= '<div data-val="' +$(this).val() + '">' + $(this).text() + '</div>'
+            str+= '<div data-val="' +$(this).val() + '"><span>' + $(this).text() + '</span></div>'
         });
         str+= '</div>';
         select.html(select.html() + str);
@@ -32,7 +32,11 @@ $(document).ready(function(){
         $(this).find('.az-options').slideToggle(0);
         $(this).toggleClass('az-select-focus');
     });
-
+    // setTimeout(function(){
+    //     alert($('.az-options div[data-val]').eq(0).css('width'));
+    // }, 1000);
+    
+    $('.az-border').width(51);
     // ********************************
 
     // $(".phone").mask("+ 7 (999) 999 - 99 - 99?");

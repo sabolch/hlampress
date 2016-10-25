@@ -32,6 +32,7 @@
 
 	<script src="<?php echo get_template_directory_uri(); ?>/js/responsiveTabs.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.maskedinput.min.js"></script>
+	
 	<script src="<?php echo get_template_directory_uri(); ?>/js/common.js"></script>
 
 	<div id="hid">
@@ -92,12 +93,29 @@
 			</div>
 			<div class="col-md-3">
 				<div class="ab-top-txt">
-					<a href="<?php echo get_template_directory_uri(); ?>/#">Выберите город:</a><a href="<?php echo get_template_directory_uri(); ?>/#">Москва</a>
+					<a href="#">Выберите город:</a>
+					<div class="az-select">
+						<select name="" id="">
+							<option value="+7 (499) 502-93-30">Москва</option>
+							<option value="+7 (499) 502-93-31">Санкт Петербург</option>
+							<option value="+7 (499) 502-93-32">Тальяти</option>
+						</select>
+						<div class="az-border"></div>
+					</div>
+					<script>
+						$(document).ready(function(){
+							
+							$(".az-options div[data-val]").click(function(){
+						        $('.az-tel').text($(this).attr('data-val'));
+						        $('.az-border').width($(this).find('span').width());
+						    });
+						});
+					</script>
 				</div>
 			</div>
 			<div class="col-md-4">
 				<div class="ab-top-right">
-					<span>+7 (499) 502-93-30</span>
+					<span class="az-tel">+7 (499) 502-93-30</span>
 					<span>Прием заказов: с 9 до 23</span>
 					<a href="#zvonok" name="modal">Заказать звонок</a>
 				</div>
