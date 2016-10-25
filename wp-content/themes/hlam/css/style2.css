@@ -304,7 +304,7 @@
   display: none;
   position: absolute;
   content: "";
-  width: 475px;
+  width: 305px;
   height: 222px;
   bottom: 0px;
   right: -300px;
@@ -318,6 +318,9 @@
   line-height: 54px;
   margin-bottom: 30px;
   text-align: center; }
+
+.ah-comptext2 {
+  width: none; }
 
 .ah-comptext1 {
   display: block;
@@ -364,6 +367,29 @@
   .ah-ceni-title {
     font-size: 44px; } }
 @media only screen and (min-width: 992px) {
+  .ah-comptext2 {
+    width: 82%; }
+
+  .ah-comptext:after {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 440px;
+    height: 290px;
+    bottom: 0px;
+    left: -330px;
+    background: url(../img/ah-text1.png) top center no-repeat; }
+
+  .ah-comptext:before {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 305px;
+    height: 222px;
+    bottom: 0px;
+    right: 0px;
+    background: url(../img/ah-text2.png) top center no-repeat; }
+
   .ah-item-span {
     font-size: 24px; }
 
@@ -460,25 +486,5 @@
     width: 545px;
     height: 72px;
     background: url(../img/ah-contactfon.png) center center no-repeat; } }
-@media only screen and (min-width: 1400px) {
-  .ah-comptext:after {
-    display: block;
-    position: absolute;
-    content: "";
-    width: 440px;
-    height: 290px;
-    bottom: 0px;
-    left: -340px;
-    background: url(../img/ah-text1.png) top center no-repeat; }
-
-  .ah-comptext:before {
-    display: block;
-    position: absolute;
-    content: "";
-    width: 475px;
-    height: 222px;
-    bottom: 0px;
-    right: -300px;
-    background: url(../img/ah-text2.png) top center no-repeat; } }
 
 /*# sourceMappingURL=style2.css.map */

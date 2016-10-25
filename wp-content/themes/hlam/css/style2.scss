@@ -337,7 +337,7 @@
 	display: none;
 	position: absolute;
     content: "";
-    width: 475px;
+    width: 305px;
     height: 222px;
     bottom: 0px;
     right: -300px;
@@ -351,6 +351,9 @@
 	line-height: 54px;
 	margin-bottom: 30px;
 	text-align: center;
+}
+.ah-comptext2{
+	width: none;
 }
 .ah-comptext1{
 	display: block;
@@ -411,6 +414,29 @@
 }
 
 @media only screen and (min-width : 992px) {
+	.ah-comptext2{
+		width: 82%;
+	}
+	.ah-comptext:after{
+		display: block;
+		position: absolute;
+	    content: "";
+	    width: 440px;
+	    height: 290px;
+	    bottom: 0px;
+	    left: -330px;
+	    background: url(../img/ah-text1.png) top center no-repeat;
+	}
+	.ah-comptext:before{
+		display: block;
+		position: absolute;
+	    content: "";
+	    width: 305px;
+	    height: 222px;
+	    bottom: 0px;
+	    right: 0px;
+	    background: url(../img/ah-text2.png) top center no-repeat;
+	}
 	.ah-item-span{
 		font-size: 24px;
 	}
@@ -511,26 +537,26 @@
 }
 
 @media only screen and (min-width : 1400px) {
-	.ah-comptext:after{
-		display: block;
-		position: absolute;
-	    content: "";
-	    width: 440px;
-	    height: 290px;
-	    bottom: 0px;
-	    left: -340px;
-	    background: url(../img/ah-text1.png) top center no-repeat;
-	}
-	.ah-comptext:before{
-		display: block;
-		position: absolute;
-	    content: "";
-	    width: 475px;
-	    height: 222px;
-	    bottom: 0px;
-	    right: -300px;
-	    background: url(../img/ah-text2.png) top center no-repeat;
-	}
+	// .ah-comptext:after{
+	// 	display: block;
+	// 	position: absolute;
+	//     content: "";
+	//     width: 440px;
+	//     height: 290px;
+	//     bottom: 0px;
+	//     left: -340px;
+	//     background: url(../img/ah-text1.png) top center no-repeat;
+	// }
+	// .ah-comptext:before{
+	// 	display: block;
+	// 	position: absolute;
+	//     content: "";
+	//     width: 475px;
+	//     height: 222px;
+	//     bottom: 0px;
+	//     right: -300px;
+	//     background: url(../img/ah-text2.png) top center no-repeat;
+	// }
 }
 
 .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
