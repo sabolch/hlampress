@@ -58,6 +58,9 @@
 		ul {		
 			margin-right: 55px;		
 		}
+	}
+	#zk-1,#zk-2{
+		margin-top: 4px;		
 	}				
 }
 
@@ -192,30 +195,51 @@ text-align: center;
 
 
 .zk_we_export_all{	
-	width:100%;	
+	width:100%;
+	outline:1px solid blue;	
+	
 		.zk_ex_caption{
 		font-size: 33px;
 		color:#212121;
 		margin-top: 50px;
 		font-family: "RobotoBold";
-		text-align: center;		
+		text-align: center;
+		outline:1px solid silver;
+		margin-bottom: 42px; 		
 	}	
-	.zk_export_one{		
+	.zk_export_one{
+		float:left;		
 		color:#31343b;
 		font-size: 16px;
 		font-family: "RobotoBold";
-		text-align: center;	
-		float:left;
+		text-align: center;		
 		width:100%;
 		min-width:220px;
-		height:190px;		
-		margin:42px 0 20px 0;			
-		.zk_img_ex_box img{
-			width:185px;
-			height:140px;			
+		height:220px;		
+		margin-bottom:0px;
+		outline:1px solid red;
+		vertical-align: middle !important;
+		display: inline;
+		//padding-top: 30px; 
+
+		.zk_img_ex_box{
+			height:180px;
+			width: 227px;
+			outline:1px dotted red;
+			vertical-align: middle;
+			 img{
+				 // max-width:185px;
+				 // max-height: 175px;			
+				 outline:1px solid green;
+				vertical-align: middle;
+
+			}
 		}		
 	}	
 }
+ .zk_export_one:first-child {padding-top: 0px; padding-bottom: 30px;  }
+ .zk_export_one:last-child {padding-top: 0px; padding-bottom: 30px; }
+
 
 
 
