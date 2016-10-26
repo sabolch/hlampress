@@ -14,13 +14,16 @@
 .ab-pochemy-mi{
 	text-align:center;
 	padding-top:15px;
+	background:url(../img/grey-bg.jpg) center;
+	background-size:cover;
 	.ab-pochemy-mi-img-box{
 		margin:0 auto;
 		border: 3px solid #fff;
 		background: url(../img/ab-p1.png) center;
 		width: 105px;
 		height: 105px;
-		box-shadow: 0 0 5px 2px rgba(122,122,122,0.5);
+		box-shadow: 0 5px 15px rgba(255, 0, 0, 0.2);
+		//box-shadow: 0 0 5px 2px rgba(122,122,122,0.5);
 		border-radius:60px;
 	}
 	.ab-pochemy-mi-img-box2{
@@ -468,10 +471,25 @@
 
 
 .header-bottom{
-	background:url(../img/big-bg.jpg) no-repeat center;
+	//background:url(../img/big-bg.jpg) no-repeat  center;
+	background:url(../img/mob-bg.jpg) no-repeat  center;
 	background-size:cover;
-	height:660px;
-	padding-top:30px;
+	height:1300px;
+	//padding-top:30px;
+	//position:relative;
+	.back-white{
+		background:#fff !important;
+		padding-bottom:40px;
+		padding-top:40px;
+	}
+	.ggg{
+		//background:url(../img/ggg.png) no-repeat  center;
+		//height: 728px;
+		//margin-top: -300px;
+		padding-left:0;
+		padding-right:0px;
+
+	}
 	.ab-div-logo{
 		img{
 			margin: 0 auto; 
@@ -527,7 +545,8 @@
 	}
 	.ab-down{
 		text-align: center;
-		margin-top:200px;
+		margin-top: 20px;
+		//margin-top:200px;
 		span{
 			display: block;
 			font-family: "RobotoBold";
@@ -562,9 +581,29 @@
 
 
 @media only screen and (min-width : 320px) {
+
+	.ab-top-txt {
+    
+    padding-left: 67px !important;
+    
+}
+	.ab-down{
+		text-align: center;
+		margin-top: 20px;
+		//margin-top:200px;
+		span{
+			//font-size: 46px;
+			font-size: 35px !important;
+		}
+		a{
+			font-size: 20px !important;
+		}
+	}	
 }
 
 @media only screen and (min-width : 480px) {
+
+	
 
 	.search-box{
 	    min-width: 375px;
@@ -618,6 +657,38 @@
 }
 
 @media only screen and (min-width : 768px) {
+
+	.header-bottom{
+		background:url(../img/big-bg.jpg) no-repeat  center;
+		//background:url(../img/mob-bg.jpg) no-repeat  center;
+		background-size:cover;
+		height:1003px;
+		//padding-top:30px;
+		//position:relative;
+		.back-white{
+			background:none !important;
+			padding-bottom:40px;
+			padding-top:40px;
+		}
+		.ggg{
+			img{
+				display: none;
+			}
+			//background:url(../img/ggg.png) no-repeat  center;
+			//height: 728px;
+			//margin-top: -300px;
+			padding-left:0;
+			padding-right:0px;
+
+		}
+	}	
+
+
+	.ab-top-txt {
+    
+    padding-left: 0 !important;
+    
+}
 	.ab-pochemy-mi-title{
 		span{
 			font-size: 48px !important;
@@ -743,7 +814,7 @@
 	.header-bottom{
 		height: 960px !important;
 		.ab-down{
-			padding-top: 250px;
+			padding-top: 180px;
 			a{
 				margin-top: 37px !important; 
 			} 
