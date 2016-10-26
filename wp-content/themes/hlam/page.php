@@ -123,7 +123,7 @@
 			<div class="col-md-12">
 				<div class="ab-down">
 					<span><?php the_field('zag01'); ?></span>
-					<a class="wow pulse" data-wow-iteration="100" data-wow-duration="2.5s" href="<?php echo get_template_directory_uri(); ?>/#">Заказать услугу под ключ</a>
+					<a class="wow pulse" data-wow-iteration="100" data-wow-duration="2.5s" href="#zvonok" name="modal">Заказать услугу под ключ</a>
 				</div>
 			</div>
 		</div>
