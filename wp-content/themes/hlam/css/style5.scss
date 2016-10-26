@@ -5,7 +5,8 @@
 
 @media only screen and (min-width : 480px) {
 	.zk_export_one{
-		width: 50% !important;		
+		width: 50% !important;
+		margin-right: 2px;		
 	}
 }
 
@@ -195,16 +196,13 @@ text-align: center;
 
 
 .zk_we_export_all{	
-	width:100%;
-	outline:1px solid blue;	
-	
+	width:100%;	
 		.zk_ex_caption{
 		font-size: 33px;
 		color:#212121;
 		margin-top: 50px;
 		font-family: "RobotoBold";
-		text-align: center;
-		outline:1px solid silver;
+		text-align: center;		
 		margin-bottom: 42px; 		
 	}	
 	.zk_export_one{
@@ -213,32 +211,20 @@ text-align: center;
 		font-size: 16px;
 		font-family: "RobotoBold";
 		text-align: center;		
-		width:100%;
-		min-width:220px;
-		height:220px;		
-		margin-bottom:0px;
-		outline:1px solid red;
-		vertical-align: middle !important;
-		display: inline;
-		//padding-top: 30px; 
-
+		width:100%;		
+		height:240px;		
+		
 		.zk_img_ex_box{
-			height:180px;
-			width: 227px;
-			outline:1px dotted red;
+			height:185px;			
 			vertical-align: middle;
+			margin-bottom: 9px;			
 			 img{
-				 // max-width:185px;
-				 // max-height: 175px;			
-				 outline:1px solid green;
-				vertical-align: middle;
-
+				//width: 190px;
 			}
 		}		
 	}	
 }
- .zk_export_one:first-child {padding-top: 0px; padding-bottom: 30px;  }
- .zk_export_one:last-child {padding-top: 0px; padding-bottom: 30px; }
+ 
 
 
 

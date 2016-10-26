@@ -1,6 +1,7 @@
 @media only screen and (min-width: 480px) {
   .zk_export_one {
-    width: 50% !important; } }
+    width: 50% !important;
+    margin-right: 2px; } }
 @media only screen and (min-width: 768px) {
   .zk_caption {
     font-size: 40px !important; }
@@ -126,15 +127,13 @@
     padding-left: 40px; }
 
 .zk_we_export_all {
-  width: 100%;
-  outline: 1px solid blue; }
+  width: 100%; }
   .zk_we_export_all .zk_ex_caption {
     font-size: 33px;
     color: #212121;
     margin-top: 50px;
     font-family: "RobotoBold";
     text-align: center;
-    outline: 1px solid silver;
     margin-bottom: 42px; }
   .zk_we_export_all .zk_export_one {
     float: left;
@@ -143,27 +142,10 @@
     font-family: "RobotoBold";
     text-align: center;
     width: 100%;
-    min-width: 220px;
-    height: 220px;
-    margin-bottom: 0px;
-    outline: 1px solid red;
-    vertical-align: middle !important;
-    display: inline; }
+    height: 240px; }
     .zk_we_export_all .zk_export_one .zk_img_ex_box {
-      height: 180px;
-      width: 227px;
-      outline: 1px dotted red;
-      vertical-align: middle; }
-      .zk_we_export_all .zk_export_one .zk_img_ex_box img {
-        outline: 1px solid green;
-        vertical-align: middle; }
-
-.zk_export_one:first-child {
-  padding-top: 0px;
-  padding-bottom: 30px; }
-
-.zk_export_one:last-child {
-  padding-top: 0px;
-  padding-bottom: 30px; }
+      height: 185px;
+      vertical-align: middle;
+      margin-bottom: 9px; }
 
 /*# sourceMappingURL=style5.css.map */
