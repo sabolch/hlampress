@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Главная</title>
+	<title><?php the_title() ?></title>
 	
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/libs/bootstrap/bootstrap-grid-3.3.1.min.css" />
 	<link href="<?php echo get_template_directory_uri(); ?>///netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet">
@@ -32,6 +32,7 @@
 
 	<script src="<?php echo get_template_directory_uri(); ?>/js/responsiveTabs.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.maskedinput.min.js"></script>
+	
 	<script src="<?php echo get_template_directory_uri(); ?>/js/common.js"></script>
 
 	<div id="hid">
@@ -55,17 +56,16 @@
           </div>
           <div class="col-md-6 col-sm-12 xa-menu">
             <ul class="nav navbar-nav">
-              <li class=""><a href="<?php echo get_template_directory_uri(); ?>/#">Наши услуги</a></li>
-              <li class=""><a href="<?php echo get_template_directory_uri(); ?>/#">Почему мы</a></li>
-              <li class=""><a href="<?php echo get_template_directory_uri(); ?>/#">Акции</a></li>
-              <li class=""><a href="<?php echo get_template_directory_uri(); ?>/#">Отзывы</a></li>
-              <li class=""><a href="<?php echo get_template_directory_uri(); ?>/#">Контакты</a></li>
-              
+              <li class=""><a href="#uslugi">Наши услуги</a></li>
+              <li class=""><a href="#prichina">Почему мы</a></li>
+              <li class=""><a href="#sales">Акции</a></li>
+              <li class=""><a href="#review">Отзывы</a></li>
+              <li class=""><a href="#contact">Контакты</a></li>
             </ul>
           </div>
           <div class="col-md-3 col-sm-12">
             <span class="xa-phone">
-              <a href="tel:<?php the_field('tel01'); ?> "><?php the_field('tel01'); ?></a>
+              <a href="<?php echo get_template_directory_uri(); ?>/tel:+7 (499) 502-93-30 ">+7 (499) 502-93-30 </a>
             </span>
           </div>
           
@@ -73,7 +73,7 @@
       </div>
     </div>
 </div>
-<script src="<?php echo get_template_directory_uri(); ?>/http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <script>
       $(function () {
         var element = $("#hid"), display;
@@ -92,26 +92,44 @@
 			</div>
 			<div class="col-md-3">
 				<div class="ab-top-txt">
-					<a href="<?php echo get_template_directory_uri(); ?>/#">Выберите город:</a><a href="<?php echo get_template_directory_uri(); ?>/#">Москва</a>
+					<a href="#">Выберите город:</a>
+					<div class="az-select">
+						<select name="" id="">
+							<option value="+7 (499) 502-93-30">Москва</option>
+							<option value="+7 (499) 502-93-31">Санкт Петербург</option>
+							<option value="+7 (499) 502-93-32">Тальяти</option>
+						</select>
+						<div class="az-border"></div>
+					</div>
+					<script>
+						$(document).ready(function(){
+							
+							$(".az-options div[data-val]").click(function(){
+						        $('.az-tel').text($(this).attr('data-val'));
+						        $('.az-border').width($(this).find('span').width() + 4);
+						    });
+						});
+					</script>
 				</div>
 			</div>
 			<div class="col-md-4">
 				<div class="ab-top-right">
-					<span><?php the_field('tel01'); ?></span>
+					<span class="az-tel">+7 (499) 502-93-30</span>
 					<span>Прием заказов: с 9 до 23</span>
-					<a href="<?php echo get_template_directory_uri(); ?>/#">Заказать звонок</a>
+					<a href="#zvonok" name="modal">Заказать звонок</a>
 				</div>
 			</div>
 			<div class="clearfix"></div>
 			<div class="col-md-12">
 				<div class="ab-down">
-					<span>Вывоз старой мебели</span>
-					<a class="wow pulse" data-wow-iteration="100" data-wow-duration="2.5s" href="<?php echo get_template_directory_uri(); ?>/#"><?php the_field('zag01'); ?></a>
+					<span><?php the_field('zag01'); ?></span>
+					<a class="wow pulse" data-wow-iteration="100" data-wow-duration="2.5s" href="#zvonok" name="modal">Заказать услугу под ключ</a>
 				</div>
 			</div>
 		</div>
 	</div>
-</section>	<div class="container">
+</section>	
+<div class="container" id="uslugi">
 	<div class="row">
 		<div class="col-md-12">
 			<div class="zk_we_export_all">
@@ -150,8 +168,7 @@
 			</div>
 		</div>	
 	</div>
-</div>		
-	
+</div>				
 <section class="xa-osush">
 	<div class="container">
 		<div class="row">
@@ -227,12 +244,13 @@
 			</div>
 		</div>
 	</div>
-</section>	<div class="container">
+</section>	
+<div class="container">
 	<div class="row">
 		<div class="col-md-12">
 			<div class="zk_vivoz">	
 				<div class="zk_vivoz_man"><?php if($my_img=get_field("kar-pr")){echo '<img src="'.$my_img.'"/>';}?></div>
-				<h3 class="zk_vivoz_caption"><?php the_field('zagpr'); ?></h3>
+				<h3 class="zk_vivoz_caption"><?php the_field('zag-pr'); ?></h3>
 				<div class="first_v">
 				<ul>
 					<li><?php the_field('pri1'); ?></li>
@@ -254,9 +272,9 @@
 			</div>
 		</div>
 	</div>
-</div>			
+</div>		
 
-	<section class="ab-pochemy-mi">
+	<section class="ab-pochemy-mi" id="prichina">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
@@ -364,12 +382,66 @@
 			<div class="clearfix"></div>
 		</div>
 	</div>
-</section>	<section class="ab-zvonok">
+</section>	
+
+<section class="ab-zvonok">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
 				<div class="ab-zvonok-title wow bounceInDown" data-animated-duration="20.5s">
 					<span><?php the_field('zag51'); ?></span>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+			<form class="" action="#">
+				<div class="col-md-4">
+					<div class="vhod-bottom">
+						<div class="search-box">
+							<div class="ab-form">
+								<label class="ab-first-input">
+									<input type="text" name="yourname" placeholder="Ваше имя">
+								</label>
+							</div>	
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="vhod-bottom">
+						<div class="search-box">
+						<div class="ab-form">
+							<label class="ab-second-input">
+								<input type="text" name="tel" placeholder="Телефон">
+							</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<label class="ab-second-input">
+						<div class="ab-zvonok-button">
+							<a class="ab-button" href="#thanks" name="modal">Оставить заявку</a>
+						</div>
+					</label>	
+				</div>
+				<div class="clearfix"></div>
+				<div class="col-md-12">
+					<div class="ab-zvonok-tel wow pulse" data-wow-duration="3.5s" data-wow-iteration="infinite";>
+						<span><?php the_field('tel51'); ?></span>
+					</div>	
+				</div>
+			</form>	
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</section>
+
+
+<!-- <section class="ab-zvonok">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="ab-zvonok-title wow bounceInDown" data-animated-duration="20.5s">
+					<span>Позвоните для оценки стоимости вызова<br> или оставьте заявку</span>
 				</div>
 			</div>
 			<div class="clearfix"></div>
@@ -405,72 +477,92 @@
 			<div class="clearfix"></div>
 			<div class="col-md-12">
 				<div class="ab-zvonok-tel wow pulse" data-wow-duration="3.5s" data-wow-iteration="3";>
-					<span><?php the_field('tel51'); ?></span>
+					<span>8 (499) 502-93-30</span>
 				</div>	
 			</div>
 			<div class="clearfix"></div>
 		</div>
 	</div>
-</section>	<div class="container">
+</section> -->	
+
+
+
+
+
+
+<div class="container">
 	<div class="row">
-		<div class="col-md-12">
-			<div class="zk_preim_all">
-				<h3 class="zk_caption"><?php the_field('zag-zag'); ?></h3>	
-					<div class="zk_preim">
+		<div class="col-md-12">			
+				<h3 class="zk_caption"><?php the_field('zag-zag'); ?></h3>
+		</div>
+		<div class="clearfix"></div>			
+					<div class="col-md-3">
 						<div class="zk_pr_ph">	
 							<div class="zk-img-box">
 								<?php if($my_img=get_field("kar61")){echo '<img src="'.$my_img.'"/>';}?>
 							</div>			
-							<div><?php the_field('opi61'); ?> </div>				
+							<div><?php the_field('opi61'); ?> </div>		
 						</div>
+					</div>
+					<div class="col-md-3">	
 						<div class="zk_pr_ph">
 							<div class="zk-img-box">			
 								<?php if($my_img=get_field("kar62")){echo '<img src="'.$my_img.'"/>';}?>
 							</div>	
-								<div><?php the_field('opi62'); ?></div>
-
+							<div><?php the_field('opi62'); ?> </div>	
 						</div>
+					</div>
+					<div class="col-md-3">	
 						<div class="zk_pr_ph">
 							<div class="zk-img-box">				
 								<?php if($my_img=get_field("kar63")){echo '<img src="'.$my_img.'"/>';}?>
 							</div>	
-								<div><?php the_field('opi63'); ?></div>				
+							<div><?php the_field('opi63'); ?> </div>				
 						</div>
+					</div>
+					<div class="col-md-3">	
 						<div class="zk_pr_ph">
 							<div class="zk-img-box">				
 								<?php if($my_img=get_field("kar64")){echo '<img src="'.$my_img.'"/>';}?>
 							</div>	
-								<div><?php the_field('opi64'); ?></div>				
+							<div><?php the_field('opi64'); ?> </div>		
 						</div>
-						
-						<div class="zk_second_line">
-							<div class="zk_pr_ph">
-								<div class="zk-img-box">
-							 	<?php if($my_img=get_field("kar65")){echo '<img src="'.$my_img.'"/>';}?>
-							 	</div>
-							 	<div><?php the_field('opi65'); ?></div>
-							</div>
-							<div class="zk_pr_ph">
-								<div class="zk-img-box">
-							 	<?php if($my_img=get_field("kar66")){echo '<img src="'.$my_img.'"/>';}?>
-							 	</div>
-							 	<div><?php the_field('opi66'); ?></div>
-							</div>
-							<div class="zk_pr_ph">
-								<div class="zk-img-box">
-							 	<?php if($my_img=get_field("kar67")){echo '<img src="'.$my_img.'"/>';}?>
-							 	</div>
-							 	<div><?php the_field('opi67'); ?></div>
-							</div>
+					</div>	
+						<div class="clearfix"></div>
+					<div class="col-md-4">
+						<div class="zk_pr_ph">
+							<div class="zk-img-box">
+						 		<?php if($my_img=get_field("kar65")){echo '<img src="'.$my_img.'"/>';}?>
+						 	</div>
+						 	<div><?php the_field('opi65'); ?> </div>	
 						</div>
 					</div>
+					<div class="col-md-4">	
+						<div class="zk_pr_ph">
+							<div class="zk-img-box">
+						 		<?php if($my_img=get_field("kar66")){echo '<img src="'.$my_img.'"/>';}?>
+						 	</div>
+						 	<div><?php the_field('opi66'); ?> </div>	
+						</div>
+					</div>
+					<div class="col-md-4">	
+						<div class="zk_pr_ph">
+							<div class="zk-img-box">
+						 		<?php if($my_img=get_field("kar67")){echo '<img src="'.$my_img.'"/>';}?>
+						 	</div>
+						 	<div><?php the_field('opi67'); ?> </div>	
+						</div>
+					</div>	
+					
 				<div class="clear"></div>
 			</div>
 		</div>
 	</div>
 </div>	
-	<div class="clearfix"></div>
-<section class="ah-ceni">
+
+<div class="clearfix"></div>
+
+<section class="ah-ceni" id="sales">
 
     <div class="container">
 	    <div class="row">
@@ -482,15 +574,15 @@
 				<div class="ah-ceni-wrap">
 					<div class="ah-ceni-item">
 						<?php if($my_img=get_field("kar71")){echo '<img src="'.$my_img.'"/>';}?>
-						<span class="ah-item-span"><?php the_field('opi71'); ?></span>		
+						<span class="ah-item-span"><?php the_field('opi71'); ?></span>	
 					</div>
 					<div class="ah-ceni-item">
 						<?php if($my_img=get_field("kar72")){echo '<img src="'.$my_img.'"/>';}?>
-						<span class="ah-item-span"><?php the_field('opi72'); ?></span>			
+						<span class="ah-item-span"><?php the_field('opi72'); ?></span>				
 					</div>
 					<div class="ah-ceni-item ah-ceni-item1">
 						<?php if($my_img=get_field("kar73")){echo '<img src="'.$my_img.'"/>';}?>
-						<span class="ah-item-span"><?php the_field('opi73'); ?></span>			
+						<span class="ah-item-span"><?php the_field('opi73'); ?></span>		
 					</div>
 				</div>
 			</div>
@@ -505,13 +597,14 @@
 	    <div class="row">
 		    <div class="col-md-12 col-sm-12 col-xs-12">
 				<span class="ah-zakaz-span">Закажите обратный звонок</span>
-				<a href="<?php echo get_template_directory_uri(); ?>/#" class="ah-zakaz-link">Заказать звонок</a>
+				<a href="#zvonok" name="modal" class="ah-zakaz-link">Заказать звонок</a>
 			</div>
 		</div>
 	</div>
 </section>
 
-<div class="clearfix"></div>	<section class="ab-otziv">
+<div class="clearfix"></div>	
+<section class="ab-otziv" id="review">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
@@ -539,7 +632,7 @@
 				<div class="ab-otziv-face-wrap">
 					<div class="ab-face-img-wrap">
 						<div class="ab-face-img">
-							<?php if($my_img=get_field("kar113")){echo '<img src="'.$my_img.'"/>';}?>
+							<?php if($my_img=get_field("kar112")){echo '<img src="'.$my_img.'"/>';}?>
 						</div>
 					</div>
 					<div class="ab-face-txt ab-face-txt-2">
@@ -566,86 +659,89 @@
 				</div>
 			</div>
 			<div class="clearfix"></div>
-			<div class="col-md-12">
-				<div class="ab-comments-wrap">
-					<div class="ab-comments-txt">
-						<span>Мы ввели систему отзывов, она работает для того,<br>
-						чтобы улучшить наш сервис.</span>
-						<span>Все отзывы просматриваются и тщательно нами разбираются.<br>
-						Даже в положительном отзыве вы можете указать нам ваши положения.<br>
-						Укажите, что нравиться или не нравиться в нашем сайте или в работе нашего персонала.<br>
-						Любой ваш отзыв нам очень важен.</span>
-					</div>
-					<div class="ab-comform-wrap">
-						<form class="ab-comform" action="#">
-							<label>
-								<textarea class="ab-text-area" placeholder="*Комментарий"></textarea>
-							</label>
-						</form>
-					</div>
-					<div class="ab-chekbox-wrap">
-						<div class="ab-chekbos-title">
-							<span>Выберите отзыв</span>
+			
+			<form class="" action="#">
+				<div class="col-md-12">
+					<div class="ab-comments-wrap">
+						<div class="ab-comments-txt">
+							<span>Мы ввели систему отзывов, она работает для того,<br>
+							чтобы улучшить наш сервис.</span>
+							<span>Все отзывы просматриваются и тщательно нами разбираются.<br>
+							Даже в положительном отзыве вы можете указать нам ваши положения.<br>
+							Укажите, что нравиться или не нравиться в нашем сайте или в работе нашего персонала.<br>
+							Любой ваш отзыв нам очень важен.</span>
 						</div>
-						<div class="ab-my-chekbox-wrap">	
-							<div class="ab-my-chekbox">
+						<div class="ab-comform-wrap">
+							<div class="ab-comform" action="#">
 								<label>
-								    <input class="checkbox" type="radio" name="checkbox-test" checked>
-								    <span class="checkbox-custom"></span>
-								    <span class="label"></span>
+									<textarea class="ab-text-area" placeholder="*Комментарий"></textarea>
 								</label>
 							</div>
-							<div class="ab-chekbox-span">
-								<span>Положительный</span>
+						</div>
+						<div class="ab-chekbox-wrap">
+							<div class="ab-chekbos-title">
+								<span>Выберите отзыв</span>
+							</div>
+							<div class="ab-my-chekbox-wrap">	
+								<div class="ab-my-chekbox">
+									<label>
+									    <input class="checkbox" type="radio" name="checkbox-test" checked>
+									    <span class="checkbox-custom"></span>
+									    <span class="label"></span>
+									</label>
+								</div>
+								<div class="ab-chekbox-span">
+									<span>Положительный</span>
+								</div>
+							</div>
+							<div class="ab-my-chekbox-wrap margin-left20">	
+								<div class="ab-my-chekbox ab-my-chekbox-2">
+									<label>
+									    <input class="checkbox" type="radio" name="checkbox-test">
+									    <span class="checkbox-custom"></span>
+									    <span class="label"></span>
+									</label>
+								</div>
+								<div class="ab-chekbox-span">
+									<span>Нейтральный</span>
+								</div>
+							</div>	
+							<div class="ab-my-chekbox-wrap margin-left20">	
+								<div class="ab-my-chekbox ab-my-chekbox-3">
+									<label>
+									    <input class="checkbox" type="radio" name="checkbox-test">
+									    <span class="checkbox-custom"></span>
+									    <span class="label"></span>
+									</label>
+								</div>
+								<div class="ab-chekbox-span">
+									<span>Отрецательный</span>
+								</div>
+							</div>
+							<div class="clearfix"></div>		
+						</div>
+						<div class="clearfix"></div>
+						<div class="col-md-12 col-padding-left-0">
+							<div class="ab-last-block-comments-wrap">
+								<div class="ab-last-block-txt">
+									<span>Введите код полученный после<br> выполнения заказа</span>
+								</div>
+								<div class="ab-last-block-input">
+									<input class="ab-in-put" type="text" placeholder="">
+								</div>
+								<div class="ab-last-block-button">
+									<a href="<?php echo get_template_directory_uri(); ?>/#">Отправить</a>
+								</div>
+								<div class="clearfix"></div>
+								<div class="ab-last-block-txt-bottom">
+									Если забыли или потеряли код, позвоните в диспетчерскую службу
+								</div>
 							</div>
 						</div>
-						<div class="ab-my-chekbox-wrap margin-left20">	
-							<div class="ab-my-chekbox ab-my-chekbox-2">
-								<label>
-								    <input class="checkbox" type="radio" name="checkbox-test">
-								    <span class="checkbox-custom"></span>
-								    <span class="label"></span>
-								</label>
-							</div>
-							<div class="ab-chekbox-span">
-								<span>Нейтральный</span>
-							</div>
-						</div>	
-						<div class="ab-my-chekbox-wrap margin-left20">	
-							<div class="ab-my-chekbox ab-my-chekbox-3">
-								<label>
-								    <input class="checkbox" type="radio" name="checkbox-test">
-								    <span class="checkbox-custom"></span>
-								    <span class="label"></span>
-								</label>
-							</div>
-							<div class="ab-chekbox-span">
-								<span>Отрицательный</span>
-							</div>
-						</div>
-						<div class="clearfix"></div>		
+						<div class="clearfix"></div>	
 					</div>
-					<div class="clearfix"></div>
-					<div class="col-md-12 col-padding-left-0">
-						<div class="ab-last-block-comments-wrap">
-							<div class="ab-last-block-txt">
-								<span>Введите код полученный после<br> выполнения заказа</span>
-							</div>
-							<div class="ab-last-block-input">
-								<input class="ab-in-put" type="text" placeholder="">
-							</div>
-							<div class="ab-last-block-button">
-								<a href="<?php echo get_template_directory_uri(); ?>/#">Отправить</a>
-							</div>
-							<div class="clearfix"></div>
-							<div class="ab-last-block-txt-bottom">
-								Если забыли или потеряли код, позвоните в диспетчерскую службу
-							</div>
-						</div>
-					</div>
-					<div class="clearfix"></div>	
 				</div>
-			</div>
+			</form>	
 			<div class="clearfix"></div>
 		</div>
 	</div>
@@ -655,14 +751,16 @@
 <section class="ah-comptext">
     <div class="container">
 	    <div class="row">
-		    <div class="col-md-12 col-sm-12 col-xs-12">
+		   <div class="col-md-12 col-sm-12 col-xs-12">
 				<?php the_field('txt81'); ?>
 			</div>
 		</div>
 	</div>
 </section>
 
-<div class="clearfix"></div>	<section class="ab-zvonok ab-zvonok2">
+<div class="clearfix"></div>	
+
+<section class="ab-zvonok ab-zvonok2">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
@@ -671,36 +769,45 @@
 				</div>
 			</div>
 			<div class="clearfix"></div>
+			<form class="ah-form2" action="#">
+
 			<div class="col-md-4">
 				<div class="vhod-bottom">
 					<div class="search-box">
-						<label class="ab-first-input">
-							<form class="ab-form" action="#">
+					<div class="ab-form" name="yourname">
+						<label class="ab-first-input ab-first-input2">
+							
 								<input type="text" placeholder="Ваше имя">
-							</form>
+							
 						</label>
+						</div>
 					</div>
 				</div>
 			</div>
 			<div class="col-md-4">
 				<div class="vhod-bottom">
 					<div class="search-box">
+					<div class="ab-form">
 						<label class="ab-second-input">
-							<form class="ab-form" action="#">
-								<input type="text" placeholder="Телефон">
-							</form>
+							
+								<input type="text" name="tel" placeholder="Телефон">
+							
 						</label>
+						</div>
 					</div>
 				</div>
 			</div>
 			<div class="col-md-4">
 				<label class="ab-second-input">
 					<div class="ab-zvonok-button">
-						<a class="ab-button" href="<?php echo get_template_directory_uri(); ?>/#">Оставить заявку</a>
+						<a class="ab-button" href="#thanks" name="modal" id="ah-form2-submit">Оставить заявку</a>
 					</div>
 				</label>	
 			</div>
+			</form>
+
 			<div class="clearfix"></div>
+
 			<div class="col-md-12">
 				<div class="ab-zvonok-tel-3">
 					<span><?php the_field('tel91'); ?></span>
@@ -723,7 +830,7 @@
 	</div>
 </section>	<div class="clearfix"></div>
 
-<section class="ah-contakt">
+<section class="ah-contakt" id="contact">
     <div class="container">
 	    <div class="row">
 	    <span class="ah-contakt-span2"><?php the_field('zag-gor'); ?></span>
@@ -734,9 +841,7 @@
 						<span class="ah-contakt-span1"><?php the_field('tel101'); ?></span>
 					</div>
 					<div class="ah-contakt-bottom">
-						<div id="map">
-							<?php the_field('car101'); ?>
-						</div>
+						<div id="map"><?php the_field('car101'); ?></div>
 					</div>
 				</div>
 			</div>
@@ -747,9 +852,7 @@
 						<span class="ah-contakt-span1"><?php the_field('tel102'); ?></span>
 					</div>
 					<div class="ah-contakt-bottom">
-						<div id="map1">
-							<?php the_field('car102'); ?>
-						</div>
+						<div id="map1"><?php the_field('car102'); ?></div>
 					</div>
 				</div>
 			</div>
@@ -763,9 +866,7 @@
 						<span class="ah-contakt-span1"><?php the_field('tel103'); ?></span>
 					</div>
 					<div class="ah-contakt-bottom">
-						<div id="map2">
-							<?php the_field('car103'); ?>
-						</div>
+						<div id="map2"><?php the_field('car103'); ?></div>
 					</div>
 				</div>
 			</div>
@@ -776,9 +877,7 @@
 						<span class="ah-contakt-span1"><?php the_field('tel104'); ?></span>
 					</div>
 					<div class="ah-contakt-bottom">
-						<div id="map3">
-							<?php the_field('car104'); ?>
-						</div>
+						<div id="map3"><?php the_field('car104'); ?></div>
 					</div>
 				</div>
 			</div>
@@ -789,7 +888,7 @@
 <div class="clearfix"></div>
 
 
-<script src="<?php echo get_template_directory_uri(); ?>///api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
  <script type="text/javascript">
    ymaps.ready(init);
      var myMap,
@@ -803,29 +902,29 @@
 
 	function init(){
 
-		myMap = new ymaps.Map("map", {
-		 center: [55.73521577724309,37.6503515],
-		 zoom: 16,
-		 controls: []
-		});
+		// myMap = new ymaps.Map("map", {
+		//  center: [55.73521577724309,37.6503515],
+		//  zoom: 16,
+		//  controls: []
+		// });
 
-		myMap1 = new ymaps.Map("map1", {
-		 center: [55.73521577724309,37.6503515],
-		 zoom: 16,
-		 controls: []
-		});
+		// myMap1 = new ymaps.Map("map1", {
+		//  center: [55.73521577724309,37.6503515],
+		//  zoom: 16,
+		//  controls: []
+		// });
 
-		myMap2 = new ymaps.Map("map2", {
-		 center: [55.73521577724309,37.6503515],
-		 zoom: 16,
-		 controls: []
-		});
+		// myMap2 = new ymaps.Map("map2", {
+		//  center: [55.73521577724309,37.6503515],
+		//  zoom: 16,
+		//  controls: []
+		// });
 
-		myMap3 = new ymaps.Map("map3", {
-		 center: [55.73521577724309,37.6503515],
-		 zoom: 16,
-		 controls: []
-		});
+		// myMap3 = new ymaps.Map("map3", {
+		//  center: [55.73521577724309,37.6503515],
+		//  zoom: 16,
+		//  controls: []
+		// });
 
         myMap.behaviors.disable('scrollZoom');
         myMap1.behaviors.disable('scrollZoom');
@@ -874,7 +973,7 @@
 			</div>
 			<div class="col-md-4">
 				<div class="xa-imgbox">
-					<img src="<?php echo get_template_directory_uri(); ?>/img/footer-logo.png" alt="">
+					<img class="wow pulse" data-wow-iteration="100" data-wow-duration="2.5s" src="<?php echo get_template_directory_uri(); ?>/img/footer-logo.png" alt="">
 				</div>
 			</div>
 			<div class="col-md-4">
@@ -882,11 +981,42 @@
 			</div>
 		</div>
 	</div>
-	
 </footer>
+
 <div class="xa-topbox">
 	<a href="#xa-bdy"><img src="<?php echo get_template_directory_uri(); ?>/img/top.png" alt=""></a>
 </div>
+
+<div id="mask"></div>
+
+<div id="zvonok" class="window">
+	<section class="ah-myup">
+		<div class="ah-close"></div>
+		<div class="ah-myup-wrapper">
+			<span class="ah-myup-span1">Закажите звонок</span>
+			<span class="ah-myup-span2">На получение расчета стоимости и консультацию</span>
+			<form action="" class="ah-common-form ah-form1">
+				<input type="text" name="uname" placeholder="Ваше имя" class="ah-uname">
+				<input type="text" name="tel" placeholder="Телефон" class="ah-tel phone">
+				<input type="submit" value="Заказать звонок" class="ah-submit" id="ah-form1-submit">
+			</form>
+		</div>
+	</section>
+</div>
+
+<div id="thanks" class="window"> 
+	<div class="ah-close"></div>
+	<div class="ah-thanks">
+		<span class="ah-title">Спасибо!</span>
+		<p>Наши специалисты с Вами свяжутся в ближайшее время.</p>	
+	</div>
+</div>
+<a href="#thanks" name="modal"></a>
+
+
+
+
+
 	
 </body>
 </html>

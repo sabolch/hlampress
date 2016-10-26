@@ -3,7 +3,47 @@
 @import "style2.css";
 @import "style3.css";
 @import "style4.css";
-@import "fonts.css";
+@import "fonts.css"; 
+
+
+
+
+// ***********************************
+#mask {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 9000;
+  background-color: #000;
+}
+.window{
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 9998; 
+}
+#thanks{
+	margin-top: 100px;
+}
+.ah-thanks{
+	position: relative;
+    background-color: #fff;
+    padding: 50px;
+    text-align: center;
+    border-radius: 3px;
+    p{
+	    font-size: 18px;
+	    margin-top: 20px;
+	    font-family: "RobotoRegular";
+    }
+}
+.ah-title{
+	display: block;
+    font-size: 40px;
+    font-family: "RobotoBold";
+}
 
 // MYUP****************************************
 
@@ -280,29 +320,30 @@
 
 // comptext***************************************
 .ah-comptext{
+	background: #fff;
 	position: relative;
 	padding: 70px 0px;
 }
-.ah-comptext:after{
-	display: none;
-	position: absolute;
-    content: "";
-    width: 440px;
-    height: 290px;
-    bottom: 0px;
-    left: -340px;
-    background: none;
-}
-.ah-comptext:before{
-	display: none;
-	position: absolute;
-    content: "";
-    width: 475px;
-    height: 222px;
-    bottom: 0px;
-    right: -300px;
-    background: none;
-}
+// .ah-comptext:after{
+// 	display: none;
+// 	position: absolute;
+//     content: "";
+//     width: 440px;
+//     height: 290px;
+//     bottom: 0px;
+//     left: -340px;
+//     background: none;
+// }
+// .ah-comptext:before{
+// 	display: none;
+// 	position: absolute;
+//     content: "";
+//     width: 305px;
+//     height: 222px;
+//     bottom: 0px;
+//     right: -300px;
+//     background: none;
+// }
 .ah-comptext-title{
 	display: block;
 	color: #31343b;
@@ -312,6 +353,9 @@
 	margin-bottom: 30px;
 	text-align: center;
 }
+.ah-comptext2{
+	width: none;
+}
 .ah-comptext1{
 	display: block;
 	font-family: "RobotoRegular";
@@ -319,7 +363,7 @@
 	font-size: 14px;
 	line-height: 22px;
 	margin-bottom: 30px;
-	span{
+	a{
 		color: #d22c00;
 		font-family: "RobotoRegular";
 		font-size: 14px;
@@ -371,6 +415,35 @@
 }
 
 @media only screen and (min-width : 992px) {
+	.ah-comptext{
+		background: url(../img/ah-seofon.jpg) bottom center no-repeat;
+		position: relative;
+		padding: 70px 0px;
+	}
+	.ah-comptext2{
+	    width: 95%;
+	    padding-left: 80px;
+	}
+	// .ah-comptext:after{
+	// 	display: block;
+	// 	position: absolute;
+	//     content: "";
+	//     width: 440px;
+	//     height: 290px;
+	//     bottom: 0px;
+	//     left: -330px;
+	//     background: url(../img/ah-text1.png) top center no-repeat;
+	// }
+	// .ah-comptext:before{
+	// 	display: block;
+	// 	position: absolute;
+	//     content: "";
+	//     width: 305px;
+	//     height: 222px;
+	//     bottom: 0px;
+	//     right: 0px;
+	//     background: url(../img/ah-text2.png) top center no-repeat;
+	// }
 	.ah-item-span{
 		font-size: 24px;
 	}
@@ -471,26 +544,26 @@
 }
 
 @media only screen and (min-width : 1400px) {
-	.ah-comptext:after{
-		display: block;
-		position: absolute;
-	    content: "";
-	    width: 440px;
-	    height: 290px;
-	    bottom: 0px;
-	    left: -340px;
-	    background: url(../img/ah-text1.png) top center no-repeat;
-	}
-	.ah-comptext:before{
-		display: block;
-		position: absolute;
-	    content: "";
-	    width: 475px;
-	    height: 222px;
-	    bottom: 0px;
-	    right: -300px;
-	    background: url(../img/ah-text2.png) top center no-repeat;
-	}
+	// .ah-comptext:after{
+	// 	display: block;
+	// 	position: absolute;
+	//     content: "";
+	//     width: 440px;
+	//     height: 290px;
+	//     bottom: 0px;
+	//     left: -340px;
+	//     background: url(../img/ah-text1.png) top center no-repeat;
+	// }
+	// .ah-comptext:before{
+	// 	display: block;
+	// 	position: absolute;
+	//     content: "";
+	//     width: 475px;
+	//     height: 222px;
+	//     bottom: 0px;
+	//     right: -300px;
+	//     background: url(../img/ah-text2.png) top center no-repeat;
+	// }
 }
 
 .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {

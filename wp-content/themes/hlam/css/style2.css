@@ -4,6 +4,40 @@
 @import url(style3.css);
 @import url(style4.css);
 @import url(fonts.css);
+#mask {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 9000;
+  background-color: #000; }
+
+.window {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 9998; }
+
+#thanks {
+  margin-top: 100px; }
+
+.ah-thanks {
+  position: relative;
+  background-color: #fff;
+  padding: 50px;
+  text-align: center;
+  border-radius: 3px; }
+  .ah-thanks p {
+    font-size: 18px;
+    margin-top: 20px;
+    font-family: "RobotoRegular"; }
+
+.ah-title {
+  display: block;
+  font-size: 40px;
+  font-family: "RobotoBold"; }
+
 .ah-myup-body {
   background-color: #5b5c59; }
 
@@ -253,28 +287,9 @@
   background: none; }
 
 .ah-comptext {
+  background: #fff;
   position: relative;
   padding: 70px 0px; }
-
-.ah-comptext:after {
-  display: none;
-  position: absolute;
-  content: "";
-  width: 440px;
-  height: 290px;
-  bottom: 0px;
-  left: -340px;
-  background: none; }
-
-.ah-comptext:before {
-  display: none;
-  position: absolute;
-  content: "";
-  width: 475px;
-  height: 222px;
-  bottom: 0px;
-  right: -300px;
-  background: none; }
 
 .ah-comptext-title {
   display: block;
@@ -285,6 +300,9 @@
   margin-bottom: 30px;
   text-align: center; }
 
+.ah-comptext2 {
+  width: none; }
+
 .ah-comptext1 {
   display: block;
   font-family: "RobotoRegular";
@@ -292,7 +310,7 @@
   font-size: 14px;
   line-height: 22px;
   margin-bottom: 30px; }
-  .ah-comptext1 span {
+  .ah-comptext1 a {
     color: #d22c00;
     font-family: "RobotoRegular";
     font-size: 14px;
@@ -330,6 +348,15 @@
   .ah-ceni-title {
     font-size: 44px; } }
 @media only screen and (min-width: 992px) {
+  .ah-comptext {
+    background: url(../img/ah-seofon.jpg) bottom center no-repeat;
+    position: relative;
+    padding: 70px 0px; }
+
+  .ah-comptext2 {
+    width: 95%;
+    padding-left: 80px; }
+
   .ah-item-span {
     font-size: 24px; }
 
@@ -426,25 +453,5 @@
     width: 545px;
     height: 72px;
     background: url(../img/ah-contactfon.png) center center no-repeat; } }
-@media only screen and (min-width: 1400px) {
-  .ah-comptext:after {
-    display: block;
-    position: absolute;
-    content: "";
-    width: 440px;
-    height: 290px;
-    bottom: 0px;
-    left: -340px;
-    background: url(../img/ah-text1.png) top center no-repeat; }
-
-  .ah-comptext:before {
-    display: block;
-    position: absolute;
-    content: "";
-    width: 475px;
-    height: 222px;
-    bottom: 0px;
-    right: -300px;
-    background: url(../img/ah-text2.png) top center no-repeat; } }
 
 /*# sourceMappingURL=style2.css.map */

@@ -80,8 +80,8 @@
       background: url(../img/ab-chel.png) no-repeat left;
       width: 20px;
       height: 20px;
-      top: 29px;
-      right: 94px; }
+      top: 0;
+      left: 10px; }
     .ab-zvonok .search-box .ab-second-input {
       position: relative; }
     .ab-zvonok .search-box .ab-second-input:after {
@@ -90,8 +90,8 @@
       background: url(../img/ab-tel.png) no-repeat left;
       width: 19px;
       height: 20px;
-      top: 29px;
-      right: 94px; }
+      top: 0px;
+      left: 10px; }
   .ab-zvonok .ab-form {
     display: block;
     position: relative;

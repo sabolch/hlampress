@@ -1,10 +1,53 @@
-@import "reset.css";
-@import "style.css";
-@import "style2.css";
-@import "style3.css";
-@import "style4.css";
-@import "fonts.css";
+.az-select{
+	font-family: "RobotoRegular";
+	font-size: 14px;
+	color:#2C3139;
+	// border-bottom: 1px dashed #2C3139;
+	margin-left: 9px;
+	position: relative;
+	display: inline-block;
+	// width: 100px;
+	text-align: left;
+	cursor: pointer;
+	select{
+		border: none;
+		background: none;
+		outline: none;
+		text-align: left;
+		-webkit-appearance: none;
+        -moz-appearance: none;
+        cursor: pointer;
+    }
+    select::-ms-expand {
+        display: none;
+    }
+	.az-options{
+		position: absolute;
+		display: none;
+		font-family: "RobotoRegular";
+		font-size: 14px;
+		color:#2C3139;
+		text-align: left;
+		// border-bottom: 1px dashed #2C3139;
+		// margin-left: 9px;
+		width: 100%;
+		// left: 50%;
+		// transform: translate(-50%, 0);
+		span{
+			display: inline-block;
+		}
 
+	}
+}
+.az-border{
+	content: '';
+	position: absolute;
+	height: 0px;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	border-bottom: 1px dashed #2C3139;
+}
 
 @media only screen and (min-width : 320px) {
 }
