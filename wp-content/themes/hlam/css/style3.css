@@ -5,13 +5,13 @@
   margin-left: 9px;
   position: relative;
   display: inline-block;
-  text-align: center;
+  text-align: left;
   cursor: pointer; }
   .az-select select {
     border: none;
     background: none;
     outline: none;
-    text-align: center;
+    text-align: left;
     -webkit-appearance: none;
     -moz-appearance: none;
     cursor: pointer; }

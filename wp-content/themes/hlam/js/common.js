@@ -36,7 +36,7 @@ $(document).ready(function(){
     //     alert($('.az-options div[data-val]').eq(0).css('width'));
     // }, 1000);
     
-    $('.az-border').width(51);
+    $('.az-border').width(54);
     // ********************************
 
     // $(".phone").mask("+ 7 (999) 999 - 99 - 99?");

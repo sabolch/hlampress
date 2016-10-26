@@ -106,7 +106,7 @@
 							
 							$(".az-options div[data-val]").click(function(){
 						        $('.az-tel').text($(this).attr('data-val'));
-						        $('.az-border').width($(this).find('span').width());
+						        $('.az-border').width($(this).find('span').width() + 4);
 						    });
 						});
 					</script>
