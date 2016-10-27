@@ -123,8 +123,9 @@
 		</div>
 	</div>
 	<div class="container ggg">
-	<img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/ggg.png" alt="">
-		<div class="row">
+	
+		<div class="row margin-l">
+		<img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/ggg.png" alt="">
 			<div class="col-md-12">
 				<div class="ab-down">
 					<span><?php the_field('zag01'); ?></span>
