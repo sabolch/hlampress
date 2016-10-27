@@ -123,7 +123,7 @@
 		</div>
 	</div>
 	<div class="container ggg">
-	<img src="<?php echo get_template_directory_uri(); ?>/img/ggg.png" alt="">
+	<img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/ggg.png" alt="">
 		<div class="row">
 			<div class="col-md-12">
 				<div class="ab-down">

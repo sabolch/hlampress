@@ -488,6 +488,9 @@
 		//margin-top: -300px;
 		padding-left:0;
 		padding-right:0px;
+		img{
+			margin:0 auto; 
+		}
 
 	}
 	.ab-div-logo{
@@ -579,9 +582,20 @@
 
 /*=============== Конец Нижняя часть Хедер ===========*/
 
+@media only screen and (min-width : 250px) {
+
+.header-bottom{
+	height:850px;
+	}  
+
+}
+
 
 @media only screen and (min-width : 320px) {
 
+	.header-bottom{
+	height:1300px !important;
+	}  
 	.ab-top-txt {
     
     padding-left: 67px !important;
