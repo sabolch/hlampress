@@ -66,7 +66,8 @@
     margin-right: 55px; }
 
   .zk_we_export_all .zk_ex_caption {
-    font-size: 48px !important; }
+    font-size: 48px !important;
+    margin-bottom: 0px !important; }
   .zk_we_export_all .zk_export_one {
     width: 20% !important; }
   .zk_we_export_all .zk_first_child {
@@ -133,7 +134,7 @@
     margin-top: 50px;
     font-family: "RobotoBold";
     text-align: center;
-    margin-bottom: 42px; }
+    margin-bottom: 20px; }
   .zk_we_export_all .zk_export_one {
     float: left;
     color: #31343b;

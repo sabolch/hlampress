@@ -5,8 +5,7 @@
 
 @media only screen and (min-width : 480px) {
 	.zk_export_one{
-		width: 50% !important;
-		
+		width: 50% !important;		
 	}
 }
 
@@ -105,7 +104,8 @@
 				//=========================WE_EXPORT=======
 	.zk_we_export_all{		
 		.zk_ex_caption{
-			font-size: 48px !important;		
+			font-size: 48px !important;
+			margin-bottom: 0px !important;		
 		}
 		.zk_export_one{
 			width:20% !important;
@@ -203,7 +203,7 @@ text-align: center;
 		margin-top: 50px;
 		font-family: "RobotoBold";
 		text-align: center;		
-		margin-bottom: 42px; 		
+		margin-bottom: 20px;		
 	}	
 	.zk_export_one{
 		float:left;		
