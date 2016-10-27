@@ -758,7 +758,7 @@
     <div class="container">
 	    <div class="row">
 		   <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
-				<?php the_field('txt81'); ?>
+				<?php echo the_field('txt81'); ?>
 			</div>
 		</div>
 	</div>
