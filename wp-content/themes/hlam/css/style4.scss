@@ -13,7 +13,7 @@
 }
 .ab-pochemy-mi{
 	text-align:center;
-	padding-top:15px;
+	padding-top:280px;
 	background:url(../img/grey-bg.jpg) center;
 	background-size:cover;
 	.ab-pochemy-mi-img-box{
@@ -474,7 +474,7 @@
 	//background:url(../img/big-bg.jpg) no-repeat  center;
 	background:url(../img/mob-bg.jpg) no-repeat  center;
 	background-size:cover;
-	height:1300px;
+	height:850px;
 	//padding-top:30px;
 	//position:relative;
 	.back-white{
@@ -585,7 +585,8 @@
 @media only screen and (min-width : 250px) {
 
 .header-bottom{
-	height:850px;
+	//height:850px !important;
+	//height:35% !important;
 	}  
 
 }
@@ -712,6 +713,10 @@
 }
 
 @media only screen and (min-width : 992px) {
+
+	.ab-pochemy-mi{
+	text-align:center;
+	padding-top:210px !important;}
 
 	.ab-pochemy-mi{
 		text-align: left;
