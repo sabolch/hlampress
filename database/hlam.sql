@@ -1,20 +1,20 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.1
+-- version 4.4.15.5
 -- http://www.phpmyadmin.net
 --
--- Хост: 127.0.0.1
--- Время создания: Окт 27 2016 г., 11:05
--- Версия сервера: 5.5.25
--- Версия PHP: 5.3.13
+-- Хост: 127.0.0.1:3306
+-- Время создания: Окт 27 2016 г., 17:11
+-- Версия сервера: 5.5.48
+-- Версия PHP: 5.5.33
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- База данных: `hlam`
@@ -27,14 +27,11 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `wp_commentmeta` (
-  `meta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `meta_id` bigint(20) unsigned NOT NULL,
   `comment_id` bigint(20) unsigned NOT NULL DEFAULT '0',
   `meta_key` varchar(255) DEFAULT NULL,
-  `meta_value` longtext,
-  PRIMARY KEY (`meta_id`),
-  KEY `comment_id` (`comment_id`),
-  KEY `meta_key` (`meta_key`(191))
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+  `meta_value` longtext
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -43,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `wp_commentmeta` (
 --
 
 CREATE TABLE IF NOT EXISTS `wp_comments` (
-  `comment_ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `comment_ID` bigint(20) unsigned NOT NULL,
   `comment_post_ID` bigint(20) unsigned NOT NULL DEFAULT '0',
   `comment_author` tinytext NOT NULL,
   `comment_author_email` varchar(100) NOT NULL DEFAULT '',
@@ -57,14 +54,8 @@ CREATE TABLE IF NOT EXISTS `wp_comments` (
   `comment_agent` varchar(255) NOT NULL DEFAULT '',
   `comment_type` varchar(20) NOT NULL DEFAULT '',
   `comment_parent` bigint(20) unsigned NOT NULL DEFAULT '0',
-  `user_id` bigint(20) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`comment_ID`),
-  KEY `comment_post_ID` (`comment_post_ID`),
-  KEY `comment_approved_date_gmt` (`comment_approved`,`comment_date_gmt`),
-  KEY `comment_date_gmt` (`comment_date_gmt`),
-  KEY `comment_parent` (`comment_parent`),
-  KEY `comment_author_email` (`comment_author_email`(10))
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+  `user_id` bigint(20) unsigned NOT NULL DEFAULT '0'
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `wp_comments`
@@ -80,7 +71,7 @@ INSERT INTO `wp_comments` (`comment_ID`, `comment_post_ID`, `comment_author`, `c
 --
 
 CREATE TABLE IF NOT EXISTS `wp_links` (
-  `link_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `link_id` bigint(20) unsigned NOT NULL,
   `link_url` varchar(255) NOT NULL DEFAULT '',
   `link_name` varchar(255) NOT NULL DEFAULT '',
   `link_image` varchar(255) NOT NULL DEFAULT '',
@@ -92,10 +83,8 @@ CREATE TABLE IF NOT EXISTS `wp_links` (
   `link_updated` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `link_rel` varchar(255) NOT NULL DEFAULT '',
   `link_notes` mediumtext NOT NULL,
-  `link_rss` varchar(255) NOT NULL DEFAULT '',
-  PRIMARY KEY (`link_id`),
-  KEY `link_visible` (`link_visible`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+  `link_rss` varchar(255) NOT NULL DEFAULT ''
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -104,13 +93,11 @@ CREATE TABLE IF NOT EXISTS `wp_links` (
 --
 
 CREATE TABLE IF NOT EXISTS `wp_options` (
-  `option_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `option_id` bigint(20) unsigned NOT NULL,
   `option_name` varchar(191) NOT NULL DEFAULT '',
   `option_value` longtext NOT NULL,
-  `autoload` varchar(20) NOT NULL DEFAULT 'yes',
-  PRIMARY KEY (`option_id`),
-  UNIQUE KEY `option_name` (`option_name`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=263 ;
+  `autoload` varchar(20) NOT NULL DEFAULT 'yes'
+) ENGINE=InnoDB AUTO_INCREMENT=266 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `wp_options`
@@ -220,7 +207,7 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (101, 'widget_calendar', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
 (102, 'widget_tag_cloud', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
 (103, 'widget_nav_menu', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
-(104, 'cron', 'a:4:{i:1477556307;a:1:{s:30:"wp_scheduled_auto_draft_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1477574029;a:3:{s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1477574064;a:1:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}s:7:"version";i:2;}', 'yes'),
+(104, 'cron', 'a:4:{i:1477574029;a:3:{s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1477574064;a:1:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1477642707;a:1:{s:30:"wp_scheduled_auto_draft_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}s:7:"version";i:2;}', 'yes'),
 (107, 'nonce_key', 'cSFhY9}c8Q0Z_k~=%ciu5igV7J%Vg5.R6A0&2tnmDn2MT3{eQKy{I+&f92&OXder', 'no'),
 (108, 'nonce_salt', 'q.XHTvVu3M^uN![}?.q}SW>cke2*PCIyBK96c^sHZ*vXp*u i=+]FmhZ;jPXvU0B', 'no'),
 (118, 'auth_key', '!XX *[+OClRK6q/w 2d6IQtkK2!2FM4eR>?iRj.oFUVrn3. l3+$(MD+?_n[wG* ', 'no'),
@@ -258,7 +245,9 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (259, '_transient_timeout_plugin_slugs', '1477637139', 'no'),
 (260, '_transient_plugin_slugs', 'a:3:{i:0;s:30:"advanced-custom-fields/acf.php";i:1;s:19:"akismet/akismet.php";i:2;s:9:"hello.php";}', 'no'),
 (261, '_transient_timeout_dash_f69de0bbfe7eaa113146875f40c02000', '1477593939', 'no'),
-(262, '_transient_dash_f69de0bbfe7eaa113146875f40c02000', '<div class="rss-widget"><ul><li><a class=''rsswidget'' href=''https://wordpress.org/news/2016/10/join-us-again-for-global-wordpress-translation-day/''>Join Us Again for Global WordPress Translation Day</a> <span class="rss-date">14.10.2016</span><div class="rssSummary">The WordPress Polyglots team is organizing the second Global WordPress Translation Day on November 12th. Everyone is invited to join – from anywhere in the world! Translating is one of the easiest ways to get involved with WordPress and contribute to the project. Global WordPress Translation Day is your chance to learn more about translating WordPress, meet [&hellip;]</div></li></ul></div><div class="rss-widget"><p><strong>Ошибка RSS</strong>: WP HTTP Error: cURL error 28: connect() timed out!</p></div><div class="rss-widget"><ul><li class="dashboard-news-plugin"><span>Популярный плагин:</span> Meta Slider&nbsp;<a href="plugin-install.php?tab=plugin-information&amp;plugin=siteorigin-panels&amp;_wpnonce=3322ea8999&amp;TB_iframe=true&amp;width=600&amp;height=800" class="thickbox open-plugin-details-modal" aria-label="Установить Meta Slider">(Установить)</a></li></ul></div>', 'no');
+(262, '_transient_dash_f69de0bbfe7eaa113146875f40c02000', '<div class="rss-widget"><ul><li><a class=''rsswidget'' href=''https://wordpress.org/news/2016/10/join-us-again-for-global-wordpress-translation-day/''>Join Us Again for Global WordPress Translation Day</a> <span class="rss-date">14.10.2016</span><div class="rssSummary">The WordPress Polyglots team is organizing the second Global WordPress Translation Day on November 12th. Everyone is invited to join – from anywhere in the world! Translating is one of the easiest ways to get involved with WordPress and contribute to the project. Global WordPress Translation Day is your chance to learn more about translating WordPress, meet [&hellip;]</div></li></ul></div><div class="rss-widget"><p><strong>Ошибка RSS</strong>: WP HTTP Error: cURL error 28: connect() timed out!</p></div><div class="rss-widget"><ul><li class="dashboard-news-plugin"><span>Популярный плагин:</span> Meta Slider&nbsp;<a href="plugin-install.php?tab=plugin-information&amp;plugin=siteorigin-panels&amp;_wpnonce=3322ea8999&amp;TB_iframe=true&amp;width=600&amp;height=800" class="thickbox open-plugin-details-modal" aria-label="Установить Meta Slider">(Установить)</a></li></ul></div>', 'no'),
+(264, '_site_transient_timeout_browser_63df1a2e5ad383e90a7677e09c37cad5', '1478175834', 'no'),
+(265, '_site_transient_browser_63df1a2e5ad383e90a7677e09c37cad5', 'a:9:{s:8:"platform";s:7:"Windows";s:4:"name";s:6:"Chrome";s:7:"version";s:12:"54.0.2840.59";s:10:"update_url";s:28:"http://www.google.com/chrome";s:7:"img_src";s:49:"http://s.wordpress.org/images/browsers/chrome.png";s:11:"img_src_ssl";s:48:"https://wordpress.org/images/browsers/chrome.png";s:15:"current_version";s:2:"18";s:7:"upgrade";b:0;s:8:"insecure";b:0;}', 'no');
 
 -- --------------------------------------------------------
 
@@ -267,14 +256,11 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 --
 
 CREATE TABLE IF NOT EXISTS `wp_postmeta` (
-  `meta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `meta_id` bigint(20) unsigned NOT NULL,
   `post_id` bigint(20) unsigned NOT NULL DEFAULT '0',
   `meta_key` varchar(255) DEFAULT NULL,
-  `meta_value` longtext,
-  PRIMARY KEY (`meta_id`),
-  KEY `post_id` (`post_id`),
-  KEY `meta_key` (`meta_key`(191))
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8937 ;
+  `meta_value` longtext
+) ENGINE=InnoDB AUTO_INCREMENT=9163 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `wp_postmeta`
@@ -383,10 +369,10 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (128, 4, 'field_5808b002ab523', 'a:11:{s:3:"key";s:19:"field_5808b002ab523";s:5:"label";s:14:"Иконка 1";s:4:"name";s:5:"ico91";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:11:"save_format";s:3:"url";s:12:"preview_size";s:9:"thumbnail";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:99;}'),
 (129, 4, 'field_5808b05eab526', 'a:14:{s:3:"key";s:19:"field_5808b05eab526";s:5:"label";s:14:"Ссылка 1";s:4:"name";s:5:"url91";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:100;}'),
 (130, 4, 'field_5808b03bab524', 'a:11:{s:3:"key";s:19:"field_5808b03bab524";s:5:"label";s:14:"Иконка 2";s:4:"name";s:5:"ico92";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:11:"save_format";s:3:"url";s:12:"preview_size";s:9:"thumbnail";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:101;}'),
-(131, 4, 'field_5808b085ab527', 'a:14:{s:3:"key";s:19:"field_5808b085ab527";s:5:"label";s:14:"Ссылка 2";s:4:"name";s:5:"url92";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:102;}');
-INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
+(131, 4, 'field_5808b085ab527', 'a:14:{s:3:"key";s:19:"field_5808b085ab527";s:5:"label";s:14:"Ссылка 2";s:4:"name";s:5:"url92";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:102;}'),
 (132, 4, 'field_5808b04bab525', 'a:11:{s:3:"key";s:19:"field_5808b04bab525";s:5:"label";s:14:"Иконка 3";s:4:"name";s:5:"ico93";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:11:"save_format";s:3:"url";s:12:"preview_size";s:9:"thumbnail";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:103;}'),
-(133, 4, 'field_5808b0a6ab528', 'a:14:{s:3:"key";s:19:"field_5808b0a6ab528";s:5:"label";s:14:"Ссылка 3";s:4:"name";s:5:"url93";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:104;}'),
+(133, 4, 'field_5808b0a6ab528', 'a:14:{s:3:"key";s:19:"field_5808b0a6ab528";s:5:"label";s:14:"Ссылка 3";s:4:"name";s:5:"url93";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:104;}');
+INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
 (135, 4, 'field_5808b11d96568', 'a:8:{s:3:"key";s:19:"field_5808b11d96568";s:5:"label";s:25:"Наши контакты";s:4:"name";s:0:"";s:4:"type";s:3:"tab";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:105;}'),
 (136, 4, 'field_5808b13e96569', 'a:14:{s:3:"key";s:19:"field_5808b13e96569";s:5:"label";s:12:"Город 1";s:4:"name";s:4:"gor1";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:107;}'),
 (137, 4, 'field_5808b1779656a', 'a:14:{s:3:"key";s:19:"field_5808b1779656a";s:5:"label";s:12:"Город 2";s:4:"name";s:4:"gor2";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:110;}'),
@@ -1590,8 +1576,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (1344, 30, '_pri4', 'field_580890a5e5c2c'),
 (1345, 30, 'pri5', ''),
 (1346, 30, '_pri5', 'field_580890a5e5c2b'),
-(1347, 30, 'pri6', '');
-INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
+(1347, 30, 'pri6', ''),
 (1348, 30, '_pri6', 'field_580890a5e5c2a'),
 (1349, 30, 'pri7', ''),
 (1350, 30, '_pri7', 'field_580890a5e5c29'),
@@ -1627,7 +1612,8 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (1380, 30, '_opi44', 'field_5808a913e003d'),
 (1381, 30, 'kar45', ''),
 (1382, 30, '_kar45', 'field_5808928e98a9b'),
-(1383, 30, 'zag45', ''),
+(1383, 30, 'zag45', '');
+INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
 (1384, 30, '_zag45', 'field_5808930898aa0'),
 (1385, 30, 'opi45', ''),
 (1386, 30, '_opi45', 'field_5808a940e003e'),
@@ -1907,7 +1893,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (1660, 29, 'opi73', 'Инвалидам'),
 (1661, 29, '_opi73', 'field_5808ae3a3eefb'),
 (1662, 29, '_', ''),
-(1663, 29, 'txt81', '<strong><span class="ah-comptext-title">Текст о компании для СЕО</span></strong>\r\n\r\nПервый в мире работающий на нефти двигатель Дизеля был пущен в ход в 1899 году. Он развивал 25 л.с. и затрачивал в час около четверти килограмма нефти на 1 л.с. Это был важный успех, но заветной мечтой Нобеля было применение дизеля в качестве судовой машины.\r\n<p class="ah-comptext1">В то время среди многих инженеров еще было распространено скептическое отношение к дизелям. Большинство считало, что эти двигатели не годятся в качестве привода для движения судов.</p>\r\n<span class="ah-comptext-subtitle">Причины для этого были достаточно вескими.</span>\r\n<ul>\r\n 	<li><span class="ah-comptext-span">Во-первых, дизели не имели заднего хода (реверса) и, установленные на корабле, могли вращать винт только в одну сторону.</span></li>\r\n 	<li><span class="ah-comptext-span">Во-вторых, первые дизели было невозможно запустить при некоторых крайних положениях поршня.</span></li>\r\n</ul>\r\n<p class="ah-comptext1">В третьих, работа дизелей с трудом поддавалась регулировке - было трудно поменять режим их работы, например, уменьшить или увеличить частоту вращения вала, увеличивая или уменьшая тем самым скорость движения судна. Эти недостатки, не имевшие большого значения при стационарной установке и небольших размерах дизеля, работавшего под постоянной нагрузкой, были весьма существенным изъяном для транспортного двигателя. Широко применявшаяся тогда паровая машина имела в этом смысле перед дизелем преимущество - реверс, изменение частоты вращения вала и пуск из любого положения достигались на ней без всякого труда. В таком случае, казалось бы, стоило ли вообще связываться с дизелем? Оказывается, стоило - в этом убеждали Нобеля элементарные расчеты.</p>'),
+(1663, 29, 'txt81', '<span class="ah-comptext-title">Текст о компании для СЕО</span>\r\n<p class="ah-comptext1">Первый в мире работающий на нефти двигатель Дизеля был пущен в ход в 1899 году. Он развивал 25 л.с. и затрачивал в час около четверти килограмма нефти на 1 л.с. Это был важный успех, но заветной мечтой Нобеля было применение дизеля в качестве судовой машины.</p>\r\n<p class="ah-comptext1">В то время среди многих инженеров еще было распространено скептическое отношение к дизелям. Большинство считало, что эти двигатели не годятся в качестве привода для движения судов.</p>\r\n<span class="ah-comptext-subtitle">Причины для этого были достаточно вескими.</span><span class="ah-comptext-span">Во-первых, дизели не имели заднего хода (реверса) и, установленные на корабле, могли вращать винт только в одну сторону.</span><span class="ah-comptext-span">Во-вторых, первые дизели было невозможно запустить при некоторых крайних положениях поршня.</span>\r\n<p class="ah-comptext1">В третьих, работа дизелей с трудом поддавалась регулировке - было трудно поменять режим их работы, например, уменьшить или увеличить частоту вращения вала, увеличивая или уменьшая тем самым скорость движения судна. Эти недостатки, не имевшие большого значения при стационарной установке и небольших размерах дизеля, работавшего под постоянной нагрузкой, были весьма существенным изъяном для транспортного двигателя. Широко применявшаяся тогда паровая машина имела в этом смысле перед дизелем преимущество - реверс, изменение частоты вращения вала и пуск из любого положения достигались на ней без всякого труда. В таком случае, казалось бы, стоило ли вообще связываться с дизелем? Оказывается, стоило - в этом убеждали Нобеля элементарные расчеты.</p>'),
 (1664, 29, '_txt81', 'field_5808af136d225'),
 (1665, 29, 'zag91', 'Закажите машину на сегодня'),
 (1666, 29, '_zag91', 'field_5808af86ab520'),
@@ -1963,7 +1949,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (1716, 29, '_kar113', 'field_5808b57b16a6e'),
 (1717, 29, 'num113', '769'),
 (1718, 29, '_num113', 'field_5808b5cb16a70'),
-(1719, 29, '_edit_lock', '1477551354:1'),
+(1719, 29, '_edit_lock', '1477571130:1'),
 (1720, 31, 'zagolovok1', 'Заголовок'),
 (1721, 31, '_zagolovok1', 'field_58087e2f7a363'),
 (1722, 31, 'kar11', ''),
@@ -2852,8 +2838,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (2618, 41, '_zagolovok1', 'field_58087e2f7a363'),
 (2619, 41, 'kar11', '34'),
 (2620, 41, '_kar11', 'field_58087e767a364'),
-(2621, 41, 'opi11', 'Старую мебель вещи и книги');
-INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
+(2621, 41, 'opi11', 'Старую мебель вещи и книги'),
 (2622, 41, '_opi11', 'field_58087eef7a365'),
 (2623, 41, 'kar12', '36'),
 (2624, 41, '_kar12', 'field_58087f2b7a366'),
@@ -2981,7 +2966,8 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (2746, 41, '_opi61', 'field_5808ab8f6f542'),
 (2747, 41, 'kar62', ''),
 (2748, 41, '_kar62', 'field_5808abba6f548'),
-(2749, 41, 'opi62', ''),
+(2749, 41, 'opi62', '');
+INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
 (2750, 41, '_opi62', 'field_5808ac146f54e'),
 (2751, 41, 'kar63', ''),
 (2752, 41, '_kar63', 'field_5808abb96f547'),
@@ -4158,8 +4144,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (3923, 54, 'gor1', ''),
 (3924, 54, '_gor1', 'field_5808b13e96569'),
 (3925, 54, 'tel101', ''),
-(3926, 54, '_tel101', 'field_5808b1ad9656d');
-INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
+(3926, 54, '_tel101', 'field_5808b1ad9656d'),
 (3927, 54, 'car101', ''),
 (3928, 54, '_car101', 'field_5808b1f596571'),
 (3929, 54, 'gor2', ''),
@@ -4267,7 +4252,8 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (4032, 56, '_pri4', 'field_580890a5e5c2c'),
 (4033, 56, 'pri5', ''),
 (4034, 56, '_pri5', 'field_580890a5e5c2b'),
-(4035, 56, 'pri6', ''),
+(4035, 56, 'pri6', '');
+INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
 (4036, 56, '_pri6', 'field_580890a5e5c2a'),
 (4037, 56, 'pri7', ''),
 (4038, 56, '_pri7', 'field_580890a5e5c29'),
@@ -5211,8 +5197,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (4979, 63, '_opi61', 'field_5808ab8f6f542'),
 (4980, 63, 'kar62', ''),
 (4981, 63, '_kar62', 'field_5808abba6f548'),
-(4982, 63, 'opi62', '');
-INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
+(4982, 63, 'opi62', ''),
 (4983, 63, '_opi62', 'field_5808ac146f54e'),
 (4984, 63, 'kar63', ''),
 (4985, 63, '_kar63', 'field_5808abb96f547'),
@@ -5390,7 +5375,8 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (5158, 71, '_pri4', 'field_580890a5e5c2c'),
 (5159, 71, 'pri5', 'Замена окон, полов, ванны или просто ремонт. (строительный мусор) '),
 (5160, 71, '_pri5', 'field_580890a5e5c2b'),
-(5161, 71, 'pri6', 'Поломка бытовой техники.'),
+(5161, 71, 'pri6', 'Поломка бытовой техники.');
+INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
 (5162, 71, '_pri6', 'field_580890a5e5c2a'),
 (5163, 71, 'pri7', 'Надоела пианино.'),
 (5164, 71, '_pri7', 'field_580890a5e5c29'),
@@ -6125,8 +6111,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (5896, 77, 'opi64', 'Собственный парк техники'),
 (5897, 77, '_opi64', 'field_5808ac116f54c'),
 (5898, 77, 'kar65', '68'),
-(5899, 77, '_kar65', 'field_5808abb76f545');
-INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
+(5899, 77, '_kar65', 'field_5808abb76f545'),
 (5900, 77, 'opi65', 'Постоянно растущее количество бригад'),
 (5901, 77, '_opi65', 'field_5808ac106f54b'),
 (5902, 77, 'kar66', '69'),
@@ -6446,7 +6431,8 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (6216, 79, '_kar14', 'field_58087fb57a36a'),
 (6217, 79, 'opi14', 'Старые окна'),
 (6218, 79, '_opi14', 'field_58087fca7a36b'),
-(6219, 79, 'kar15', '39'),
+(6219, 79, 'kar15', '39');
+INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
 (6220, 79, '_kar15', 'field_58087fe47a36c'),
 (6221, 79, 'opi15', 'Бытовую технику'),
 (6222, 79, '_opi15', 'field_580880037a36d'),
@@ -6923,8 +6909,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (6693, 81, 'opi34', 'Душевой кабины'),
 (6694, 81, '_opi34', 'field_58088d3e61a42'),
 (6695, 81, 'kar35', '53'),
-(6696, 81, '_kar35', 'field_58088cf961a40');
-INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
+(6696, 81, '_kar35', 'field_58088cf961a40'),
 (6697, 81, 'opi35', 'Перегородок'),
 (6698, 81, '_opi35', 'field_58088d3d61a41'),
 (6699, 81, 'zag31', 'и получите скидку'),
@@ -7434,7 +7419,8 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (7204, 83, '_zag51', 'field_5808aac9f7b54'),
 (7205, 83, 'tel51', '8 (499) 502-93-30'),
 (7206, 83, '_tel51', 'field_5808aaf9f7b55'),
-(7207, 83, 'zag-zag', 'Наши преимущества'),
+(7207, 83, 'zag-zag', 'Наши преимущества');
+INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
 (7208, 83, '_zag-zag', 'field_5809c8e48e1b9'),
 (7209, 83, 'kar61', '64'),
 (7210, 83, '_kar61', 'field_5808ab606f541'),
@@ -7681,8 +7667,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (7451, 84, 'kar66', '69'),
 (7452, 84, '_kar66', 'field_5808abb66f544'),
 (7453, 84, 'opi66', 'Зона обслуживания Москва и до 50 км вокруг Москвы'),
-(7454, 84, '_opi66', 'field_5808ac106f54a');
-INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
+(7454, 84, '_opi66', 'field_5808ac106f54a'),
 (7455, 84, 'kar67', '70'),
 (7456, 84, '_kar67', 'field_5808abb36f543'),
 (7457, 84, 'opi67', 'Официальные договора со свалками ТБО (мусор не выкинут в соседний лес)'),
@@ -8273,7 +8258,8 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (8044, 92, '_kar23', 'field_580882f1fb477'),
 (8045, 92, 'opi23', 'Гаражей и складов'),
 (8046, 92, '_opi23', 'field_58088b1aa6ccd'),
-(8047, 92, 'zag3', 'Закажите у нас демонтаж'),
+(8047, 92, 'zag3', 'Закажите у нас демонтаж');
+INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
 (8048, 92, '_zag3', 'field_58088c5461a3a'),
 (8049, 92, 'kar31', '48'),
 (8050, 92, '_kar31', 'field_58088ca861a3c'),
@@ -8363,8 +8349,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (8134, 92, '_kar61', 'field_5808ab606f541'),
 (8135, 92, 'opi61', 'Вывоз мусора из всей квартиры от 2 до 6 часов (зависит от захламленности).'),
 (8136, 92, '_opi61', 'field_5808ab8f6f542'),
-(8137, 92, 'kar62', '65');
-INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
+(8137, 92, 'kar62', '65'),
 (8138, 92, '_kar62', 'field_5808abba6f548'),
 (8139, 92, 'opi62', 'Ваше нахождение в квартире не обязательно'),
 (8140, 92, '_opi62', 'field_5808ac146f54e'),
@@ -8948,8 +8933,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (8718, 108, '_kar11', 'field_58087e767a364'),
 (8719, 108, 'opi11', 'Старую мебель вещи и книги'),
 (8720, 108, '_opi11', 'field_58087eef7a365'),
-(8721, 108, 'kar12', '99');
-INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
+(8721, 108, 'kar12', '99'),
 (8722, 108, '_kar12', 'field_58087f2b7a366'),
 (8723, 108, 'opi12', 'Строительный мусор, ванны и радиаторы'),
 (8724, 108, '_opi12', 'field_58087f577a367'),
@@ -9022,7 +9006,8 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (8791, 108, 'pri7', 'Надоела пианино.'),
 (8792, 108, '_pri7', 'field_580890a5e5c29'),
 (8793, 108, 'pri8', 'Чистка балконов и кладовых а также гаражей и складов.'),
-(8794, 108, '_pri8', 'field_580890a5e5c28'),
+(8794, 108, '_pri8', 'field_580890a5e5c28');
+INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
 (8795, 108, 'pri9', 'Вывоз мусора после переезда (квартиры, офисы, склады, торговые точки, развлекательные мероприятия) '),
 (8796, 108, '_pri9', 'field_580890a4e5c27'),
 (8797, 108, 'pri10', ''),
@@ -9164,7 +9149,233 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (8933, 108, 'kar113', '87'),
 (8934, 108, '_kar113', 'field_5808b57b16a6e'),
 (8935, 108, 'num113', '769'),
-(8936, 108, '_num113', 'field_5808b5cb16a70');
+(8936, 108, '_num113', 'field_5808b5cb16a70'),
+(8937, 110, 'tel01', '+7 (499) 502-93-30'),
+(8938, 110, '_tel01', 'field_5809d8484779a'),
+(8939, 110, 'zag01', 'ВЫВОЗ СТАРОЙ МЕБЕЛИ'),
+(8940, 110, '_zag01', 'field_5809d8624779b'),
+(8941, 110, 'zagolovok1', 'Мы вывозим'),
+(8942, 110, '_zagolovok1', 'field_58087e2f7a363'),
+(8943, 110, 'kar11', '98'),
+(8944, 110, '_kar11', 'field_58087e767a364'),
+(8945, 110, 'opi11', 'Старую мебель вещи и книги'),
+(8946, 110, '_opi11', 'field_58087eef7a365'),
+(8947, 110, 'kar12', '99'),
+(8948, 110, '_kar12', 'field_58087f2b7a366'),
+(8949, 110, 'opi12', 'Строительный мусор, ванны и радиаторы'),
+(8950, 110, '_opi12', 'field_58087f577a367'),
+(8951, 110, 'kar13', '100'),
+(8952, 110, '_kar13', 'field_58087f737a368'),
+(8953, 110, 'opi13', 'Пианино'),
+(8954, 110, '_opi13', 'field_58087fa17a369'),
+(8955, 110, 'kar14', '101'),
+(8956, 110, '_kar14', 'field_58087fb57a36a'),
+(8957, 110, 'opi14', 'Старые окна'),
+(8958, 110, '_opi14', 'field_58087fca7a36b'),
+(8959, 110, 'kar15', '102'),
+(8960, 110, '_kar15', 'field_58087fe47a36c'),
+(8961, 110, 'opi15', 'Бытовую технику'),
+(8962, 110, '_opi15', 'field_580880037a36d'),
+(8963, 110, 'zag12', 'Осуществляем вывоз <br>  из'),
+(8964, 110, '_zag12', 'field_58088220fb471'),
+(8965, 110, 'kar21', '43'),
+(8966, 110, '_kar21', 'field_5808824efb472'),
+(8967, 110, 'opi21', 'Квартир'),
+(8968, 110, '_opi21', 'field_58088273fb473'),
+(8969, 110, 'kar22', '44'),
+(8970, 110, '_kar22', 'field_580882a4fb475'),
+(8971, 110, 'opi22', 'Офисных и торговых <br> центров'),
+(8972, 110, '_opi22', 'field_580882d0fb476'),
+(8973, 110, 'kar23', '45'),
+(8974, 110, '_kar23', 'field_580882f1fb477'),
+(8975, 110, 'opi23', 'Гаражей и складов'),
+(8976, 110, '_opi23', 'field_58088b1aa6ccd'),
+(8977, 110, 'zag3', 'Закажите у нас демонтаж'),
+(8978, 110, '_zag3', 'field_58088c5461a3a'),
+(8979, 110, 'kar31', '48'),
+(8980, 110, '_kar31', 'field_58088ca861a3c'),
+(8981, 110, 'opi31', 'Полов'),
+(8982, 110, '_opi31', 'field_58088d4161a45'),
+(8983, 110, 'kar32', '49'),
+(8984, 110, '_kar32', 'field_58088ccb61a3d'),
+(8985, 110, 'opi32', 'Стен'),
+(8986, 110, '_opi32', 'field_58088d4061a44'),
+(8987, 110, 'kar33', '50'),
+(8988, 110, '_kar33', 'field_58088cd961a3e'),
+(8989, 110, 'opi33', 'Ванны'),
+(8990, 110, '_opi33', 'field_58088d3f61a43'),
+(8991, 110, 'kar34', '51'),
+(8992, 110, '_kar34', 'field_58088ced61a3f'),
+(8993, 110, 'opi34', 'Душевой кабины'),
+(8994, 110, '_opi34', 'field_58088d3e61a42'),
+(8995, 110, 'kar35', '53'),
+(8996, 110, '_kar35', 'field_58088cf961a40'),
+(8997, 110, 'opi35', 'Перегородок'),
+(8998, 110, '_opi35', 'field_58088d3d61a41'),
+(8999, 110, 'zag31', 'и получите скидку'),
+(9000, 110, '_zag31', 'field_58088de593309'),
+(9001, 110, 'kar-pr', '55'),
+(9002, 110, '_kar-pr', 'field_58093ec72a1e0'),
+(9003, 110, 'zag-pr', 'Причина вывоза мусора'),
+(9004, 110, '_zag-pr', 'field_58093fa6ef16a'),
+(9005, 110, 'pri1', 'Покупка новой мебели, старение старой.'),
+(9006, 110, '_pri1', 'field_58088f19e5c25'),
+(9007, 110, 'pri2', 'Освобождение комнаты или квартиры после смерти пожилого родственника, инвалида.'),
+(9008, 110, '_pri2', 'field_580890a6e5c2e'),
+(9009, 110, 'pri3', 'Чистка квартиры перед ремонтом и после ремонта.'),
+(9010, 110, '_pri3', 'field_580890a6e5c2d'),
+(9011, 110, 'pri4', 'Чистка квартиры перед или после продажи квартиры.'),
+(9012, 110, '_pri4', 'field_580890a5e5c2c'),
+(9013, 110, 'pri5', 'Замена окон, полов, ванны или просто ремонт. (строительный мусор) '),
+(9014, 110, '_pri5', 'field_580890a5e5c2b'),
+(9015, 110, 'pri6', 'Поломка бытовой техники.'),
+(9016, 110, '_pri6', 'field_580890a5e5c2a'),
+(9017, 110, 'pri7', 'Надоела пианино.'),
+(9018, 110, '_pri7', 'field_580890a5e5c29'),
+(9019, 110, 'pri8', 'Чистка балконов и кладовых а также гаражей и складов.'),
+(9020, 110, '_pri8', 'field_580890a5e5c28'),
+(9021, 110, 'pri9', 'Вывоз мусора после переезда (квартиры, офисы, склады, торговые точки, развлекательные мероприятия) '),
+(9022, 110, '_pri9', 'field_580890a4e5c27'),
+(9023, 110, 'pri10', ''),
+(9024, 110, '_pri10', 'field_580890a3e5c26'),
+(9025, 110, 'zag-bl', 'Почему именно мы?'),
+(9026, 110, '_zag-bl', 'field_5809c37556c0f'),
+(9027, 110, 'zag41', 'Мобильность бригад'),
+(9028, 110, '_zag41', 'field_5808923698a98'),
+(9029, 110, 'opi41', '(бригада рядом), современные автомобили типа «Газель» способны припарковаться там, где бункеры поставить невозможно.'),
+(9030, 110, '_opi41', 'field_5808926c98a99'),
+(9031, 110, 'zag42', 'Диспетчерская база и способы связаться с нами'),
+(9032, 110, '_zag42', 'field_5808930b98aa3'),
+(9033, 110, 'opi42', 'Можете оставить номер телефона, мы вам перезвоним. Доступны мессенжеры. Обратный звонок.'),
+(9034, 110, '_opi42', 'field_580893b998aa4'),
+(9035, 110, 'zag43', 'Обученные бригады'),
+(9036, 110, '_zag43', 'field_5808930a98aa2'),
+(9037, 110, 'opi43', 'Мы сами отключаем, демонтируем, выносим и грузим ваш мусор в нашу машину. Полный комплекс услуг.'),
+(9038, 110, '_opi43', 'field_580893e298aa5'),
+(9039, 110, 'zag44', 'Утилизация мусора только в предназначенных для этого местах'),
+(9040, 110, '_zag44', 'field_5808930998aa1'),
+(9041, 110, 'opi44', 'Никаких свалок возле дома, или в соседнем районе.'),
+(9042, 110, '_opi44', 'field_5808a913e003d'),
+(9043, 110, 'zag45', 'Скидки постоянным клиентам или риэлторским конторам'),
+(9044, 110, '_zag45', 'field_5808930898aa0'),
+(9045, 110, 'opi45', 'Приведите пять друзей, и вывоз мусора из вашей квартиры сделаем бесплатно. (мысль)'),
+(9046, 110, '_opi45', 'field_5808a940e003e'),
+(9047, 110, 'zag46', 'Нет препятствий'),
+(9048, 110, '_zag46', 'field_5808930798a9f'),
+(9049, 110, 'opi46', 'Производим очистку в антисанитарных квартирах, любой объем и тип мусора.'),
+(9050, 110, '_opi46', 'field_5808a961e003f'),
+(9051, 110, 'kar47', '104'),
+(9052, 110, '_kar47', 'field_5808aa1d80ff4'),
+(9053, 110, 'kar48', '106'),
+(9054, 110, '_kar48', 'field_5808aa5280ff6'),
+(9055, 110, 'kar49', '107'),
+(9056, 110, '_kar49', 'field_5808aa5180ff5'),
+(9057, 110, 'zag51', 'Позвоните для оценки стоимости вызова<br> или оставьте заявку'),
+(9058, 110, '_zag51', 'field_5808aac9f7b54'),
+(9059, 110, 'tel51', '8 (499) 502-93-30'),
+(9060, 110, '_tel51', 'field_5808aaf9f7b55'),
+(9061, 110, 'zag-zag', 'Наши преимущества'),
+(9062, 110, '_zag-zag', 'field_5809c8e48e1b9'),
+(9063, 110, 'kar61', '64'),
+(9064, 110, '_kar61', 'field_5808ab606f541'),
+(9065, 110, 'opi61', 'Вывоз мусора из всей квартиры от 2 до 6 часов (зависит от захламленности).'),
+(9066, 110, '_opi61', 'field_5808ab8f6f542'),
+(9067, 110, 'kar62', '65'),
+(9068, 110, '_kar62', 'field_5808abba6f548'),
+(9069, 110, 'opi62', 'Ваше нахождение в квартире не обязательно'),
+(9070, 110, '_opi62', 'field_5808ac146f54e'),
+(9071, 110, 'kar63', '66'),
+(9072, 110, '_kar63', 'field_5808abb96f547'),
+(9073, 110, 'opi63', 'Самые профессиональные менеджеры'),
+(9074, 110, '_opi63', 'field_5808ac136f54d'),
+(9075, 110, 'kar64', '67'),
+(9076, 110, '_kar64', 'field_5808abb86f546'),
+(9077, 110, 'opi64', 'Собственный парк техники'),
+(9078, 110, '_opi64', 'field_5808ac116f54c'),
+(9079, 110, 'kar65', '68'),
+(9080, 110, '_kar65', 'field_5808abb76f545'),
+(9081, 110, 'opi65', 'Постоянно растущее количество бригад'),
+(9082, 110, '_opi65', 'field_5808ac106f54b'),
+(9083, 110, 'kar66', '69'),
+(9084, 110, '_kar66', 'field_5808abb66f544'),
+(9085, 110, 'opi66', 'Зона обслуживания Москва и до 50 км вокруг Москвы'),
+(9086, 110, '_opi66', 'field_5808ac106f54a'),
+(9087, 110, 'kar67', '70'),
+(9088, 110, '_kar67', 'field_5808abb36f543'),
+(9089, 110, 'opi67', 'Официальные договора со свалками ТБО (мусор не выкинут в соседний лес)'),
+(9090, 110, '_opi67', 'field_5808ac0e6f549'),
+(9091, 110, 'zag-niz', 'Низкие цены для всех и <br>постоянные скидки'),
+(9092, 110, '_zag-niz', 'field_5809cba01dc0c'),
+(9093, 110, 'kar71', '73'),
+(9094, 110, '_kar71', 'field_5808ae193eef7'),
+(9095, 110, 'opi71', 'Пенсионерам'),
+(9096, 110, '_opi71', 'field_5808ae383eef9'),
+(9097, 110, 'kar72', '74'),
+(9098, 110, '_kar72', 'field_5808ae183eef6'),
+(9099, 110, 'opi72', 'Многодетным'),
+(9100, 110, '_opi72', 'field_5808ae393eefa'),
+(9101, 110, 'kar73', '75'),
+(9102, 110, '_kar73', 'field_5808ae1a3eef8'),
+(9103, 110, 'opi73', 'Инвалидам'),
+(9104, 110, '_opi73', 'field_5808ae3a3eefb'),
+(9105, 110, 'txt81', '<span class="ah-comptext-title">Текст о компании для СЕО</span>\r\n<p class="ah-comptext1">Первый в мире работающий на нефти двигатель Дизеля был пущен в ход в 1899 году. Он развивал 25 л.с. и затрачивал в час около четверти килограмма нефти на 1 л.с. Это был важный успех, но заветной мечтой Нобеля было применение дизеля в качестве судовой машины.</p>\r\n<p class="ah-comptext1">В то время среди многих инженеров еще было распространено скептическое отношение к дизелям. Большинство считало, что эти двигатели не годятся в качестве привода для движения судов.</p>\r\n<span class="ah-comptext-subtitle">Причины для этого были достаточно вескими.</span><span class="ah-comptext-span">Во-первых, дизели не имели заднего хода (реверса) и, установленные на корабле, могли вращать винт только в одну сторону.</span><span class="ah-comptext-span">Во-вторых, первые дизели было невозможно запустить при некоторых крайних положениях поршня.</span>\r\n<p class="ah-comptext1">В третьих, работа дизелей с трудом поддавалась регулировке - было трудно поменять режим их работы, например, уменьшить или увеличить частоту вращения вала, увеличивая или уменьшая тем самым скорость движения судна. Эти недостатки, не имевшие большого значения при стационарной установке и небольших размерах дизеля, работавшего под постоянной нагрузкой, были весьма существенным изъяном для транспортного двигателя. Широко применявшаяся тогда паровая машина имела в этом смысле перед дизелем преимущество - реверс, изменение частоты вращения вала и пуск из любого положения достигались на ней без всякого труда. В таком случае, казалось бы, стоило ли вообще связываться с дизелем? Оказывается, стоило - в этом убеждали Нобеля элементарные расчеты.</p>'),
+(9106, 110, '_txt81', 'field_5808af136d225'),
+(9107, 110, 'zag91', 'Закажите машину на сегодня'),
+(9108, 110, '_zag91', 'field_5808af86ab520'),
+(9109, 110, 'tel91', '8 (499) 502-93-30'),
+(9110, 110, '_tel91', 'field_5808afc5ab521'),
+(9111, 110, 'tel92', '8 (915) 566-55-55'),
+(9112, 110, '_tel92', 'field_5808afdeab522'),
+(9113, 110, 'ico91', ''),
+(9114, 110, '_ico91', 'field_5808b002ab523'),
+(9115, 110, 'url91', ''),
+(9116, 110, '_url91', 'field_5808b05eab526'),
+(9117, 110, 'ico92', ''),
+(9118, 110, '_ico92', 'field_5808b03bab524'),
+(9119, 110, 'url92', ''),
+(9120, 110, '_url92', 'field_5808b085ab527'),
+(9121, 110, 'ico93', ''),
+(9122, 110, '_ico93', 'field_5808b04bab525'),
+(9123, 110, 'url93', ''),
+(9124, 110, '_url93', 'field_5808b0a6ab528'),
+(9125, 110, 'zag-gor', 'Наши контакты'),
+(9126, 110, '_zag-gor', 'field_5809d0024f332'),
+(9127, 110, 'gor1', 'Москва'),
+(9128, 110, '_gor1', 'field_5808b13e96569'),
+(9129, 110, 'tel101', '8 (495) 502-93-30'),
+(9130, 110, '_tel101', 'field_5808b1ad9656d'),
+(9131, 110, 'car101', '<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=smZKyQ8W6NXGa-ImkVnph7z_OG5Otdk1&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>'),
+(9132, 110, '_car101', 'field_5808b1f596571'),
+(9133, 110, 'gor2', 'Санкт-Петербург'),
+(9134, 110, '_gor2', 'field_5808b1779656a'),
+(9135, 110, 'tel102', '8 (812) 012-12-12'),
+(9136, 110, '_tel102', 'field_5808b1ca9656e'),
+(9137, 110, 'car102', '<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=ey3ZFHxQ0c4HinHEhWTRbIUHO1ghU6D7&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>'),
+(9138, 110, '_car102', 'field_5808b22196572'),
+(9139, 110, 'gor3', 'Воронеж'),
+(9140, 110, '_gor3', 'field_5808b1819656b'),
+(9141, 110, 'tel103', '8 (495) 502-93'),
+(9142, 110, '_tel103', 'field_5808b1d796570'),
+(9143, 110, 'car103', '<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=fcctg-pmjAZvHF5pkT-hjT2-_HOz0d_f&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>'),
+(9144, 110, '_car103', 'field_5808b22c96573'),
+(9145, 110, 'gor4', 'Нижний Новгород'),
+(9146, 110, '_gor4', 'field_5808b1939656c'),
+(9147, 110, 'tel104', '8 (554) 054-45-45'),
+(9148, 110, '_tel104', 'field_5808b1d69656f'),
+(9149, 110, 'car104', '<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=PSSmQKQ3IpS1Q4YQR-WrcU_wRQDrqPWC&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>'),
+(9150, 110, '_car104', 'field_5808b23796574'),
+(9151, 110, 'kar111', '85'),
+(9152, 110, '_kar111', 'field_5808b4fa16a6c'),
+(9153, 110, 'num111', '2803'),
+(9154, 110, '_num111', 'field_5808b59c16a6f'),
+(9155, 110, 'kar112', '86'),
+(9156, 110, '_kar112', 'field_5808b56d16a6d'),
+(9157, 110, 'num112', '451'),
+(9158, 110, '_num112', 'field_5808b5cc16a71'),
+(9159, 110, 'kar113', '87'),
+(9160, 110, '_kar113', 'field_5808b57b16a6e'),
+(9161, 110, 'num113', '769'),
+(9162, 110, '_num113', 'field_5808b5cb16a70');
 
 -- --------------------------------------------------------
 
@@ -9173,7 +9384,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 --
 
 CREATE TABLE IF NOT EXISTS `wp_posts` (
-  `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `ID` bigint(20) unsigned NOT NULL,
   `post_author` bigint(20) unsigned NOT NULL DEFAULT '0',
   `post_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `post_date_gmt` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
@@ -9195,13 +9406,8 @@ CREATE TABLE IF NOT EXISTS `wp_posts` (
   `menu_order` int(11) NOT NULL DEFAULT '0',
   `post_type` varchar(20) NOT NULL DEFAULT 'post',
   `post_mime_type` varchar(100) NOT NULL DEFAULT '',
-  `comment_count` bigint(20) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`ID`),
-  KEY `post_name` (`post_name`(191)),
-  KEY `type_status_date` (`post_type`,`post_status`,`post_date`,`ID`),
-  KEY `post_parent` (`post_parent`),
-  KEY `post_author` (`post_author`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=109 ;
+  `comment_count` bigint(20) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB AUTO_INCREMENT=111 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `wp_posts`
@@ -9210,23 +9416,8 @@ CREATE TABLE IF NOT EXISTS `wp_posts` (
 INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post_content`, `post_title`, `post_excerpt`, `post_status`, `comment_status`, `ping_status`, `post_password`, `post_name`, `to_ping`, `pinged`, `post_modified`, `post_modified_gmt`, `post_content_filtered`, `post_parent`, `guid`, `menu_order`, `post_type`, `post_mime_type`, `comment_count`) VALUES
 (1, 1, '2016-10-19 16:13:48', '2016-10-19 13:13:48', 'Добро пожаловать в WordPress. Это ваша первая запись. Отредактируйте или удалите её, затем пишите!', 'Привет, мир!', '', 'publish', 'open', 'open', '', '%d0%bf%d1%80%d0%b8%d0%b2%d0%b5%d1%82-%d0%bc%d0%b8%d1%80', '', '', '2016-10-19 16:13:48', '2016-10-19 13:13:48', '', 0, 'http://hlampress/?p=1', 0, 'post', '', 1),
 (2, 1, '2016-10-19 16:13:48', '2016-10-19 13:13:48', 'Это пример страницы. От записей в блоге она отличается тем, что остаётся на одном месте и отображается в меню сайта (в большинстве тем). На странице &laquo;Детали&raquo; владельцы сайтов обычно рассказывают о себе потенциальным посетителям. Например, так:\n\n<blockquote>Привет! Днём я курьер, а вечером &#8212; подающий надежды актёр. Это мой блог. Я живу в Ростове-на-Дону, люблю своего пса Джека и пинаколаду. (И ещё попадать под дождь.)</blockquote>\n\n...или так:\n\n<blockquote>Компания &laquo;Штучки XYZ&raquo; была основана в 1971 году и с тех пор производит качественные штучки. Компания находится в Готэм-сити, имеет штат из более чем 2000 сотрудников и приносит много пользы жителям Готэма.</blockquote>\n\nПерейдите <a href="http://hlampress/wp-admin/">в консоль</a>, чтобы удалить эту страницу и создать новые. Успехов!', 'Пример страницы', '', 'trash', 'closed', 'open', '', 'sample-page__trashed', '', '', '2016-10-25 21:15:49', '2016-10-25 18:15:49', '', 0, 'http://hlampress/?page_id=2', 0, 'page', '', 0),
-(3, 1, '2016-10-19 16:14:11', '0000-00-00 00:00:00', '', 'Черновик', '', 'auto-draft', 'open', 'open', '', '', '', '', '2016-10-19 16:14:11', '0000-00-00 00:00:00', '', 0, 'http://hlampress/?p=3', 0, 'post', '', 0),
 (4, 1, '2016-10-20 11:29:34', '2016-10-20 08:29:34', '', 'Главная - хламовозов', '', 'publish', 'closed', 'closed', '', 'acf_%d0%b3%d0%bb%d0%b0%d0%b2%d0%bd%d0%b0%d1%8f-%d1%85%d0%bb%d0%b0%d0%bc%d0%be%d0%b2%d0%be%d0%b7%d0%be%d0%b2', '', '', '2016-10-21 11:58:49', '2016-10-21 08:58:49', '', 0, 'http://hlampress/?post_type=acf&#038;p=4', 0, 'acf', '', 0),
-(5, 1, '2016-10-20 11:29:55', '0000-00-00 00:00:00', '', 'Черновик', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2016-10-20 11:29:55', '0000-00-00 00:00:00', '', 0, 'http://hlampress/?page_id=5', 0, 'page', '', 0),
 (6, 1, '2016-10-20 12:13:49', '2016-10-20 09:13:49', '', '', '', 'trash', 'closed', 'closed', '', '__trashed', '', '', '2016-10-25 21:15:49', '2016-10-25 18:15:49', '', 0, 'http://hlampress/?page_id=6', 0, 'page', '', 0),
-(7, 1, '2016-10-20 12:16:36', '0000-00-00 00:00:00', '', 'Черновик', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2016-10-20 12:16:36', '0000-00-00 00:00:00', '', 0, 'http://hlampress/?page_id=7', 0, 'page', '', 0),
-(8, 1, '2016-10-20 12:17:30', '0000-00-00 00:00:00', '', 'Черновик', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2016-10-20 12:17:30', '0000-00-00 00:00:00', '', 0, 'http://hlampress/?page_id=8', 0, 'page', '', 0),
-(9, 1, '2016-10-20 12:26:29', '0000-00-00 00:00:00', '', 'Черновик', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2016-10-20 12:26:29', '0000-00-00 00:00:00', '', 0, 'http://hlampress/?page_id=9', 0, 'page', '', 0),
-(10, 1, '2016-10-20 12:41:23', '0000-00-00 00:00:00', '', 'Черновик', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2016-10-20 12:41:23', '0000-00-00 00:00:00', '', 0, 'http://hlampress/?page_id=10', 0, 'page', '', 0),
-(11, 1, '2016-10-20 14:20:58', '0000-00-00 00:00:00', '', 'Черновик', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2016-10-20 14:20:58', '0000-00-00 00:00:00', '', 0, 'http://hlampress/?page_id=11', 0, 'page', '', 0),
-(12, 1, '2016-10-20 14:26:18', '0000-00-00 00:00:00', '', 'Черновик', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2016-10-20 14:26:18', '0000-00-00 00:00:00', '', 0, 'http://hlampress/?page_id=12', 0, 'page', '', 0),
-(13, 1, '2016-10-20 14:29:13', '0000-00-00 00:00:00', '', 'Черновик', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2016-10-20 14:29:13', '0000-00-00 00:00:00', '', 0, 'http://hlampress/?page_id=13', 0, 'page', '', 0),
-(14, 1, '2016-10-20 14:31:41', '0000-00-00 00:00:00', '', 'Черновик', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2016-10-20 14:31:41', '0000-00-00 00:00:00', '', 0, 'http://hlampress/?page_id=14', 0, 'page', '', 0),
-(15, 1, '2016-10-20 14:38:05', '0000-00-00 00:00:00', '', 'Черновик', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2016-10-20 14:38:05', '0000-00-00 00:00:00', '', 0, 'http://hlampress/?page_id=15', 0, 'page', '', 0),
-(16, 1, '2016-10-20 14:47:39', '0000-00-00 00:00:00', '', 'Черновик', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2016-10-20 14:47:39', '0000-00-00 00:00:00', '', 0, 'http://hlampress/?page_id=16', 0, 'page', '', 0),
-(17, 1, '2016-10-20 14:49:23', '0000-00-00 00:00:00', '', 'Черновик', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2016-10-20 14:49:23', '0000-00-00 00:00:00', '', 0, 'http://hlampress/?page_id=17', 0, 'page', '', 0),
-(18, 1, '2016-10-20 14:56:07', '0000-00-00 00:00:00', '', 'Черновик', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2016-10-20 14:56:07', '0000-00-00 00:00:00', '', 0, 'http://hlampress/?page_id=18', 0, 'page', '', 0),
-(19, 1, '2016-10-20 15:03:07', '0000-00-00 00:00:00', '', 'Черновик', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2016-10-20 15:03:07', '0000-00-00 00:00:00', '', 0, 'http://hlampress/?page_id=19', 0, 'page', '', 0),
 (20, 1, '2016-10-20 15:18:12', '0000-00-00 00:00:00', '', 'Черновик', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2016-10-20 15:18:12', '0000-00-00 00:00:00', '', 0, 'http://hlampress/?page_id=20', 0, 'page', '', 0),
 (21, 1, '2016-10-20 15:30:57', '0000-00-00 00:00:00', '', 'Черновик', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2016-10-20 15:30:57', '0000-00-00 00:00:00', '', 0, 'http://hlampress/?page_id=21', 0, 'page', '', 0),
 (22, 1, '2016-10-20 15:32:07', '0000-00-00 00:00:00', '', 'Черновик', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2016-10-20 15:32:07', '0000-00-00 00:00:00', '', 0, 'http://hlampress/?page_id=22', 0, 'page', '', 0),
@@ -9236,7 +9427,7 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (26, 1, '2016-10-20 22:12:13', '0000-00-00 00:00:00', '', 'Черновик', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2016-10-20 22:12:13', '0000-00-00 00:00:00', '', 0, 'http://hlampress/?page_id=26', 0, 'page', '', 0),
 (27, 1, '2016-10-20 22:32:19', '2016-10-20 19:32:19', '', 'ww', '', 'trash', 'closed', 'closed', '', 'ww__trashed', '', '', '2016-10-25 21:15:49', '2016-10-25 18:15:49', '', 0, 'http://hlampress/?page_id=27', 0, 'page', '', 0),
 (28, 1, '2016-10-20 22:32:19', '2016-10-20 19:32:19', '', 'ww', '', 'inherit', 'closed', 'closed', '', '27-revision-v1', '', '', '2016-10-20 22:32:19', '2016-10-20 19:32:19', '', 27, 'http://hlampress/2016/10/20/27-revision-v1/', 0, 'revision', '', 0),
-(29, 1, '2016-10-20 22:37:47', '2016-10-20 19:37:47', '', 'Хламовозов', '', 'publish', 'closed', 'closed', '', 'double', '', '', '2016-10-27 09:55:44', '2016-10-27 06:55:44', '', 0, 'http://hlampress/?page_id=29', 0, 'page', '', 0),
+(29, 1, '2016-10-20 22:37:47', '2016-10-20 19:37:47', '', 'Хламовозов', '', 'publish', 'closed', 'closed', '', 'double', '', '', '2016-10-27 15:25:03', '2016-10-27 12:25:03', '', 0, 'http://hlampress/?page_id=29', 0, 'page', '', 0),
 (30, 1, '2016-10-20 22:37:47', '2016-10-20 19:37:47', '', '', '', 'inherit', 'closed', 'closed', '', '29-revision-v1', '', '', '2016-10-20 22:37:47', '2016-10-20 19:37:47', '', 29, 'http://hlampress/2016/10/20/29-revision-v1/', 0, 'revision', '', 0),
 (31, 1, '2016-10-20 22:47:43', '2016-10-20 19:47:43', '', '', '', 'inherit', 'closed', 'closed', '', '29-revision-v1', '', '', '2016-10-20 22:47:43', '2016-10-20 19:47:43', '', 29, 'http://hlampress/2016/10/20/29-revision-v1/', 0, 'revision', '', 0),
 (33, 1, '2016-10-20 22:50:09', '2016-10-20 19:50:09', '', '', '', 'inherit', 'closed', 'closed', '', '29-revision-v1', '', '', '2016-10-20 22:50:09', '2016-10-20 19:50:09', '', 29, 'http://hlampress/2016/10/20/29-revision-v1/', 0, 'revision', '', 0),
@@ -9309,7 +9500,9 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (105, 1, '2016-10-27 09:46:33', '2016-10-27 06:46:33', '', 'Хламовозов', '', 'inherit', 'closed', 'closed', '', '29-revision-v1', '', '', '2016-10-27 09:46:33', '2016-10-27 06:46:33', '', 29, 'http://hlampress/2016/10/27/29-revision-v1/', 0, 'revision', '', 0),
 (106, 1, '2016-10-27 09:55:20', '2016-10-27 06:55:20', '', 'mb2', '', 'inherit', 'open', 'closed', '', 'mb2', '', '', '2016-10-27 09:55:20', '2016-10-27 06:55:20', '', 29, 'http://hlampress/wp-content/uploads/2016/10/mb2.png', 0, 'attachment', 'image/png', 0),
 (107, 1, '2016-10-27 09:55:36', '2016-10-27 06:55:36', '', 'mb3', '', 'inherit', 'open', 'closed', '', 'mb3', '', '', '2016-10-27 09:55:36', '2016-10-27 06:55:36', '', 29, 'http://hlampress/wp-content/uploads/2016/10/mb3.png', 0, 'attachment', 'image/png', 0),
-(108, 1, '2016-10-27 09:55:44', '2016-10-27 06:55:44', '', 'Хламовозов', '', 'inherit', 'closed', 'closed', '', '29-revision-v1', '', '', '2016-10-27 09:55:44', '2016-10-27 06:55:44', '', 29, 'http://hlampress/2016/10/27/29-revision-v1/', 0, 'revision', '', 0);
+(108, 1, '2016-10-27 09:55:44', '2016-10-27 06:55:44', '', 'Хламовозов', '', 'inherit', 'closed', 'closed', '', '29-revision-v1', '', '', '2016-10-27 09:55:44', '2016-10-27 06:55:44', '', 29, 'http://hlampress/2016/10/27/29-revision-v1/', 0, 'revision', '', 0),
+(109, 1, '2016-10-27 15:23:55', '0000-00-00 00:00:00', '', 'Черновик', '', 'auto-draft', 'open', 'open', '', '', '', '', '2016-10-27 15:23:55', '0000-00-00 00:00:00', '', 0, 'http://hlampress/?p=109', 0, 'post', '', 0),
+(110, 1, '2016-10-27 15:25:03', '2016-10-27 12:25:03', '', 'Хламовозов', '', 'inherit', 'closed', 'closed', '', '29-revision-v1', '', '', '2016-10-27 15:25:03', '2016-10-27 12:25:03', '', 29, 'http://hlampress/2016/10/27/29-revision-v1/', 0, 'revision', '', 0);
 
 -- --------------------------------------------------------
 
@@ -9318,14 +9511,11 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 --
 
 CREATE TABLE IF NOT EXISTS `wp_termmeta` (
-  `meta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `meta_id` bigint(20) unsigned NOT NULL,
   `term_id` bigint(20) unsigned NOT NULL DEFAULT '0',
   `meta_key` varchar(255) DEFAULT NULL,
-  `meta_value` longtext,
-  PRIMARY KEY (`meta_id`),
-  KEY `term_id` (`term_id`),
-  KEY `meta_key` (`meta_key`(191))
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+  `meta_value` longtext
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -9334,14 +9524,11 @@ CREATE TABLE IF NOT EXISTS `wp_termmeta` (
 --
 
 CREATE TABLE IF NOT EXISTS `wp_terms` (
-  `term_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `term_id` bigint(20) unsigned NOT NULL,
   `name` varchar(200) NOT NULL DEFAULT '',
   `slug` varchar(200) NOT NULL DEFAULT '',
-  `term_group` bigint(10) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`term_id`),
-  KEY `slug` (`slug`(191)),
-  KEY `name` (`name`(191))
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+  `term_group` bigint(10) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `wp_terms`
@@ -9359,9 +9546,7 @@ INSERT INTO `wp_terms` (`term_id`, `name`, `slug`, `term_group`) VALUES
 CREATE TABLE IF NOT EXISTS `wp_term_relationships` (
   `object_id` bigint(20) unsigned NOT NULL DEFAULT '0',
   `term_taxonomy_id` bigint(20) unsigned NOT NULL DEFAULT '0',
-  `term_order` int(11) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`object_id`,`term_taxonomy_id`),
-  KEY `term_taxonomy_id` (`term_taxonomy_id`)
+  `term_order` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -9378,16 +9563,13 @@ INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`, `term_orde
 --
 
 CREATE TABLE IF NOT EXISTS `wp_term_taxonomy` (
-  `term_taxonomy_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `term_taxonomy_id` bigint(20) unsigned NOT NULL,
   `term_id` bigint(20) unsigned NOT NULL DEFAULT '0',
   `taxonomy` varchar(32) NOT NULL DEFAULT '',
   `description` longtext NOT NULL,
   `parent` bigint(20) unsigned NOT NULL DEFAULT '0',
-  `count` bigint(20) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`term_taxonomy_id`),
-  UNIQUE KEY `term_id_taxonomy` (`term_id`,`taxonomy`),
-  KEY `taxonomy` (`taxonomy`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+  `count` bigint(20) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `wp_term_taxonomy`
@@ -9403,14 +9585,11 @@ INSERT INTO `wp_term_taxonomy` (`term_taxonomy_id`, `term_id`, `taxonomy`, `desc
 --
 
 CREATE TABLE IF NOT EXISTS `wp_usermeta` (
-  `umeta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `umeta_id` bigint(20) unsigned NOT NULL,
   `user_id` bigint(20) unsigned NOT NULL DEFAULT '0',
   `meta_key` varchar(255) DEFAULT NULL,
-  `meta_value` longtext,
-  PRIMARY KEY (`umeta_id`),
-  KEY `user_id` (`user_id`),
-  KEY `meta_key` (`meta_key`(191))
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=19 ;
+  `meta_value` longtext
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `wp_usermeta`
@@ -9430,7 +9609,7 @@ INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 (11, 1, 'wp_user_level', '10'),
 (12, 1, 'dismissed_wp_pointers', ''),
 (13, 1, 'show_welcome_panel', '1'),
-(15, 1, 'wp_dashboard_quick_press_last_post_id', '3'),
+(15, 1, 'wp_dashboard_quick_press_last_post_id', '109'),
 (16, 1, 'session_tokens', 'a:5:{s:64:"2546a61d75ba4dec3ac481c8d024305af5ed6caed3fcbee7f90bf1005af20238";a:4:{s:10:"expiration";i:1478160962;s:2:"ip";s:9:"127.0.0.1";s:2:"ua";s:101:"Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.59 Safari/537.36";s:5:"login";i:1476951362;}s:64:"1da9defc14af9d01f33ee02b3ec1dc491e9c7124b1617fd9fafc4239ff6713b7";a:4:{s:10:"expiration";i:1478200317;s:2:"ip";s:9:"127.0.0.1";s:2:"ua";s:115:"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36";s:5:"login";i:1476990717;}s:64:"d0459e664659a00c8caf26192142950689d53f7e63a8a3dc80939e2efe8a9167";a:4:{s:10:"expiration";i:1477655534;s:2:"ip";s:9:"127.0.0.1";s:2:"ua";s:108:"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36";s:5:"login";i:1477482734;}s:64:"7abecf5953d9a03fc719375acf17fe8e4b7e0e814419365d41bbb3cfd173fcb1";a:4:{s:10:"expiration";i:1477663511;s:2:"ip";s:9:"127.0.0.1";s:2:"ua";s:72:"Mozilla/5.0 (Windows NT 6.1; WOW64; rv:49.0) Gecko/20100101 Firefox/49.0";s:5:"login";i:1477490711;}s:64:"65e7875441208419e3596dcca8e46a255c303ce5e38632e48e075323f5526ae1";a:4:{s:10:"expiration";i:1478760309;s:2:"ip";s:9:"127.0.0.1";s:2:"ua";s:65:"Mozilla/5.0 (Windows NT 6.1; rv:49.0) Gecko/20100101 Firefox/49.0";s:5:"login";i:1477550709;}}'),
 (17, 1, 'wp_user-settings', 'libraryContent=browse'),
 (18, 1, 'wp_user-settings-time', '1477000514');
@@ -9442,7 +9621,7 @@ INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 --
 
 CREATE TABLE IF NOT EXISTS `wp_users` (
-  `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `ID` bigint(20) unsigned NOT NULL,
   `user_login` varchar(60) NOT NULL DEFAULT '',
   `user_pass` varchar(255) NOT NULL DEFAULT '',
   `user_nicename` varchar(50) NOT NULL DEFAULT '',
@@ -9451,12 +9630,8 @@ CREATE TABLE IF NOT EXISTS `wp_users` (
   `user_registered` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `user_activation_key` varchar(255) NOT NULL DEFAULT '',
   `user_status` int(11) NOT NULL DEFAULT '0',
-  `display_name` varchar(250) NOT NULL DEFAULT '',
-  PRIMARY KEY (`ID`),
-  KEY `user_login_key` (`user_login`),
-  KEY `user_nicename` (`user_nicename`),
-  KEY `user_email` (`user_email`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+  `display_name` varchar(250) NOT NULL DEFAULT ''
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `wp_users`
@@ -9465,6 +9640,168 @@ CREATE TABLE IF NOT EXISTS `wp_users` (
 INSERT INTO `wp_users` (`ID`, `user_login`, `user_pass`, `user_nicename`, `user_email`, `user_url`, `user_registered`, `user_activation_key`, `user_status`, `display_name`) VALUES
 (1, 'admin', '$P$B.uF3L7rmFd1WblNWMADK2sp4oFXJe/', 'admin', 'sabolch@yandex.ru', '', '2016-10-19 13:13:48', '', 0, 'admin');
 
+--
+-- Индексы сохранённых таблиц
+--
+
+--
+-- Индексы таблицы `wp_commentmeta`
+--
+ALTER TABLE `wp_commentmeta`
+  ADD PRIMARY KEY (`meta_id`),
+  ADD KEY `comment_id` (`comment_id`),
+  ADD KEY `meta_key` (`meta_key`(191));
+
+--
+-- Индексы таблицы `wp_comments`
+--
+ALTER TABLE `wp_comments`
+  ADD PRIMARY KEY (`comment_ID`),
+  ADD KEY `comment_post_ID` (`comment_post_ID`),
+  ADD KEY `comment_approved_date_gmt` (`comment_approved`,`comment_date_gmt`),
+  ADD KEY `comment_date_gmt` (`comment_date_gmt`),
+  ADD KEY `comment_parent` (`comment_parent`),
+  ADD KEY `comment_author_email` (`comment_author_email`(10));
+
+--
+-- Индексы таблицы `wp_links`
+--
+ALTER TABLE `wp_links`
+  ADD PRIMARY KEY (`link_id`),
+  ADD KEY `link_visible` (`link_visible`);
+
+--
+-- Индексы таблицы `wp_options`
+--
+ALTER TABLE `wp_options`
+  ADD PRIMARY KEY (`option_id`),
+  ADD UNIQUE KEY `option_name` (`option_name`);
+
+--
+-- Индексы таблицы `wp_postmeta`
+--
+ALTER TABLE `wp_postmeta`
+  ADD PRIMARY KEY (`meta_id`),
+  ADD KEY `post_id` (`post_id`),
+  ADD KEY `meta_key` (`meta_key`(191));
+
+--
+-- Индексы таблицы `wp_posts`
+--
+ALTER TABLE `wp_posts`
+  ADD PRIMARY KEY (`ID`),
+  ADD KEY `post_name` (`post_name`(191)),
+  ADD KEY `type_status_date` (`post_type`,`post_status`,`post_date`,`ID`),
+  ADD KEY `post_parent` (`post_parent`),
+  ADD KEY `post_author` (`post_author`);
+
+--
+-- Индексы таблицы `wp_termmeta`
+--
+ALTER TABLE `wp_termmeta`
+  ADD PRIMARY KEY (`meta_id`),
+  ADD KEY `term_id` (`term_id`),
+  ADD KEY `meta_key` (`meta_key`(191));
+
+--
+-- Индексы таблицы `wp_terms`
+--
+ALTER TABLE `wp_terms`
+  ADD PRIMARY KEY (`term_id`),
+  ADD KEY `slug` (`slug`(191)),
+  ADD KEY `name` (`name`(191));
+
+--
+-- Индексы таблицы `wp_term_relationships`
+--
+ALTER TABLE `wp_term_relationships`
+  ADD PRIMARY KEY (`object_id`,`term_taxonomy_id`),
+  ADD KEY `term_taxonomy_id` (`term_taxonomy_id`);
+
+--
+-- Индексы таблицы `wp_term_taxonomy`
+--
+ALTER TABLE `wp_term_taxonomy`
+  ADD PRIMARY KEY (`term_taxonomy_id`),
+  ADD UNIQUE KEY `term_id_taxonomy` (`term_id`,`taxonomy`),
+  ADD KEY `taxonomy` (`taxonomy`);
+
+--
+-- Индексы таблицы `wp_usermeta`
+--
+ALTER TABLE `wp_usermeta`
+  ADD PRIMARY KEY (`umeta_id`),
+  ADD KEY `user_id` (`user_id`),
+  ADD KEY `meta_key` (`meta_key`(191));
+
+--
+-- Индексы таблицы `wp_users`
+--
+ALTER TABLE `wp_users`
+  ADD PRIMARY KEY (`ID`),
+  ADD KEY `user_login_key` (`user_login`),
+  ADD KEY `user_nicename` (`user_nicename`),
+  ADD KEY `user_email` (`user_email`);
+
+--
+-- AUTO_INCREMENT для сохранённых таблиц
+--
+
+--
+-- AUTO_INCREMENT для таблицы `wp_commentmeta`
+--
+ALTER TABLE `wp_commentmeta`
+  MODIFY `meta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT для таблицы `wp_comments`
+--
+ALTER TABLE `wp_comments`
+  MODIFY `comment_ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT для таблицы `wp_links`
+--
+ALTER TABLE `wp_links`
+  MODIFY `link_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT для таблицы `wp_options`
+--
+ALTER TABLE `wp_options`
+  MODIFY `option_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=266;
+--
+-- AUTO_INCREMENT для таблицы `wp_postmeta`
+--
+ALTER TABLE `wp_postmeta`
+  MODIFY `meta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9163;
+--
+-- AUTO_INCREMENT для таблицы `wp_posts`
+--
+ALTER TABLE `wp_posts`
+  MODIFY `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=111;
+--
+-- AUTO_INCREMENT для таблицы `wp_termmeta`
+--
+ALTER TABLE `wp_termmeta`
+  MODIFY `meta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT для таблицы `wp_terms`
+--
+ALTER TABLE `wp_terms`
+  MODIFY `term_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT для таблицы `wp_term_taxonomy`
+--
+ALTER TABLE `wp_term_taxonomy`
+  MODIFY `term_taxonomy_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT для таблицы `wp_usermeta`
+--
+ALTER TABLE `wp_usermeta`
+  MODIFY `umeta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=19;
+--
+-- AUTO_INCREMENT для таблицы `wp_users`
+--
+ALTER TABLE `wp_users`
+  MODIFY `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
