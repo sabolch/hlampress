@@ -3928,6 +3928,16 @@ button.close {
         display: none!important
     }
 }
+@media (max-width: 768px) {
+    .xa-osush h2{
+        font-size: 32px;
+    }
+}
+@media (max-width: 568px) {
+    .xa-osush h2{
+        font-size: 28px;
+    }
+}
 .visible-print {
     display: none!important
 }
