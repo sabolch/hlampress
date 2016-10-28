@@ -62,8 +62,8 @@
 	              <li class=""><a href="#contact">Контакты</a></li>
 	            </ul>
 	          </div>
-	          <div class="col-md-3 col-sm-12">
-	            <span class="xa-phone">
+	          <div class="col-md-3 col-sm-12 xa-phone">
+	            <span >
 	              <a href="<?php echo get_template_directory_uri(); ?>/tel:+7 (499) 502-93-30 ">+7 (499) 502-93-30 </a>
 	            </span>
 	          </div>

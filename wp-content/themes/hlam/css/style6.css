@@ -220,6 +220,8 @@ footer{
 	font-size: 24px;
 	font-family: "RobotoBold";
 	white-space: nowrap;
+    padding: 0;
+    text-align: right;
 }
 .xa-logo{
 	padding-top: 5px;
@@ -276,8 +278,11 @@ footer{
 
 .nav{
 	text-transform: uppercase !important;
-	font-family: "RobotoRegular";
+	font-family: "RobotoBold";
 	font-size: 14px;
+}
+.nav a{
+    color: #31343b !important;
 }
 
 .xa-phone a{
