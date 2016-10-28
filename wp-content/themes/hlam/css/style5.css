@@ -49,19 +49,19 @@
     text-align: center; }
 
 .zk_vivoz {
-  padding: 50px 0px;
+  padding-top: 15px;
   font-size: 18px;
   font-family: "RobotoRegular";
   color: #646464;
-  padding-bottom: 0px; }
+  padding-bottom: 50px; }
   .zk_vivoz .zk_vivoz_caption {
     font-size: 27px;
     font-family: "RobotoBold";
     color: #31343b;
     display: inline-block;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
     text-align: left;
-    margin-top: 35px;
+    margin-top: 25px;
     margin-left: 14px; }
   .zk_vivoz .zk_vivoz_man {
     visibility: hidden;
@@ -69,11 +69,12 @@
   .zk_vivoz ul li {
     line-height: 1.5em;
     padding-top: 14px;
-    margin: 14px;
+    margin: 0px;
     background: url(..//img/zk_vivoz.png) center left no-repeat;
     padding-left: 40px; }
-  .zk_vivoz ul li:last-child {
-    background: url(..//img/zk_vivoz.png) top 18px left no-repeat; }
+
+.second_v li:last-child {
+  background: url(..//img/zk_vivoz.png) top 18px left no-repeat; }
 
 .zk_we_export_all {
   width: 100%; }
@@ -105,7 +106,12 @@
     font-size: 40px !important; }
 
   .zk_vivoz_caption {
-    text-align: left !important; }
+    text-align: left !important;
+    font-size: 38px !important; }
+
+  .zk_vivoz ul li {
+    padding-top: 14px;
+    margin: 14px; }
 
   .zk_we_export_all .zk_ex_caption {
     font-size: 48px !important; }
@@ -132,28 +138,33 @@
   .zk_pr_ph {
     padding-bottom: 43px; }
 
-  .zk_vivoz .zk_vivoz_caption {
-    font-size: 45px !important;
-    text-align: left;
-    margin-top: 25px !important;
-    margin-bottom: 20px !important;
-    font-size: 33px;
-    margin-left: 14px; }
-  .zk_vivoz .zk_vivoz_man {
-    float: left;
-    width: 225px;
-    height: 549px;
-    text-align: center;
-    background-image: url(..//img/zk_vivoz_man.png) no-repeat;
-    visibility: visible !important;
-    display: inline-block !important;
-    margin-right: 38px !important; }
-  .zk_vivoz .first_v {
-    float: left;
-    width: 40%; }
-  .zk_vivoz .second_v {
-    float: left;
-    width: 30%; }
+  .zk_vivoz {
+    padding-bottom: 0px; }
+    .zk_vivoz .zk_vivoz_caption {
+      font-size: 45px !important;
+      text-align: left;
+      margin-top: 25px !important;
+      margin-bottom: 20px !important;
+      font-size: 33px;
+      margin-left: 14px; }
+    .zk_vivoz .zk_vivoz_man {
+      float: left;
+      width: 225px;
+      height: 549px;
+      text-align: center;
+      background-image: url(..//img/zk_vivoz_man.png) no-repeat;
+      visibility: visible !important;
+      display: inline-block !important;
+      margin-right: 38px !important; }
+    .zk_vivoz .first_v {
+      float: left;
+      width: 40%; }
+    .zk_vivoz .second_v {
+      float: left;
+      width: 30%; }
+    .zk_vivoz ul li {
+      padding-top: 14px;
+      margin: 14px; }
 
   #zk-1, #zk-2 {
     margin-top: 4px; } }
