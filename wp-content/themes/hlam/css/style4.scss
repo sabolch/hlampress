@@ -795,8 +795,17 @@
 @media only screen and (min-width : 1248px) {
 
 	.header-bottom{
+		.ab-div-logo, {
+			margin-top: 42px; 
+		}
+		.ab-top-txt{
+			margin-top: 71px; 
+		}
+		.ab-top-right{
+			margin-top:64px; 
+		}
 		.ab-down{
-			padding-top: 300px;
+			padding-top: 250px !important;
 			padding-left:20px;
 			a{
 				margin-top: 37px !important; 
