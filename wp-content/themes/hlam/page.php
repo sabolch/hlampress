@@ -567,17 +567,18 @@
 		    <div class="ah-ceniiimg">
 		    	<span class="ah-ceniiimg-span">От<br><span>200</span><br>рублей за<br>предмет</span>
 		    </div>
-				<span class="ah-ceni-title"><?php the_field('zag-niz'); ?></span>
+			    <span class="ah-ceni-title">Низкие цены для всех<br class="ah-br"> и <br class="ah-br">постоянные скидки</span>
+				<!-- <span class="ah-ceni-title"><?php the_field('zag-niz'); ?></span> -->
 				<div class="ah-ceni-wrap">
-					<div class="ah-ceni-item">
+					<div class="ah-ceni-item ah-ceni-item1">
 						<?php if($my_img=get_field("kar71")){echo '<img src="'.$my_img.'"/>';}?>
 						<span class="ah-item-span"><?php the_field('opi71'); ?></span>	
 					</div>
-					<div class="ah-ceni-item">
+					<div class="ah-ceni-item ah-ceni-item2">
 						<?php if($my_img=get_field("kar72")){echo '<img src="'.$my_img.'"/>';}?>
 						<span class="ah-item-span"><?php the_field('opi72'); ?></span>				
 					</div>
-					<div class="ah-ceni-item ah-ceni-item1">
+					<div class="ah-ceni-item ah-ceni-item3">
 						<?php if($my_img=get_field("kar73")){echo '<img src="'.$my_img.'"/>';}?>
 						<span class="ah-item-span"><?php the_field('opi73'); ?></span>		
 					</div>
