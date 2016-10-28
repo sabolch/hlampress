@@ -168,14 +168,14 @@
 </div>				
 <section class="xa-osush">
   <div class="container">
-    <div class="row">
+    <div class="row xa-box">
       <div class="col-md-12">
         <h2 class="wow bounceInDown"><?php the_field('zag12'); ?></h2>
         <div class="xa-os wow bounceInLeft">
           <div class="col-md-4 col-sm-4 col-xs-12">
             <div class="xa-vbox">
               <?php if($my_img=get_field("kar21")){echo '<img src="'.$my_img.'"/>';}?>
-              <p><?php the_field('opi21'); ?></p>
+              <p class="xa-design"><?php the_field('opi21'); ?></p>
             </div>
           </div>
           <div class="col-md-4 col-sm-4 col-xs-12">
@@ -202,7 +202,7 @@
           <h2 class="wow bounceInDown"><?php the_field('zag3'); ?></h2>
         </div>
       </div>
-      <div class="row wow bounceInLeft">
+      <div class="row wow bounceInLeft xa-perfect">
         <div class="col-md-2 col-sm-4 xa-newcol col-xs-6">
           <div class="xa-zakbox">
             <?php if($my_img=get_field("kar31")){echo '<img src="'.$my_img.'"/>';}?>
@@ -224,7 +224,7 @@
         <div class="col-md-2 col-sm-4 xa-newcol xa-col50 col-xs-6">
           <div class="xa-zakbox">
             <?php if($my_img=get_field("kar34")){echo '<img src="'.$my_img.'"/>';}?>
-            <p>Д<?php the_field('opi34'); ?></p>
+            <p><?php the_field('opi34'); ?></p>
           </div>
         </div>
         <div class="col-md-2 col-sm-4 xa-newcol xa-col50 col-xs-6 xa-col100">
@@ -236,7 +236,7 @@
       </div>
       <div class="row xa-none">
         <div class="col-md-12">
-          <h2 class="wow bounceInUp"><?php the_field('zag31'); ?></h2>
+          <h2 class="wow bounceInUp xa-super-design"><?php the_field('zag31'); ?></h2>
         </div>
       </div>
     </div>
