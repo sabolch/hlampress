@@ -10,7 +10,6 @@
 	background-image: url('../img/osuh.jpg');
 	background-repeat: no-repeat;
 	background-position: center;
-outline: 1px solid red;
 	padding: 191px 0 122px 0;
 }
 .xa-osush h2{
@@ -34,7 +33,6 @@ outline: 1px solid red;
 	text-align: center;
 }
 .xa-box{
-    outline: 1px solid red;
     margin-top: 0;
     max-width: 1144px;
     padding-left: 29px;
@@ -73,7 +71,6 @@ footer{
         position: relative;
         max-width: 1006px;
         padding-top: 11px;
-        outline: 1px solid red;
         margin-left: 64px;
     }
     .xa-super-design{
