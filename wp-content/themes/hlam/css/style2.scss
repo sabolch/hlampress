@@ -149,7 +149,7 @@
 
 // ZAKAZ***************************************
 .ah-zakaz{
-	padding: 20px;
+	padding: 35px 20px;
 	background: url(../img/ah-cenifonbottom.jpg) top center no-repeat;
 	background-size: cover;
 	text-align: center;
@@ -160,6 +160,7 @@
 	color: #fff;
 	font-size: 40px;
 	line-height: 36px;
+	margin-left: 0px;
 }
 .ah-zakaz-link{
 	display: block;
@@ -173,8 +174,8 @@
 	line-height: 56px;
 	text-transform: uppercase;
 	text-align: center;
-	margin-left: 0px;
 	margin-top: 15px;
+	margin-left: 0px;
 }
 .ah-zakaz-link:hover{
 	background: lighten(#ffc501, 20%);
@@ -186,9 +187,9 @@
 	background: none;
 	width: 261px;
 	height: 207px;
-	top: -21px;
+	top: -12px;
 	right: 0px;
-	padding: 38px 57px 10px 10px; 
+	padding: 41px 57px 10px 10px; 
 }
 .ah-br{
 	display: none;
@@ -207,7 +208,7 @@
 }
 .ah-ceni{
 	position: relative;
-	padding: 20px;
+	padding: 35px 20px;
 	background: url(../img/ah-cenifon.jpg) top center no-repeat;
 	background-size: cover;
 	text-align: center;
@@ -228,8 +229,8 @@
     content: "";
     width: 468px;
     height: 244px;
-    top: -124px;
-    left: -218px;
+    top: -144px;
+    left: -195px;
     background: none;
 }
 .ah-ceni-wrap{
@@ -244,8 +245,8 @@
 }
 .ah-item-span{
 	position: absolute;
-	left: 0px;
-	bottom: -46px;
+	left: -3px;
+	bottom: -38px;
 	display: block;
 	font-family: "RobotoRegular";
 	color: #000;
@@ -268,7 +269,7 @@
 }
 // contact****************************************
 .ah-contakt{
-	padding: 20px 0px;
+	padding: 35px 0px;
 }
 .ah-contakt-bottom{
 	width: 100%;
@@ -299,7 +300,7 @@
 	font-size: 48px;
 	line-height: 39px;
 	text-align: center;
-	margin-bottom: 50px;
+	margin-bottom: 59px;
 }
 .ah-contakt-span{
 	display: block;
@@ -328,7 +329,7 @@
 .ah-comptext{
 	background: #fff;
 	position: relative;
-	padding: 70px 0px;
+	padding: 35px 20px 35px 20px;
 }
 // .ah-comptext:after{
 // 	display: none;
@@ -356,7 +357,7 @@
 	font-family: "RobotoBold";
 	font-size: 48px;
 	line-height: 54px;
-	margin-bottom: 30px;
+	margin-bottom: 35px;
 	text-align: center;
 }
 .ah-comptext2{
@@ -368,7 +369,7 @@
 	color: #656565;
 	font-size: 14px;
 	line-height: 22px;
-	margin-bottom: 30px;
+	margin-bottom: 32px;
 	a{
 		color: #d22c00;
 		font-family: "RobotoRegular";
@@ -424,7 +425,7 @@
 	.ah-comptext{
 		background: url(../img/ah-seofon.jpg) bottom center no-repeat;
 		position: relative;
-		padding: 70px 0px;
+		padding: 101px 115px 42px 115px;
 	}
 	.ah-comptext2{
 	    width: 95%;
@@ -459,9 +460,9 @@
 		background: url(../img/ah-ceniiimg.png) center center no-repeat;
 		width: 261px;
 		height: 207px;
-		top: -21px;
+		top: -12px;
 		right: 0px;
-		padding: 38px 57px 10px 10px; 
+		padding: 41px 57px 10px 10px; 
 	}
 	.ah-ceni-title:before{
 		display: block;
@@ -469,15 +470,15 @@
 	    content: "";
 	    width: 468px;
 	    height: 244px;
-	    top: -124px;
-	    left: -218px;
+		top: -144px;
+		left: -195px;
 	    background: url(../img/ah-ceniicar.png) center center no-repeat;
 	}
 	.ah-br{
 		display: block;
 	}
 	.ah-contakt{
-		padding: 70px 0px;
+		padding: 108px 0px;
 	}
 	.ah-contakt-span2{
 		line-height: 22px;
@@ -495,10 +496,10 @@
 		position: relative;
 		margin-top: 0px;
 		margin-bottom: 0px;
-		margin-right: 156px;
+		margin-right: 170px;
 	}
 	.ah-zakaz{
-		padding: 50px 20px;
+		padding: 51px 20px;
 	}
 	.ah-ceni{
 		position: relative;
@@ -508,11 +509,12 @@
 		display: inline-block;
 		width: 263px;
 		height: 57px;
-		margin-left: 26px;
 		margin-top: 0px;
+		margin-left: 24px;
 	}
 	.ah-zakaz-span{
 		display: inline-block;
+		margin-left: 81px;
 	}
 	.ah-comptext-title{
 		text-align: left;
