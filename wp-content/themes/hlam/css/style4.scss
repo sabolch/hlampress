@@ -101,7 +101,7 @@
 	}
 
 	.search-box{
-	    width: 250px;
+	    //width: 250px;
 	    margin: 0 auto;
 	    //outline: 1px solid red;
 	    .ab-first-input{
@@ -157,9 +157,9 @@
 	    display: block;
 	    position: relative;
 	    border-radius: 5px;
-	    width: 250px;
+
 	    height: 48px;
-	    border: 1px solid #cbd1d6;
+	  
 	    box-sizing: border-box;
 		 
 		input[type="text"]{
@@ -177,7 +177,7 @@
 		    outline: none !important;
 		    letter-spacing: .02em;
 		    font-family: "RobotoRegular";
-		    max-height: 100%;
+		    //max-height: 100%;
 		    overflow: hidden;
 		    border-radius:4px;
 		}
@@ -193,6 +193,7 @@
 			font-family: "RobotoBold";
 			font-size: 18px;
 			color: #131313;
+			text-transform: uppercase;
 			border-radius:5px;
 		}
     }
@@ -476,7 +477,8 @@
 
 .header-bottom{
 	width: 100%;
-	background:url(../img/big-bg.jpg) no-repeat  top center;
+	//background:url(../img/big-bg.jpg) no-repeat  top center;
+	background:url(../img/bg-new.jpg) no-repeat  top center;
 	background-size: cover;
 	padding-bottom: 50px;
 	position: relative;
@@ -625,12 +627,7 @@
 			right: 157px !important;
 	    }
 	}
-	.ab-form{
-	    min-width: 375px;
-		input[type="text"]{
-		    min-width: 375px;
-		}
-	}	
+
 
 	.ab-pochemy-mi-title{
 		span{
@@ -701,24 +698,29 @@
 	}
 
 	.vhod-bottom{
-	    margin-bottom: 55px !important;
-	    padding-top:58px !important;
+	    margin-bottom: 28px !important;
+	    padding-top:30px !important;
+	}
+	.ab-zvonok{
+
 	}    
 	.ab-zvonok-button{
-    	padding-top:58px !important;
-    	text-align: left !important;
+    	padding-top:31px !important;
+    	text-align: center !important;
     }
     .ab-zvonok-title{
-    	padding-right:149px;
-    	padding-top:48px;
+    	padding-right:45px;
+    	padding-top:30px;
+    	padding-bottom:26px;
 		span{
 			font-size: 48px;
 		}
     }
    .ab-zvonok-tel{
-   	padding-right:166px !important;
+   	padding-right:70px !important;
    	padding-top:0 !important;
-   	padding-bottom: 76px !important;
+   	padding-bottom: 40px !important;
+   	margin-top: 20px !important; 
    		span{
 			font-size: 48px !important;
 		}
@@ -727,19 +729,19 @@
 		font-size: 36px !important;
 		font-family: "RobotoRegular";
 		color: #fff;
-		padding-right:152px;
+		padding-right:84px;
 		padding-bottom:10px;
     }
     .ab-zvonok-tel-3{
 		font-family: "RobotoRegular";
 		font-size: 48px !important;
 		color: #fff;
-		padding-right:163px;
+		padding-right:79px;
 		padding-bottom:4px;
     }
     .ab-soc{
-		padding-right:137px;
-		padding-bottom:40px;
+		padding-right:60px;
+		//padding-bottom:40px;
     }
     .ab-otziv-title{
 		text-align: center;
@@ -789,21 +791,29 @@
 		a{
 			font-size: 20px !important;
 		} 
-	}	
+	}
+	.search-box{
+		padding-left:68px;
+	}
+	.ab-form{
+		input[type="text"]{
+			width: 358px !important;
+		}
+	}		
 }
 
 @media only screen and (min-width : 1248px) {
 
 	.header-bottom{
-		.ab-div-logo, {
-			margin-top: 42px; 
-		}
-		.ab-top-txt{
-			margin-top: 71px; 
-		}
-		.ab-top-right{
-			margin-top:64px; 
-		}
+		// .ab-div-logo, {
+		// 	margin-top: 42px; 
+		// }
+		// .ab-top-txt{
+		// 	margin-top: 71px; 
+		// }
+		// .ab-top-right{
+		// 	margin-top:64px; 
+		// }
 		.ab-down{
 			padding-top: 250px !important;
 			padding-left:20px;

@@ -767,44 +767,41 @@
 			</div>
 			<div class="clearfix"></div>
 			<form class="ah-form2" action="#">
-
-			<div class="col-md-4">
-				<div class="vhod-bottom">
-					<div class="search-box">
-					<div class="ab-form" name="yourname">
-						<label class="ab-first-input ab-first-input2">
-							
-								<input type="text" placeholder="Ваше имя">
-							
-						</label>
+				<div class="col-md-4">
+					<div class="vhod-bottom">
+						<div class="search-box">
+						<div class="ab-form" name="yourname">
+							<label class="ab-first-input ab-first-input2">
+								
+									<input type="text" placeholder="Ваше имя">
+								
+							</label>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="vhod-bottom">
-					<div class="search-box">
-					<div class="ab-form">
-						<label class="ab-second-input">
-							
-								<input type="text" name="tel" placeholder="Телефон">
-							
-						</label>
+				<div class="col-md-4">
+					<div class="vhod-bottom">
+						<div class="search-box">
+						<div class="ab-form">
+							<label class="ab-second-input">
+								
+									<input type="text" name="tel" placeholder="Телефон">
+								
+							</label>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-md-4">
-				<label class="ab-second-input">
-					<div class="ab-zvonok-button">
-						<a class="ab-button" href="#thanks" name="modal" id="ah-form2-submit">Оставить заявку</a>
-					</div>
-				</label>	
-			</div>
+				<div class="col-md-4">
+					<label class="ab-second-input">
+						<div class="ab-zvonok-button">
+							<a class="ab-button" href="#thanks" name="modal" id="ah-form2-submit">Оставить заявку</a>
+						</div>
+					</label>	
+				</div>
 			</form>
-
 			<div class="clearfix"></div>
-
 			<div class="col-md-12">
 				<div class="ab-zvonok-tel-3">
 					<span><?php the_field('tel91'); ?></span>
