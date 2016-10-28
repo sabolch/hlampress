@@ -167,80 +167,80 @@
 	</div>
 </div>				
 <section class="xa-osush">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<h2><?php the_field('zag12'); ?></h2>
-				<div class="xa-os">
-					<div class="col-md-4 col-sm-4 col-xs-12">
-						<div class="xa-vbox">
-							<?php if($my_img=get_field("kar21")){echo '<img src="'.$my_img.'"/>';}?>
-							<p><?php the_field('opi21'); ?></p>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-4 col-xs-12">
-						<div class="xa-vbox">
-							<?php if($my_img=get_field("kar22")){echo '<img src="'.$my_img.'"/>';}?>
-							<p><?php the_field('opi22'); ?></p>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-4 col-xs-12">
-						<div class="xa-vbox">
-							<?php if($my_img=get_field("kar23")){echo '<img src="'.$my_img.'"/>';}?>
-							<p><?php the_field('opi23'); ?></p>
-						</div>
-					</div>
-					
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="xa-zak">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<h2><?php the_field('zag3'); ?></h2>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-2 col-sm-4 xa-newcol col-xs-6">
-					<div class="xa-zakbox">
-						<?php if($my_img=get_field("kar31")){echo '<img src="'.$my_img.'"/>';}?>
-						<p><?php the_field('opi31'); ?></p>
-					</div>
-				</div>
-				<div class="col-md-2 col-sm-4 xa-newcol col-xs-6">
-					<div class="xa-zakbox">
-						<?php if($my_img=get_field("kar32")){echo '<img src="'.$my_img.'"/>';}?>
-						<p><?php the_field('opi32'); ?></p>
-					</div>
-				</div>
-				<div class="col-md-2 col-sm-4 xa-newcol col-xs-6">
-					<div class="xa-zakbox">
-						<?php if($my_img=get_field("kar33")){echo '<img src="'.$my_img.'"/>';}?>
-						<p><?php the_field('opi33'); ?></p>
-					</div>
-				</div>
-				<div class="col-md-2 col-sm-4 xa-newcol xa-col50 col-xs-6">
-					<div class="xa-zakbox">
-						<?php if($my_img=get_field("kar34")){echo '<img src="'.$my_img.'"/>';}?>
-						<p>Д<?php the_field('opi34'); ?></p>
-					</div>
-				</div>
-				<div class="col-md-2 col-sm-4 xa-newcol xa-col50 col-xs-6 xa-col100">
-					<div class="xa-zakbox">
-						<?php if($my_img=get_field("kar35")){echo '<img src="'.$my_img.'"/>';}?>
-						<p><?php the_field('opi35'); ?></p>
-					</div>
-				</div>
-			</div>
-			<div class="row xa-none">
-				<div class="col-md-12">
-					<h2><?php the_field('zag31'); ?></h2>
-				</div>
-			</div>
-		</div>
-	</div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="wow bounceInDown"><?php the_field('zag12'); ?></h2>
+        <div class="xa-os wow bounceInLeft">
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="xa-vbox">
+              <?php if($my_img=get_field("kar21")){echo '<img src="'.$my_img.'"/>';}?>
+              <p><?php the_field('opi21'); ?></p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="xa-vbox">
+              <?php if($my_img=get_field("kar22")){echo '<img src="'.$my_img.'"/>';}?>
+              <p><?php the_field('opi22'); ?></p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="xa-vbox">
+              <?php if($my_img=get_field("kar23")){echo '<img src="'.$my_img.'"/>';}?>
+              <p><?php the_field('opi23'); ?></p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="xa-zak">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="wow bounceInDown"><?php the_field('zag3'); ?></h2>
+        </div>
+      </div>
+      <div class="row wow bounceInLeft">
+        <div class="col-md-2 col-sm-4 xa-newcol col-xs-6">
+          <div class="xa-zakbox">
+            <?php if($my_img=get_field("kar31")){echo '<img src="'.$my_img.'"/>';}?>
+            <p><?php the_field('opi31'); ?></p>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-4 xa-newcol col-xs-6">
+          <div class="xa-zakbox">
+            <?php if($my_img=get_field("kar32")){echo '<img src="'.$my_img.'"/>';}?>
+            <p><?php the_field('opi32'); ?></p>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-4 xa-newcol col-xs-6">
+          <div class="xa-zakbox">
+            <?php if($my_img=get_field("kar33")){echo '<img src="'.$my_img.'"/>';}?>
+            <p><?php the_field('opi33'); ?></p>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-4 xa-newcol xa-col50 col-xs-6">
+          <div class="xa-zakbox">
+            <?php if($my_img=get_field("kar34")){echo '<img src="'.$my_img.'"/>';}?>
+            <p>Д<?php the_field('opi34'); ?></p>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-4 xa-newcol xa-col50 col-xs-6 xa-col100">
+          <div class="xa-zakbox">
+            <?php if($my_img=get_field("kar35")){echo '<img src="'.$my_img.'"/>';}?>
+            <p><?php the_field('opi35'); ?></p>
+          </div>
+        </div>
+      </div>
+      <div class="row xa-none">
+        <div class="col-md-12">
+          <h2 class="wow bounceInUp"><?php the_field('zag31'); ?></h2>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>	
 <div class="container">
 	<div class="row">
