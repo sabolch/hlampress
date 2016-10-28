@@ -205,17 +205,12 @@
   background: none; }
 
 .ah-ceni-wrap {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
+  display: block;
   margin-top: 20px;
   margin-bottom: 20px;
   margin-left: 0px; }
 
 .ah-item-span {
-  position: absolute;
-  left: -3px;
-  bottom: -38px;
   display: block;
   font-family: "RobotoRegular";
   color: #000;
@@ -224,16 +219,21 @@
   margin-top: 15px; }
 
 .ah-ceni-item {
-  position: relative;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  margin-right: 0px; }
+  display: block;
+  margin-right: 0px;
+  width: 100%; }
   .ah-ceni-item img {
     box-shadow: 0 16px 21px rgba(166, 76, 3, 0.28);
     border-radius: 50%; }
 
 .ah-ceni-item1 {
-  margin-right: 0px; }
+  padding-left: 0px; }
+
+.ah-ceni-item2 {
+  padding-left: 0px; }
+
+.ah-ceni-item3 {
+  padding-right: 0px; }
 
 .ah-contakt {
   padding: 35px 0px; }
@@ -353,6 +353,15 @@
   .ah-ceni-title {
     font-size: 44px; } }
 @media only screen and (min-width: 992px) {
+  .ah-myup {
+    position: relative;
+    background: url(../img/ah-myupfon.png) top center no-repeat;
+    width: 796px;
+    height: 466px;
+    margin: 0 auto;
+    margin-top: 80px;
+    margin-bottom: 80px; }
+
   .ah-comptext {
     background: url(../img/ah-seofon.jpg) bottom center no-repeat;
     position: relative;
@@ -395,18 +404,24 @@
     line-height: 22px; }
 
   .ah-ceni-wrap {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    margin-top: 115px;
-    margin-bottom: 60px;
-    margin-left: 15%; }
+    display: table;
+    width: 100%;
+    margin-top: 68px;
+    margin-bottom: 60px; }
 
   .ah-ceni-item {
-    position: relative;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-right: 170px; }
+    display: table-cell;
+    display: inline-block;
+    width: 33.3%; }
+
+  .ah-ceni-item1 {
+    padding-left: 152px; }
+
+  .ah-ceni-item2 {
+    padding-left: 88px; }
+
+  .ah-ceni-item3 {
+    padding-right: 63px; }
 
   .ah-zakaz {
     padding: 51px 20px; }

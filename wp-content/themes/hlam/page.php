@@ -234,7 +234,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row xa-none">
 				<div class="col-md-12">
 					<h2><?php the_field('zag31'); ?></h2>
 				</div>
@@ -487,8 +487,8 @@
 
 
 
-<div class="container">
-	<div class="row">
+<div class="container" id="zkmarginauto">
+	<div class="row" id="zk-marginbot">
 		<div class="col-md-12">			
 				<h3 class="zk_caption"><?php the_field('zag-zag'); ?></h3>
 		</div>
@@ -498,7 +498,7 @@
 							<div class="zk-img-box">
 								<?php if($my_img=get_field("kar61")){echo '<img src="'.$my_img.'"/>';}?>
 							</div>			
-							<div><?php the_field('opi61'); ?> </div>		
+							<div class="zktext1"><?php the_field('opi61'); ?> </div>		
 						</div>
 					</div>
 					<div class="col-md-3">	
@@ -506,7 +506,7 @@
 							<div class="zk-img-box">			
 								<?php if($my_img=get_field("kar62")){echo '<img src="'.$my_img.'"/>';}?>
 							</div>	
-							<div><?php the_field('opi62'); ?> </div>	
+							<div class="zktext2"><?php the_field('opi62'); ?> </div>	
 						</div>
 					</div>
 					<div class="col-md-3">	
@@ -514,7 +514,7 @@
 							<div class="zk-img-box">				
 								<?php if($my_img=get_field("kar63")){echo '<img src="'.$my_img.'"/>';}?>
 							</div>	
-							<div><?php the_field('opi63'); ?> </div>				
+							<div class="zktext3"><?php the_field('opi63'); ?> </div>				
 						</div>
 					</div>
 					<div class="col-md-3">	
@@ -522,16 +522,16 @@
 							<div class="zk-img-box">				
 								<?php if($my_img=get_field("kar64")){echo '<img src="'.$my_img.'"/>';}?>
 							</div>	
-							<div><?php the_field('opi64'); ?> </div>		
+							<div class="zktext4"><?php the_field('opi64'); ?> </div>		
 						</div>
 					</div>	
 						<div class="clearfix"></div>
-					<div class="col-md-4">
+					<div class="col-md-4" id="zk-marginleft">
 						<div class="zk_pr_ph">
 							<div class="zk-img-box">
 						 		<?php if($my_img=get_field("kar65")){echo '<img src="'.$my_img.'"/>';}?>
 						 	</div>
-						 	<div><?php the_field('opi65'); ?> </div>	
+						 	<div class="zktext5"><?php the_field('opi65'); ?> </div>	
 						</div>
 					</div>
 					<div class="col-md-4">	
@@ -539,15 +539,15 @@
 							<div class="zk-img-box">
 						 		<?php if($my_img=get_field("kar66")){echo '<img src="'.$my_img.'"/>';}?>
 						 	</div>
-						 	<div><?php the_field('opi66'); ?> </div>	
+						 	<div class="zktext6"><?php the_field('opi66'); ?> </div>	
 						</div>
 					</div>
-					<div class="col-md-4">	
+					<div class="col-md-4" id="zk-marginright">	
 						<div class="zk_pr_ph">
 							<div class="zk-img-box">
 						 		<?php if($my_img=get_field("kar67")){echo '<img src="'.$my_img.'"/>';}?>
 						 	</div>
-						 	<div><?php the_field('opi67'); ?> </div>	
+						 	<div class="zktext7"><?php the_field('opi67'); ?> </div>	
 						</div>
 					</div>	
 					
@@ -567,17 +567,18 @@
 		    <div class="ah-ceniiimg">
 		    	<span class="ah-ceniiimg-span">От<br><span>200</span><br>рублей за<br>предмет</span>
 		    </div>
-				<span class="ah-ceni-title"><?php the_field('zag-niz'); ?></span>
+			    <span class="ah-ceni-title">Низкие цены для всех<br class="ah-br"> и <br class="ah-br">постоянные скидки</span>
+				<!-- <span class="ah-ceni-title"><?php the_field('zag-niz'); ?></span> -->
 				<div class="ah-ceni-wrap">
-					<div class="ah-ceni-item">
+					<div class="ah-ceni-item ah-ceni-item1">
 						<?php if($my_img=get_field("kar71")){echo '<img src="'.$my_img.'"/>';}?>
 						<span class="ah-item-span"><?php the_field('opi71'); ?></span>	
 					</div>
-					<div class="ah-ceni-item">
+					<div class="ah-ceni-item ah-ceni-item2">
 						<?php if($my_img=get_field("kar72")){echo '<img src="'.$my_img.'"/>';}?>
 						<span class="ah-item-span"><?php the_field('opi72'); ?></span>				
 					</div>
-					<div class="ah-ceni-item ah-ceni-item1">
+					<div class="ah-ceni-item ah-ceni-item3">
 						<?php if($my_img=get_field("kar73")){echo '<img src="'.$my_img.'"/>';}?>
 						<span class="ah-item-span"><?php the_field('opi73'); ?></span>		
 					</div>
