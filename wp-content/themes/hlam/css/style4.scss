@@ -13,9 +13,10 @@
 }
 .ab-pochemy-mi{
 	text-align:center;
-	padding-top:280px;
-	background:url(../img/grey-bg.jpg) center;
+	//padding-top:280px;
+	//background:url(../img/grey-bg.jpg) center;
 	background-size:cover;
+	// outline:1px solid red;
 	.ab-pochemy-mi-img-box{
 		margin:0 auto;
 		border: 3px solid #fff;
@@ -62,10 +63,10 @@
 	}
 	.ab-pochemy-mi-title{
 		text-align: center;
-		padding-bottom: 25px;
+		padding-bottom: 15px;
 		span{
 			font-family: "RobotoBold";
-			font-size: 28px;
+			font-size: 25px;
 		}
 	}
 }
@@ -476,7 +477,7 @@
 .header-bottom{
 	//background:url(../img/big-bg.jpg) no-repeat  center;
 	background:url(../img/mob-bg.jpg) no-repeat  center;
-	background-size:cover;
+	//background-size:cover;
 	height:850px;
 	//padding-top:30px;
 	//position:relative;
@@ -497,14 +498,17 @@
 
 	}
 	.ab-div-logo{
+		padding-right: 44px;
+	    padding-top: 30px;
 		img{
 			margin: 0 auto; 
 		}
 	}
 	.ab-top-txt{
-		padding-bottom:10px;
-		padding-top:10px;
-		text-align: center;
+		margin-top: 29px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    text-align: center;
 		a:first-child{
 			font-family: "RobotoBold";
 			font-size: 14px;
@@ -519,7 +523,9 @@
 		}
 	}
 	.ab-top-right{
-		text-align: center;
+		margin-right: 3px;
+	    margin-top: 20px;
+	    text-align: center;
 		span:first-child{
 			font-family: "RobotoBold";
 			font-size: 28px;
@@ -530,18 +536,20 @@
 			font-family: "RobotoRegular";
 			font-size: 14px;
 			display: block;
-			padding-top: 8px;
-			padding-bottom:13px;
+			padding-top: 2px;
+			padding-bottom:8px;
 		}
 		a{
 			display: inline-block;
 			font-family: "RobotoBold";
 			font-size: 14px;
 			text-transform: uppercase;
-			padding:17px 19px;
+			padding:13px 9px;
 			background:#FFC600;
 			border-radius:5px;
-			box-shadow: 2px 15px 15px rgba(177, 184, 178, 0.7);
+			-moz-box-shadow: 0 11px 32px rgba(152,70,3,.42); /* drop shadow */
+			-webkit-box-shadow: 0 11px 32px rgba(152,70,3,.42); /* drop shadow */
+			box-shadow: 0 11px 32px rgba(152,70,3,.42); /* drop shadow */
 			transition: 1s linear;
 			color:black;
 		}
@@ -567,10 +575,12 @@
 			//font-size: 20px;
 			font-size: 10px;
 			text-transform: uppercase;
-			padding:17px 19px;
+			padding:21px 19px;
 			background:#FFC600;
 			border-radius:5px;
-			box-shadow: 2px 15px 15px rgba(177, 184, 178, 0.7);
+			-moz-box-shadow: 0 11px 32px rgba(152,70,3,.42); /* drop shadow */
+			-webkit-box-shadow: 0 11px 32px rgba(152,70,3,.42); /* drop shadow */
+			box-shadow: 0 11px 32px rgba(152,70,3,.42); /* drop shadow */
 			transition: 1s linear;
 			margin-top:18px;
 			color:black; 
@@ -681,9 +691,9 @@
 @media only screen and (min-width : 768px) {
 
 	.header-bottom{
-		background:url(../img/big-bg.jpg) no-repeat  center;
+		background:url(../img/bg-new.jpg) no-repeat  center;
 		//background:url(../img/mob-bg.jpg) no-repeat  center;
-		background-size:cover;
+		//background-size:cover;
 		height:1003px;
 		//padding-top:30px;
 		//position:relative;
@@ -723,7 +733,9 @@
 
 	.ab-pochemy-mi{
 	text-align:center;
-	padding-top:210px !important;}
+	padding-top:187px !important;
+	background:url(../img/grey-bg.jpg) center;
+}
 
 	.ab-pochemy-mi{
 		text-align: left;
@@ -838,9 +850,12 @@
 @media only screen and (min-width : 1248px) {
 
 	.header-bottom{
-		height: 960px !important;
+		height: 1003px !important;
+
+
 		.ab-down{
-			padding-top: 180px;
+			padding-top: 200px;
+			padding-left:20px;
 			a{
 				margin-top: 37px !important; 
 			} 
