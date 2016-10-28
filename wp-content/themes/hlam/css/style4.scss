@@ -475,28 +475,11 @@
 
 
 .header-bottom{
-	//background:url(../img/big-bg.jpg) no-repeat  center;
-	background:url(../img/mob-bg.jpg) no-repeat  center;
-	//background-size:cover;
-	height:850px;
-	//padding-top:30px;
-	//position:relative;
-	.back-white{
-		background:#fff !important;
-		padding-bottom:40px;
-		padding-top:40px;
-	}
-	.ggg{
-		//background:url(../img/ggg.png) no-repeat  center;
-		//height: 728px;
-		//margin-top: -300px;
-		padding-left:0;
-		padding-right:0px;
-		img{
-			margin:0 auto; 
-		}
-
-	}
+	width: 100%;
+	background:url(../img/big-bg.jpg) no-repeat  top center;
+	background-size: cover;
+	padding-bottom: 50px;
+	position: relative;
 	.ab-div-logo{
 		padding-right: 44px;
 	    padding-top: 30px;
@@ -506,9 +489,9 @@
 	}
 	.ab-top-txt{
 		margin-top: 29px;
-    padding-bottom: 10px;
-    padding-right: 10px;
-    text-align: center;
+	    padding-bottom: 10px;
+	    padding-right: 10px;
+	    text-align: center;
 		a:first-child{
 			font-family: "RobotoBold";
 			font-size: 14px;
@@ -575,7 +558,7 @@
 			//font-size: 20px;
 			font-size: 10px;
 			text-transform: uppercase;
-			padding:21px 19px;
+			padding:17px 19px;
 			background:#FFC600;
 			border-radius:5px;
 			-moz-box-shadow: 0 11px 32px rgba(152,70,3,.42); /* drop shadow */
@@ -591,7 +574,16 @@
 		}
 	}
 }
-
+.header-bottom:before{
+	position: absolute;
+	content: "";
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height:100%;
+	//z-index: 6;
+	background: rgba(#fff, 0.7);
+}
 .margin-l{
 	margin-right: 0 !important;
 	padding-right:0 !important;
@@ -601,40 +593,17 @@
 
 @media only screen and (min-width : 250px) {
 
-.header-bottom{
-	//height:850px !important;
-	//height:35% !important;
-	}  
+
 
 }
 
 
 @media only screen and (min-width : 320px) {
 
-	.header-bottom{
-	height:1300px !important;
-	}  
-	.ab-top-txt {
-    
-    padding-left: 67px !important;
-    
-}
-	.ab-down{
-		text-align: center;
-		margin-top: 20px;
-		//margin-top:200px;
-		span{
-			//font-size: 46px;
-			font-size: 35px !important;
-		}
-		a{
-			font-size: 20px !important;
-		}
-	}	
+		
 }
 
 @media only screen and (min-width : 480px) {
-
 	
 
 	.search-box{
@@ -668,13 +637,11 @@
 			font-size: 35px !important;
 		}
 	}
-
 	.ab-text-area{
 		width: 100%;
 	}
 	.ab-my-chekbox-wrap{
 		float: left;
-		
 	}
 	
 	.ab-chekbos-title{
@@ -690,52 +657,30 @@
 
 @media only screen and (min-width : 768px) {
 
-	.header-bottom{
-		background:url(../img/bg-new.jpg) no-repeat  center;
-		//background:url(../img/mob-bg.jpg) no-repeat  center;
-		//background-size:cover;
-		height:1003px;
-		//padding-top:30px;
-		//position:relative;
-		.back-white{
-			background:none !important;
-			padding-bottom:40px;
-			padding-top:40px;
-		}
-		.ggg{
-			img{
-				display: none;
-			}
-			//background:url(../img/ggg.png) no-repeat  center;
-			//height: 728px;
-			//margin-top: -300px;
-			padding-left:0;
-			padding-right:0px;
-
-		}
-	}	
-
-
 	.ab-top-txt {
-    
-    padding-left: 0 !important;
-    
-}
+	    padding-left: 0 !important;
+	}
 	.ab-pochemy-mi-title{
 		span{
 			font-size: 48px !important;
 		}
 	}
-
 }
 
 @media only screen and (min-width : 992px) {
-
+	.header-bottom{
+		background-size: unset !important;
+		height: 1003px;
+	}
+	.header-bottom:before{
+		display: none;
+	}
+	
 	.ab-pochemy-mi{
-	text-align:center;
-	padding-top:187px !important;
-	background:url(../img/grey-bg.jpg) center;
-}
+		text-align:center;
+		padding-top:187px !important;
+		background:url(../img/grey-bg.jpg) center;
+	}
 
 	.ab-pochemy-mi{
 		text-align: left;
@@ -850,18 +795,14 @@
 @media only screen and (min-width : 1248px) {
 
 	.header-bottom{
-		height: 1003px !important;
-
-
 		.ab-down{
-			padding-top: 200px;
+			padding-top: 300px;
 			padding-left:20px;
 			a{
 				margin-top: 37px !important; 
 			} 
 		}
 	}
-
 }
 
 .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
