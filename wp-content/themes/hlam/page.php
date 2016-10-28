@@ -234,7 +234,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row xa-none">
 				<div class="col-md-12">
 					<h2><?php the_field('zag31'); ?></h2>
 				</div>
