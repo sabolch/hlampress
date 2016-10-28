@@ -1833,6 +1833,9 @@ select[multiple].input-group-sm>.input-group-btn>.btn {
 }
 .navbar{
 	text-align: center;
+    -moz-box-shadow: 0 5px 5px rgba(0,0,0,.05); 
+    -webkit-box-shadow: 0 5px 5px rgba(0,0,0,.05); 
+    box-shadow: 0 5px 5px rgba(0,0,0,.05); 
 }
 .navbar-collapse.in {
     overflow-y: auto

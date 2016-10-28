@@ -36,44 +36,41 @@
 	<script src="<?php echo get_template_directory_uri(); ?>/js/common.js"></script>
 
 	<div id="hid">
-  <!-- Fixed navbar -->
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          
-        </div>
-        <div class="navbar-collapse collapse">
-          <div class="col-md-3 col-sm-12 xa-logo">
-            <a href="<?php echo get_template_directory_uri(); ?>//">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/xa-logo.png" alt="">
-            </a>
-          </div>
-          <div class="col-md-6 col-sm-12 xa-menu">
-            <ul class="nav navbar-nav">
-              <li class=""><a href="#uslugi">Наши услуги</a></li>
-              <li class=""><a href="#prichina">Почему мы</a></li>
-              <li class=""><a href="#sales">Акции</a></li>
-              <li class=""><a href="#review">Отзывы</a></li>
-              <li class=""><a href="#contact">Контакты</a></li>
-            </ul>
-          </div>
-          <div class="col-md-3 col-sm-12">
-            <span class="xa-phone">
-              <a href="<?php echo get_template_directory_uri(); ?>/tel:+7 (499) 502-93-30 ">+7 (499) 502-93-30 </a>
-            </span>
-          </div>
-          
-        </div><!--/.nav-collapse -->
-      </div>
-    </div>
-</div>
-<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	      <div class="container">
+	        <div class="navbar-header">
+	          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	            <span class="sr-only">Toggle navigation</span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	          </button>
+	          
+	        </div>
+	        <div class="navbar-collapse collapse">
+	          <div class="col-md-3 col-sm-12 xa-logo">
+	            <a href="<?php echo get_template_directory_uri(); ?>//">
+	              <img src="<?php echo get_template_directory_uri(); ?>/img/xa-logo.png" alt="">
+	            </a>
+	          </div>
+	          <div class="col-md-6 col-sm-12 xa-menu">
+	            <ul class="nav navbar-nav">
+	              <li class=""><a href="#uslugi">Наши услуги</a></li>
+	              <li class=""><a href="#prichina">Почему мы</a></li>
+	              <li class=""><a href="#sales">Акции</a></li>
+	              <li class=""><a href="#review">Отзывы</a></li>
+	              <li class=""><a href="#contact">Контакты</a></li>
+	            </ul>
+	          </div>
+	          <div class="col-md-3 col-sm-12">
+	            <span class="xa-phone">
+	              <a href="<?php echo get_template_directory_uri(); ?>/tel:+7 (499) 502-93-30 ">+7 (499) 502-93-30 </a>
+	            </span>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+	</div>
     <script>
       $(function () {
         var element = $("#hid"), display;
