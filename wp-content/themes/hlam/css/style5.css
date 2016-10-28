@@ -1,88 +1,17 @@
-@media only screen and (min-width: 480px) {
-  .zk_export_one {
-    width: 50% !important; } }
-@media only screen and (min-width: 768px) {
-  .zk_caption {
-    font-size: 40px !important; }
-
-  .zk_vivoz_caption {
-    text-align: left !important; }
-
-  .zk_we_export_all .zk_ex_caption {
-    font-size: 48px !important; }
-  .zk_we_export_all .zk_export_one {
-    width: 33.2% !important; } }
-@media only screen and (min-width: 992px) {
-  .zk_caption {
-    font-size: 45px !important; }
-
-  .zk_vivoz .zk_vivoz_caption {
-    font-size: 45px !important;
-    text-align: left;
-    margin-top: 25px !important;
-    margin-bottom: 20px !important; }
-  .zk_vivoz .zk_vivoz_man {
-    float: left;
-    width: 25%;
-    text-align: center;
-    background-image: url(..//img/zk_vivoz_man.png) no-repeat;
-    visibility: visible !important;
-    display: inline-block !important;
-    margin-right: 10px !important; }
-  .zk_vivoz .first_v {
-    float: left;
-    width: 40%; }
-  .zk_vivoz .second_v {
-    float: left;
-    width: 30%; }
-  .zk_vivoz ul {
-    margin-right: 55px; }
-
-  #zk-1, #zk-2 {
-    margin-top: 4px; } }
-@media only screen and (min-width: 1248px) {
-  .zk_preim_all .zk_caption {
-    font-size: 48px !important; }
-
-  .zk_vivoz .zk_vivoz_caption {
-    font-size: 48px !important;
-    margin-top: 40px !important;
-    margin-bottom: 35px !important; }
-  .zk_vivoz .zk_vivoz_man {
-    float: left;
-    width: 25%;
-    background-image: url(..//img/zk_vivoz_man.png) no-repeat;
-    visibility: visible !important;
-    display: inline-block !important;
-    margin-right: 15px !important;
-    text-align: center; }
-  .zk_vivoz .first_v {
-    float: left;
-    width: 40%; }
-  .zk_vivoz .second_v {
-    float: left;
-    width: 32%; }
-  .zk_vivoz ul {
-    margin-right: 55px; }
-
-  .zk_we_export_all .zk_ex_caption {
-    font-size: 48px !important;
-    margin-bottom: 0px !important; }
-  .zk_we_export_all .zk_export_one {
-    width: 20% !important; }
-  .zk_we_export_all .zk_first_child {
-    width: 150px;
-    margin-left: 35px; } }
 .clear {
   clear: both; }
+
+#zkmarginauto {
+  margin: 0 auto; }
 
 .zk_caption {
   font-size: 35px;
   font-family: "RobotoBold";
   color: #31343b;
-  margin-top: 110px;
-  margin-bottom: 50px;
-  text-align: center; }
+  margin-top: 35px;
+  margin-bottom: 47px;
+  text-align: center;
+  letter-spacing: 0.04em; }
 
 .zk_pr_ph {
   margin-top: 48px;
@@ -90,11 +19,25 @@
   font-size: 16px;
   color: #646464;
   text-align: center;
-  padding-bottom: 65px;
-  width: 270px;
+  padding-bottom: 15px;
   margin: 0 auto; }
   .zk_pr_ph div:last-child {
-    padding: 10px 12px; }
+    padding: 17px 12px 20px 12px;
+    margin: 0 auto; }
+  .zk_pr_ph .zktext1 {
+    width: 250px; }
+  .zk_pr_ph .zktext2 {
+    width: 245px; }
+  .zk_pr_ph .zktext3 {
+    width: 165px; }
+  .zk_pr_ph .zktext4 {
+    width: 135px; }
+  .zk_pr_ph .zktext5 {
+    width: 190px; }
+  .zk_pr_ph .zktext6 {
+    width: 250px; }
+  .zk_pr_ph .zktext7 {
+    width: 340px; }
   .zk_pr_ph .zk-img-box {
     height: 141px;
     width: 140px;
@@ -102,29 +45,35 @@
     border-radius: 70px;
     box-shadow: 0px 5px 15px rgba(255, 0, 0, 0.2);
     margin: 0 auto;
-    padding-bottom: 20px; }
+    padding-bottom: 20px;
+    text-align: center; }
 
 .zk_vivoz {
   padding: 50px 0px;
   font-size: 18px;
   font-family: "RobotoRegular";
-  color: #646464; }
+  color: #646464;
+  padding-bottom: 0px; }
   .zk_vivoz .zk_vivoz_caption {
-    font-size: 33px;
+    font-size: 27px;
     font-family: "RobotoBold";
     color: #31343b;
     display: inline-block;
     margin-bottom: 35px;
     text-align: left;
-    margin-top: 40px; }
+    margin-top: 35px;
+    margin-left: 14px; }
   .zk_vivoz .zk_vivoz_man {
     visibility: hidden;
     display: none; }
   .zk_vivoz ul li {
     line-height: 1.5em;
-    padding: 11px 0;
+    padding-top: 14px;
+    margin: 14px;
     background: url(..//img/zk_vivoz.png) center left no-repeat;
     padding-left: 40px; }
+  .zk_vivoz ul li:last-child {
+    background: url(..//img/zk_vivoz.png) top 18px left no-repeat; }
 
 .zk_we_export_all {
   width: 100%; }
@@ -147,5 +96,89 @@
       height: 185px;
       vertical-align: middle;
       margin-bottom: 9px; }
+
+@media only screen and (min-width: 480px) {
+  .zk_export_one {
+    width: 50% !important; } }
+@media only screen and (min-width: 768px) {
+  .zk_caption {
+    font-size: 40px !important; }
+
+  .zk_vivoz_caption {
+    text-align: left !important; }
+
+  .zk_we_export_all .zk_ex_caption {
+    font-size: 48px !important; }
+  .zk_we_export_all .zk_export_one {
+    width: 33.2% !important; } }
+@media only screen and (min-width: 992px) {
+  #zk-marginbot {
+    margin-bottom: 42px; }
+
+  #zk-marginleft {
+    margin-left: 40px;
+    padding-right: 0px;
+    margin-right: -40px; }
+
+  #zk-marginright {
+    margin-right: 40px;
+    padding-left: 0px;
+    margin-left: -40px; }
+
+  .zk_caption {
+    font-size: 45px !important;
+    margin-top: 110px; }
+
+  .zk_pr_ph {
+    padding-bottom: 43px; }
+
+  .zk_vivoz .zk_vivoz_caption {
+    font-size: 45px !important;
+    text-align: left;
+    margin-top: 25px !important;
+    margin-bottom: 20px !important;
+    font-size: 33px;
+    margin-left: 14px; }
+  .zk_vivoz .zk_vivoz_man {
+    float: left;
+    width: 225px;
+    height: 549px;
+    text-align: center;
+    background-image: url(..//img/zk_vivoz_man.png) no-repeat;
+    visibility: visible !important;
+    display: inline-block !important;
+    margin-right: 38px !important; }
+  .zk_vivoz .first_v {
+    float: left;
+    width: 40%; }
+  .zk_vivoz .second_v {
+    float: left;
+    width: 30%; }
+
+  #zk-1, #zk-2 {
+    margin-top: 4px; } }
+@media only screen and (min-width: 1248px) {
+  .zk_preim_all .zk_caption {
+    font-size: 48px !important; }
+
+  .zk_vivoz .zk_vivoz_caption {
+    font-size: 48px !important;
+    margin-top: 40px !important;
+    margin-bottom: 22px !important; }
+  .zk_vivoz .first_v {
+    float: left;
+    width: 42%; }
+  .zk_vivoz .second_v {
+    float: left;
+    width: 33%; }
+
+  .zk_we_export_all .zk_ex_caption {
+    font-size: 48px !important;
+    margin-bottom: 0px !important; }
+  .zk_we_export_all .zk_export_one {
+    width: 20% !important; }
+  .zk_we_export_all .zk_first_child {
+    width: 150px;
+    margin-left: 35px; } }
 
 /*# sourceMappingURL=style5.css.map */
