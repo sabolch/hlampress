@@ -40,7 +40,7 @@
 	      <div class="container">
 	        <div class="navbar-header">
 	          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-	            <span class="sr-only">Toggle navigation</span>
+	            <span class="sr-only"></span>
 	            <span class="icon-bar"></span>
 	            <span class="icon-bar"></span>
 	            <span class="icon-bar"></span>
@@ -49,7 +49,7 @@
 	        </div>
 	        <div class="navbar-collapse collapse">
 	          <div class="col-md-3 col-sm-12 xa-logo">
-	            <a href="<?php echo get_template_directory_uri(); ?>//">
+	            <a href="/">
 	              <img src="<?php echo get_template_directory_uri(); ?>/img/xa-logo.png" alt="">
 	            </a>
 	          </div>
@@ -296,32 +296,6 @@
 					<div class="ab-pochemy-mi-img-box ab-pochemy-mi-img-box2">
 					</div>
 					<div class="ab-pochemy-mi-txt">
-						<span><?php the_field('zag42'); ?></span>
-						<span> 
-							<?php the_field('opi42'); ?>
-						</span>
-					</div>
-				</div>
-			</div>
-			<div class="clearfix"></div>
-			<div class="col-md-6">
-				<div class="padding-top-col">
-					<div class="ab-pochemy-mi-img-box ab-pochemy-mi-img-box3">
-					</div>
-					<div class="ab-pochemy-mi-txt">
-						<span><?php the_field('zag43'); ?>
-						</span>
-						<span> 
-							<?php the_field('opi43'); ?>
-						</span>
-					</div>
-				</div>	
-			</div>
-			<div class="col-md-6">
-				<div class="padding-top-col">
-					<div class="ab-pochemy-mi-img-box ab-pochemy-mi-img-box4">
-					</div>
-					<div class="ab-pochemy-mi-txt">
 						<span><?php the_field('zag44'); ?></span>
 						<span> 
 							<?php the_field('opi44'); ?>
@@ -332,12 +306,38 @@
 			<div class="clearfix"></div>
 			<div class="col-md-6">
 				<div class="padding-top-col">
-					<div class="ab-pochemy-mi-img-box ab-pochemy-mi-img-box5">
+					<div class="ab-pochemy-mi-img-box ab-pochemy-mi-img-box3">
+					</div>
+					<div class="ab-pochemy-mi-txt">
+						<span><?php the_field('zag42'); ?>
+						</span>
+						<span> 
+							<?php the_field('opi42'); ?>
+						</span>
+					</div>
+				</div>	
+			</div>
+			<div class="col-md-6">
+				<div class="padding-top-col">
+					<div class="ab-pochemy-mi-img-box ab-pochemy-mi-img-box4">
 					</div>
 					<div class="ab-pochemy-mi-txt">
 						<span><?php the_field('zag45'); ?></span>
 						<span> 
 							<?php the_field('opi45'); ?>
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+			<div class="col-md-6">
+				<div class="padding-top-col">
+					<div class="ab-pochemy-mi-img-box ab-pochemy-mi-img-box5">
+					</div>
+					<div class="ab-pochemy-mi-txt">
+						<span><?php the_field('zag43'); ?></span>
+						<span> 
+							<?php the_field('opi43'); ?>
 						</span>
 					</div>
 				</div>
