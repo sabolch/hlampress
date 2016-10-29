@@ -131,31 +131,31 @@
 		<div class="col-md-12">
 			<div class="zk_we_export_all">
 				<h3 class="zk_ex_caption"><?php the_field('zagolovok1'); ?></h3>
-				<div class="zk_export_one wow bounceInDown "  data-animated-duration="30.5s" data-wow-delay="0.5s">
+				<div class="zk_export_one zk1 wow bounceInDown "  data-animated-duration="30.5s" data-wow-delay="0.5s">
 					<div class="zk_img_ex_box wow pulse animated"  data-wow-iteration="2"  data-wow-duration="2.5s" data-wow-delay="2s">
 						<?php if($my_img=get_field("kar11")){echo '<img src="'.$my_img.'"/>';}?>
 				    </div>
 					<div class="zk_first_child"><?php the_field('opi11'); ?></div>
 				</div>
-				<div class="zk_export_one wow bounceInDown "  data-animated-duration="30.5s" data-wow-delay="0.5s">
+				<div class="zk_export_one zk2 wow bounceInDown "  data-animated-duration="30.5s" data-wow-delay="0.5s">
 					<div class="zk_img_ex_box wow pulse animated"  data-wow-iteration="2"  data-wow-duration="2.5s" data-wow-delay="2s"> 
 						<?php if($my_img=get_field("kar12")){echo '<img src="'.$my_img.'"/>';}?>
 					</div>
 					<div><?php the_field('opi12'); ?></div>
 				</div>
-				<div class="zk_export_one wow bounceInDown "  data-animated-duration="30.5s" data-wow-delay="0.5s">
+				<div class="zk_export_one zk3 wow bounceInDown "  data-animated-duration="30.5s" data-wow-delay="0.5s">
 					<div class="zk_img_ex_box wow pulse animated"  data-wow-iteration="2"  data-wow-duration="2.5s" data-wow-delay="2s">
 					 	<?php if($my_img=get_field("kar13")){echo '<img src="'.$my_img.'"/>';}?>
 					 </div>
 					<div><?php the_field('opi13'); ?></div>
 				</div>
-				<div class="zk_export_one wow bounceInDown "  data-animated-duration="30.5s" data-wow-delay="0.5s">
+				<div class="zk_export_one zk4 wow bounceInDown "  data-animated-duration="30.5s" data-wow-delay="0.5s">
 					<div class="zk_img_ex_box wow pulse animated"  data-wow-iteration="2"  data-wow-duration="2.5s" data-wow-delay="2s">
 						<?php if($my_img=get_field("kar14")){echo '<img src="'.$my_img.'"/>';}?>
 					</div>
 					<div><?php the_field('opi14'); ?></div>
 				</div>
-				<div class="zk_export_one wow bounceInDown "  data-animated-duration="30.5s" data-wow-delay="0.5s">
+				<div class="zk_export_one zk5 wow bounceInDown "  data-animated-duration="30.5s" data-wow-delay="0.5s">
 					<div class="zk_img_ex_box wow pulse animated"  data-wow-iteration="2"  data-wow-duration="2.5s" data-wow-delay="2s">
 						<?php if($my_img=get_field("kar15")){echo '<img src="'.$my_img.'"/>';}?>
 					</div>
