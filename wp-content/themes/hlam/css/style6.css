@@ -10,25 +10,33 @@
 	background-image: url('../img/osuh.jpg');
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: cover;
-	padding: 150px 0 60px 0;
+	padding: 191px 0 122px 0;
 }
 .xa-osush h2{
 	text-align: center;
 	font-size: 48px;
 	font-family: "RobotoBold";
     color: #212121;
-    margin: 40px 0;
-    line-height: 0.8;
+    line-height: 36px;
 }
 .xa-osush p{
 	text-align: center;
 	font-size: 24px;
-	padding-top: 10px;
+	padding-top: 25px;
 	font-family: "RobotoRegular";
+    line-height: 22px;
+}
+.xa-design{
+    padding-left: -10px;
 }
 .xa-vbox{
 	text-align: center;
+}
+.xa-box{
+    margin-top: 0;
+    max-width: 1144px;
+    padding-left: 29px;
+    padding-top: 44px;
 }
 footer{
     font-family: "RobotoRegular";
@@ -53,6 +61,23 @@ footer{
 	font-weight: bold;
 	color: #000;
 }
+@media only screen and (min-width: 992px){
+    .xa-zak{
+        position: relative;
+        top: -26px;
+        left: -2px;
+    }
+    .xa-perfect{
+        position: relative;
+        max-width: 1006px;
+        padding-top: 11px;
+        margin-left: 64px;
+    }
+    .xa-super-design{
+        position: relative;
+        top: 31px;
+    }
+}
 @media only screen and (max-width: 992px){
 	.xa-left{
 		text-align: center;
@@ -66,12 +91,11 @@ footer{
 	.xa-osush {
 	    min-height: 1250px;
 	    background-size: initial;
-	    padding: 300px 0 60px 0;
 	    margin-top: -120px;
 
 	}
     .xa-zak{
-		padding-top: 0 !important;
+		padding-top: 74px !important;
 		margin: 0;
 		position: relative;
     	top: 50px;
@@ -184,6 +208,9 @@ footer{
 	padding: 20px 0;
 	text-align: center;
 }
+.xa-zak p{
+    font-size: 18px;
+}
  .xa-newcol{
  	text-align: center;
  }
@@ -193,6 +220,8 @@ footer{
 	font-size: 24px;
 	font-family: "RobotoBold";
 	white-space: nowrap;
+    padding: 0;
+    text-align: right;
 }
 .xa-logo{
 	padding-top: 5px;
@@ -230,6 +259,7 @@ footer{
  @media only screen and (max-width: 768px){
 	.xa-osush{
 		padding-top: 250px;
+        background-size: cover;
 	}
 	.xa-vbox img{
 		width: 307px;
@@ -248,8 +278,11 @@ footer{
 
 .nav{
 	text-transform: uppercase !important;
-	font-family: "RobotoRegular";
+	font-family: "RobotoBold";
 	font-size: 14px;
+}
+.nav a{
+    color: #31343b !important;
 }
 
 .xa-phone a{

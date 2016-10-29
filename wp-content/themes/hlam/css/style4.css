@@ -127,7 +127,6 @@
       font-family: "RobotoBold";
       font-size: 18px;
       color: #131313;
-      text-transform: uppercase;
       border-radius: 5px; }
   .ab-zvonok .ab-zvonok-tel {
     font-family: "RobotoRegular";
@@ -494,29 +493,31 @@
 
   .ab-pochemy-mi {
     text-align: center;
-    padding-top: 187px !important;
+    padding-top: 159px !important;
     background: url(../img/grey-bg.jpg) center; }
 
   .ab-pochemy-mi {
     text-align: left; }
     .ab-pochemy-mi .ab-pochemy-mi-img-box {
-      float: left; }
+      float: left;
+      margin-left: 79px; }
     .ab-pochemy-mi .ab-pochemy-mi-txt {
       float: left;
-      padding-left: 34px;
-      max-width: 450px;
-      padding-top: 11px; }
+      padding-left: 26px;
+      padding-top: 11px;
+      width: 371px; }
 
   .ab-medal {
     margin-top: 62px !important;
-    margin-bottom: 100px !important; }
+    margin-bottom: 100px !important;
+    padding-left: 73px !important; }
 
   .vhod-bottom {
     margin-bottom: 28px !important;
     padding-top: 30px !important; }
 
   .ab-zvonok-button {
-    padding-top: 31px !important;
+    padding-top: 29px !important;
     text-align: center !important; }
 
   .ab-zvonok-title {
