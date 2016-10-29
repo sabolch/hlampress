@@ -22,15 +22,17 @@
 .xa-osush p{
 	text-align: center;
 	font-size: 24px;
-	padding-top: 25px;
 	font-family: "RobotoRegular";
     line-height: 22px;
 }
-.xa-design{
-    padding-left: -10px;
-}
+
 .xa-vbox{
 	text-align: center;
+    padding-top: 15px;
+}
+.xa-vbox img{
+    height: 230px;
+    width: auto;
 }
 .xa-box{
     margin-top: 0;
