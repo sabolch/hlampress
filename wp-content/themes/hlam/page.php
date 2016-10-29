@@ -174,19 +174,19 @@
         <div class="xa-os wow bounceInLeft">
           <div class="col-md-4 col-sm-4 col-xs-12">
             <div class="xa-vbox">
-              <?php if($my_img=get_field("kar21")){echo '<img src="'.$my_img.'"/>';}?>
+              <?php if($my_img=get_field("kar21")){echo '<img class="new-img" src="'.$my_img.'"/>';}?>
               <p class="xa-design"><?php the_field('opi21'); ?></p>
             </div>
           </div>
           <div class="col-md-4 col-sm-4 col-xs-12">
             <div class="xa-vbox">
-              <?php if($my_img=get_field("kar22")){echo '<img src="'.$my_img.'"/>';}?>
+              <?php if($my_img=get_field("kar22")){echo '<img class="new-img" src="'.$my_img.'"/>';}?>
               <p><?php the_field('opi22'); ?></p>
             </div>
           </div>
           <div class="col-md-4 col-sm-4 col-xs-12">
             <div class="xa-vbox">
-              <?php if($my_img=get_field("kar23")){echo '<img src="'.$my_img.'"/>';}?>
+              <?php if($my_img=get_field("kar23")){echo '<img class="new-img" src="'.$my_img.'"/>';}?>
               <p><?php the_field('opi23'); ?></p>
             </div>
           </div>
