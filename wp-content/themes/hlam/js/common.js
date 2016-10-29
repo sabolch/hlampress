@@ -94,13 +94,13 @@ $(document).ready(function(){
 
 
 
-$('.nav a[href^="#"]').click(function(){ 
-  var $element = $('a[name=' + $(this).attr('href').substr() + ']');
-  if($element.length == 1) { 
-     $('html, body').animate({ scrollTop: $element.offset().top }, 500); 
-  }     
-  return false;
-});
+     $(".nav").on("click","a", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1500);
+    });
+
 
 
  });
