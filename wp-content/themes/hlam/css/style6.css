@@ -77,6 +77,9 @@ footer{
         position: relative;
         top: 31px;
     }
+    .xa-logo{
+        text-align: left;
+    }
 }
 @media only screen and (max-width: 992px){
 	.xa-left{
@@ -220,8 +223,9 @@ footer{
 	font-size: 24px;
 	font-family: "RobotoBold";
 	white-space: nowrap;
-    padding: 0;
     text-align: right;
+    position: relative;
+    left: 7px;
 }
 .xa-logo{
 	padding-top: 5px;
