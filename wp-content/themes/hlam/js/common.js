@@ -94,8 +94,14 @@ $(document).ready(function(){
 
 
 
+$('.nav a[href^="#"]').click(function(){ 
+  var $element = $('a[name=' + $(this).attr('href').substr() + ']');
+  if($element.length == 1) { 
+     $('html, body').animate({ scrollTop: $element.offset().top }, 500); 
+  }     
+  return false;
+});
 
 
  });
-
 
