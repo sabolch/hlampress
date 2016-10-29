@@ -414,7 +414,9 @@
   .ah-myup-wrapper {
     position: absolute;
     top: 40px;
-    right: 45px; }
+    right: 45px;
+    width: 400px;
+    text-align: center; }
 
   .ah-comptext {
     background: url(../img/ah-seofon.jpg) bottom center no-repeat;
