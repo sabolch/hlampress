@@ -650,6 +650,7 @@
 	.margin-left20{
 		margin-left: 20px !important;
 	}
+
 }
 
 @media only screen and (min-width : 768px) {
@@ -662,12 +663,14 @@
 			font-size: 48px !important;
 		}
 	}
+	
+	
 }
 
 @media only screen and (min-width : 992px) {
 	.header-bottom{
 		background-size: unset !important;
-		height: 1003px;
+		height: 964px;
 	}
 	.header-bottom:before{
 		display: none;
@@ -786,7 +789,7 @@
 		padding-top:25px !important;
 	}
 	.ab-down{
-		margin-top: 322px !important;
+		margin-top: 350px !important;
 		span{
 			font-size: 46px !important;
 		}
@@ -802,27 +805,19 @@
 			width: 358px !important;
 		}
 	}		
+	.ab-down{
+		padding-top: 240px !important;
+		
+	}
 }
 
 @media only screen and (min-width : 1248px) {
-
-	.header-bottom{
-		// .ab-div-logo, {
-		// 	margin-top: 42px; 
-		// }
-		// .ab-top-txt{
-		// 	margin-top: 71px; 
-		// }
-		// .ab-top-right{
-		// 	margin-top:64px; 
-		// }
-		.ab-down{
-			padding-top: 250px !important;
-			padding-left:20px;
-			a{
-				margin-top: 37px !important; 
-			} 
-		}
+	.ab-down{
+		padding-top: 220px !important;
+		padding-left: 20px;
+		a{
+			margin-top: 37px !important; 
+		} 
 	}
 }
 

@@ -486,7 +486,7 @@
 @media only screen and (min-width: 992px) {
   .header-bottom {
     background-size: unset !important;
-    height: 1003px; }
+    height: 964px; }
 
   .header-bottom:before {
     display: none; }
@@ -591,7 +591,7 @@
     padding-top: 25px !important; }
 
   .ab-down {
-    margin-top: 322px !important; }
+    margin-top: 350px !important; }
     .ab-down span {
       font-size: 46px !important; }
     .ab-down a {
@@ -601,12 +601,15 @@
     padding-left: 68px; }
 
   .ab-form input[type="text"] {
-    width: 358px !important; } }
+    width: 358px !important; }
+
+  .ab-down {
+    padding-top: 240px !important; } }
 @media only screen and (min-width: 1248px) {
-  .header-bottom .ab-down {
-    padding-top: 250px !important;
+  .ab-down {
+    padding-top: 220px !important;
     padding-left: 20px; }
-    .header-bottom .ab-down a {
+    .ab-down a {
       margin-top: 37px !important; } }
 
 /*# sourceMappingURL=style4.css.map */

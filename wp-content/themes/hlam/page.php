@@ -131,31 +131,31 @@
 		<div class="col-md-12">
 			<div class="zk_we_export_all">
 				<h3 class="zk_ex_caption"><?php the_field('zagolovok1'); ?></h3>
-				<div class="zk_export_one zk1 wow bounceInDown "  data-animated-duration="30.5s" data-wow-delay="0.5s">
+				<div class="zk_export_one zk1 wow bounceInDown "  data-animated-duration="3.5s" data-wow-delay="0.5s">
 					<div class="zk_img_ex_box wow pulse animated"  data-wow-iteration="2"  data-wow-duration="2.5s" data-wow-delay="2s">
 						<?php if($my_img=get_field("kar11")){echo '<img src="'.$my_img.'"/>';}?>
 				    </div>
 					<div class="zk_first_child"><?php the_field('opi11'); ?></div>
 				</div>
-				<div class="zk_export_one zk2 wow bounceInDown "  data-animated-duration="30.5s" data-wow-delay="0.5s">
+				<div class="zk_export_one zk2 wow bounceInDown "  data-animated-duration="3.5s" data-wow-delay="0.5s">
 					<div class="zk_img_ex_box wow pulse animated"  data-wow-iteration="2"  data-wow-duration="2.5s" data-wow-delay="2s"> 
 						<?php if($my_img=get_field("kar12")){echo '<img src="'.$my_img.'"/>';}?>
 					</div>
 					<div><?php the_field('opi12'); ?></div>
 				</div>
-				<div class="zk_export_one zk3 wow bounceInDown "  data-animated-duration="30.5s" data-wow-delay="0.5s">
+				<div class="zk_export_one zk3 wow bounceInDown "  data-animated-duration="3.5s" data-wow-delay="0.5s">
 					<div class="zk_img_ex_box wow pulse animated"  data-wow-iteration="2"  data-wow-duration="2.5s" data-wow-delay="2s">
 					 	<?php if($my_img=get_field("kar13")){echo '<img src="'.$my_img.'"/>';}?>
 					 </div>
 					<div><?php the_field('opi13'); ?></div>
 				</div>
-				<div class="zk_export_one zk4 wow bounceInDown "  data-animated-duration="30.5s" data-wow-delay="0.5s">
+				<div class="zk_export_one zk4 wow bounceInDown "  data-animated-duration="3.5s" data-wow-delay="0.5s">
 					<div class="zk_img_ex_box wow pulse animated"  data-wow-iteration="2"  data-wow-duration="2.5s" data-wow-delay="2s">
 						<?php if($my_img=get_field("kar14")){echo '<img src="'.$my_img.'"/>';}?>
 					</div>
 					<div><?php the_field('opi14'); ?></div>
 				</div>
-				<div class="zk_export_one zk5 wow bounceInDown "  data-animated-duration="30.5s" data-wow-delay="0.5s">
+				<div class="zk_export_one zk5 wow bounceInDown "  data-animated-duration="3.5s" data-wow-delay="0.5s">
 					<div class="zk_img_ex_box wow pulse animated"  data-wow-iteration="2"  data-wow-duration="2.5s" data-wow-delay="2s">
 						<?php if($my_img=get_field("kar15")){echo '<img src="'.$my_img.'"/>';}?>
 					</div>
@@ -385,7 +385,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="ab-zvonok-title wow bounceInDown" data-animated-duration="20.5s">
+				<div class="ab-zvonok-title wow bounceInDown" data-animated-duration="2.5s">
 					<span><?php the_field('zag51'); ?></span>
 				</div>
 			</div>
@@ -431,60 +431,6 @@
 		</div>
 	</div>
 </section>
-
-
-<!-- <section class="ab-zvonok">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="ab-zvonok-title wow bounceInDown" data-animated-duration="20.5s">
-					<span>Позвоните для оценки стоимости вызова<br> или оставьте заявку</span>
-				</div>
-			</div>
-			<div class="clearfix"></div>
-			<div class="col-md-4">
-				<div class="vhod-bottom">
-					<div class="search-box">
-						<label class="ab-first-input">
-							<form class="ab-form" action="#">
-								<input type="text" placeholder="Ваше имя">
-							</form>
-						</label>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="vhod-bottom">
-					<div class="search-box">
-						<label class="ab-second-input">
-							<form class="ab-form" action="#">
-								<input type="text" placeholder="Телефон">
-							</form>
-						</label>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<label class="ab-second-input">
-					<div class="ab-zvonok-button">
-						<a class="ab-button" href="<?php echo get_template_directory_uri(); ?>/#">Оставить заявку</a>
-					</div>
-				</label>	
-			</div>
-			<div class="clearfix"></div>
-			<div class="col-md-12">
-				<div class="ab-zvonok-tel wow pulse" data-wow-duration="3.5s" data-wow-iteration="3";>
-					<span>8 (499) 502-93-30</span>
-				</div>	
-			</div>
-			<div class="clearfix"></div>
-		</div>
-	</div>
-</section> -->	
-
-
-
-
 
 
 <div class="container" id="zkmarginauto">
@@ -749,7 +695,7 @@
 <section class="ah-comptext">
     <div class="container">
 	    <div class="row">
-		   <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
+		   <div class="col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
 				<?php echo the_field('txt81'); ?>
 			</div>
 		</div>

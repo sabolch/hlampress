@@ -265,7 +265,7 @@
   display: inline-block;
   font-family: "RobotoBold";
   color: #171717;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 70px; }
 
 .ah-contakt-span2 {
@@ -300,6 +300,7 @@
   background: none; }
 
 .ah-comptext {
+  width: 100%;
   background: #fff;
   position: relative;
   padding: 35px 20px 35px 20px; }
@@ -420,8 +421,7 @@
 
   .ah-comptext {
     background: url(../img/ah-seofon.jpg) bottom center no-repeat;
-    position: relative;
-    padding: 101px 115px 42px 115px; }
+    position: relative; }
 
   .ah-comptext2 {
     width: 95%;
@@ -523,14 +523,17 @@
     background: url(../img/ah-contact.png) center center no-repeat; }
 
   .ah-contakt-bottom {
-    width: 545px;
+    width: 100%;
     height: 340px;
     margin-bottom: 35px;
     box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2); }
 
   .ah-contakt-top {
-    width: 545px;
+    width: 100%;
     height: 72px;
-    background: url(../img/ah-contactfon.png) center center no-repeat; } }
+    background: url(../img/ah-contactfon.png) center center no-repeat; }
+
+  .ah-contakt-span, .ah-contakt-span1 {
+    font-size: 24px; } }
 
 /*# sourceMappingURL=style2.css.map */
