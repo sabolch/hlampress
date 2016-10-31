@@ -182,23 +182,14 @@
 }
 // CENI******************************************
 .ah-ceniiimg{
-	// display: none;
-	// position: absolute;
-	// background: none;
-	// width: 261px;
-	// height: 207px;
-	// top: -12px;
-	// right: 0px;
-	// padding: 41px 57px 10px 10px;
 	display: block;
-	position: absolute;
+	position: static;
 	background: url(../img/ah-ceniiimg.png) center center no-repeat;
-	width: 261px;
-	height: 207px;
-	// top: calc(0% + 27%); //12%
-	right: 44%;
+	background-size: cover ;
+	width: 245px;
+	height: 200px;
 	padding: 41px 57px 10px 10px;
-	transform: translate(50%, 0);
+	margin: 0 auto;
 }
 .ah-br{
 	display: none;
@@ -227,9 +218,8 @@
 	display: block;
 	font-family: "RobotoBold";
 	color: #202020;
-	font-size: 48px !important;
-	line-height: 48px;
-	// margin-bottom: calc(0% + 100%); //50%
+	font-size: 35px !important;
+	line-height: 44px;
 }
 .ah-ceni-title:before{
 	display: none;
@@ -304,7 +294,7 @@
 	display: block;
 	font-family: "RobotoBold";
 	color: #343434;
-	font-size: 48px;
+	font-size: 35px;
 	line-height: 39px;
 	text-align: center;
 	margin-bottom: 59px;
@@ -343,8 +333,8 @@
 	display: block;
 	color: #31343b;
 	font-family: "RobotoBold";
-	font-size: 48px;
-	line-height: 54px;
+	font-size: 35px;
+	line-height: 44px;
 	margin-bottom: 35px;
 	text-align: center;
 }
@@ -395,42 +385,22 @@
 }
 // comptext***************************************
 
-
 @media only screen and (min-width : 320px) {
-	.ah-ceniiimg{
-		top: calc(0% + 24%) !important;
-	}
-	.ah-ceni-title{
-		margin-bottom: calc(0% + 85%) !important;
-		font-size: 44px;
-	}
+	
 }
 
 @media only screen and (min-width : 480px) {
-	.ah-ceniiimg{
-		top: calc(0% + 17%) !important;
-		right: 46% !important;
-	}
-	.ah-ceni-title{
-		margin-bottom: calc(0% + 55%) !important;
-	}
+	
 }
 
 @media only screen and (min-width : 768px) {
-	// .ah-ceniiimg{
-	// 	top: calc(0% + 12%) !important;
-	// 	// top: 17% !important;
-	// 	right: 46%;
-	// }
-	// .ah-ceni-title{
-	// 	margin-bottom: calc(0% + 40%) !important;
-	// }
-	
+		
 }
 
 @media only screen and (min-width : 992px) {
 	.ah-ceni-title{
 		font-size: 48px !important;
+		line-height: 48px !important;
 		margin-bottom: 0 !important;
 	}
 	#zvonok{
@@ -498,7 +468,6 @@
 	.ah-comptext{
 		background: url(../img/ah-seofon.jpg) bottom center no-repeat;
 		position: relative;
-		//padding: 101px 115px 42px 115px;
 	}
 	.ah-comptext2{
 	    width: 95%;
@@ -535,6 +504,7 @@
 		padding: 108px 0px;
 	}
 	.ah-contakt-span2{
+		font-size: 48px;
 		line-height: 22px;
 	}
 	.ah-ceni-wrap{
@@ -578,6 +548,8 @@
 	}
 	.ah-comptext-title{
 		text-align: left;
+		font-size: 48px;
+	// line-height: 54px;
 		line-height: 22px;
 	}
 	.ah-contakt-span{

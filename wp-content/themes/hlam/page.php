@@ -510,10 +510,13 @@
     <div class="container">
 	    <div class="row">
 		    <div class="col-md-12 col-sm-12 col-xs-12">
-		    <div class="ah-ceniiimg">
+		    <!-- <div class="ah-ceniiimg">
 		    	<span class="ah-ceniiimg-span">От<br><span>200</span><br>рублей за<br>предмет</span>
-		    </div>
+		    </div> -->
 			    <span class="ah-ceni-title">Низкие цены для всех<br class="ah-br"> и <br class="ah-br">постоянные скидки</span>
+			    <div class="ah-ceniiimg">
+			    	<span class="ah-ceniiimg-span">От<br><span>200</span><br>рублей за<br>предмет</span>
+			    </div>
 				<!-- <span class="ah-ceni-title"><?php the_field('zag-niz'); ?></span> -->
 				<div class="ah-ceni-wrap">
 					<div class="ah-ceni-item ah-ceni-item1">
