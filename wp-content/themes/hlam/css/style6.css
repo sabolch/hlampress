@@ -324,7 +324,7 @@ footer{
   @media only screen and (max-width: 543px){
     .xa-logo{
         position: relative;
-        left: 54px;
+        left: 54px !important;
         width: 100%;
         text-align: right;
         top: -50px;
