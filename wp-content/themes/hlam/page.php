@@ -38,23 +38,30 @@
 	<div id="hid">
 	    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
 	      <div class="container">
-	        <div class="navbar-header">
-	          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	        <div class="navbar-header col-xs-12 col-sm-12">
+	          <button type="button" class="navbar-toggle col-xs-2 col-sm-2" data-toggle="collapse" data-target=".navbar-collapse">
 	            <span class="sr-only"></span>
 	            <span class="icon-bar"></span>
 	            <span class="icon-bar"></span>
 	            <span class="icon-bar"></span>
 	          </button>
-	        <div class="xa-phone2 navbar-toggle2">
-	            <span >
-	              <a href="<?php echo get_template_directory_uri(); ?>/tel:+7 (499) 502-93-30 ">+7 (499) 502-93-30 </a>
-	            </span>
-            </div>
+	          <div class="col-md-3 col-sm-12 xa-logo col-xs-5 xa-pov">
+		            <a href="/">
+		              <img src="<?php echo get_template_directory_uri(); ?>/img/xa-logo.png" alt="">
+		            </a>
+		       </div>
+		       <div class="xa-phone2 navbar-toggle2 col-xs-5 col-sm-5">
+		            <span>
+		              <a href="<?php echo get_template_directory_uri(); ?>/tel:+7 (499) 502-93-30 ">+7 (499) 502-93-30 </a>
+		            </span>
+	            </div>
+	            
 	          
 	        </div>
+	        <div class="clear"></div>
 	        <div class="navbar-collapse collapse">
 	          <div class="xa-magic">
-	          	<div class="col-md-3 col-sm-12 xa-logo">
+	          	  <div class="col-md-3 col-sm-12 xa-logo xa-prop">
 		            <a href="/">
 		              <img src="<?php echo get_template_directory_uri(); ?>/img/xa-logo.png" alt="">
 		            </a>
