@@ -50,6 +50,7 @@
 		              <img src="<?php echo get_template_directory_uri(); ?>/img/xa-logo.png" alt="">
 		            </a>
 		       </div>
+		       
 		       <div class="xa-phone2 navbar-toggle2 col-xs-5 col-sm-5">
 		            <span>
 		              <a href="<?php echo get_template_directory_uri(); ?>/tel:+7 (499) 502-93-30 ">+7 (499) 502-93-30 </a>

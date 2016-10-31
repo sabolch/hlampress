@@ -320,11 +320,21 @@ footer{
 	
 
  }
+
   @media only screen and (max-width: 543px){
     .xa-logo{
         position: relative;
         left: 15px;
+        width: 80%;
+        text-align: center;
     }
+    .xa-phone2{
+        width: 100% !important;
+        text-align: center;
+        position: relative;
+        left: 22px;
+    }
+    
   }
  @media only screen and (max-width: 768px){
 	.xa-osush{
