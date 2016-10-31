@@ -94,14 +94,26 @@ $(document).ready(function(){
 
 
 
-     $(".nav").on("click","a", function (event) {
+    $(".nav").on("click","a", function (event) {
         event.preventDefault();
         var id  = $(this).attr('href'),
             top = $(id).offset().top;
+
         $('body,html').animate({scrollTop: top}, 1500);
+
+        $(".navbar-collapse").removeClass("in");
+        $(".navbar-toggle").addClass("collapsed");
+        
+        //var x = $(".navbar-collapse").toggle();
+
     });
 
 
+
+    // $(".navbar-collapse").on("click",function (event) {
+    //     var x = $(".xa-magic").css("display","block"); 
+    //     }
+    // );
 
  });
 

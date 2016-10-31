@@ -38,34 +38,49 @@
 	<div id="hid">
 	    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
 	      <div class="container">
-	        <div class="navbar-header">
-	          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	        <div class="navbar-header col-xs-12 col-sm-12">
+	          <button type="button" class="navbar-toggle col-xs-2 col-sm-2" data-toggle="collapse" data-target=".navbar-collapse">
 	            <span class="sr-only"></span>
 	            <span class="icon-bar"></span>
 	            <span class="icon-bar"></span>
 	            <span class="icon-bar"></span>
 	          </button>
+	          <div class="col-md-3 col-sm-12 xa-logo col-xs-5 xa-pov">
+		            <a href="/">
+		              <img src="<?php echo get_template_directory_uri(); ?>/img/xa-logo.png" alt="">
+		            </a>
+		       </div>
+		       
+		       <div class="xa-phone2 navbar-toggle2 col-xs-5 col-sm-5">
+		            <span>
+		              <a href="<?php echo get_template_directory_uri(); ?>/tel:+7 (499) 502-93-30 ">+7 (499) 502-93-30 </a>
+		            </span>
+	            </div>
+	            
 	          
 	        </div>
+	        <div class="clear"></div>
 	        <div class="navbar-collapse collapse">
-	          <div class="col-md-3 col-sm-12 xa-logo">
-	            <a href="/">
-	              <img src="<?php echo get_template_directory_uri(); ?>/img/xa-logo.png" alt="">
-	            </a>
-	          </div>
-	          <div class="col-md-6 col-sm-12 xa-menu">
-	            <ul class="nav navbar-nav">
-	              <li class=""><a href="#uslugi">Наши услуги</a></li>
-	              <li class=""><a href="#prichina">Почему мы</a></li>
-	              <li class=""><a href="#sales">Акции</a></li>
-	              <li class=""><a href="#review">Отзывы</a></li>
-	              <li class=""><a href="#contact">Контакты</a></li>
-	            </ul>
-	          </div>
-	          <div class="col-md-3 col-sm-12 xa-phone">
-	            <span >
-	              <a href="<?php echo get_template_directory_uri(); ?>/tel:+7 (499) 502-93-30 ">+7 (499) 502-93-30 </a>
-	            </span>
+	          <div class="xa-magic">
+	          	  <div class="col-md-3 col-sm-12 xa-logo xa-prop">
+		            <a href="/">
+		              <img src="<?php echo get_template_directory_uri(); ?>/img/xa-logo.png" alt="">
+		            </a>
+		          </div>
+		          <div class="col-md-6 col-sm-12 xa-menu">
+		            <ul class="nav navbar-nav">
+		              <li class="click"><a href="#uslugi">Наши услуги</a></li>
+		              <li class="click"><a href="#prichina">Почему мы</a></li>
+		              <li class="click"><a href="#sales">Акции</a></li>
+		              <li class="click"><a href="#review">Отзывы</a></li>
+		              <li class="click"><a href="#contact">Контакты</a></li>
+		            </ul>
+		          </div>
+		          <div class="col-md-3 col-sm-12 xa-phone">
+		            <span >
+		              <a href="<?php echo get_template_directory_uri(); ?>/tel:+7 (499) 502-93-30 ">+7 (499) 502-93-30 </a>
+		            </span>
+		          </div>
 	          </div>
 	        </div>
 	      </div>
@@ -180,7 +195,7 @@
           </div>
           <div class="col-md-4 col-sm-4 col-xs-12">
             <div class="xa-vbox">
-              <?php if($my_img=get_field("kar22")){echo '<img class="new-img pr1" src="'.$my_img.'"/>';}?>
+              <?php if($my_img=get_field("kar22")){echo '<img class="new-img pr1 pl" src="'.$my_img.'"/>';}?>
               <p><?php the_field('opi22'); ?></p>
             </div>
           </div>
