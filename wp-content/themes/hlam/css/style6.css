@@ -324,9 +324,9 @@ footer{
   @media only screen and (max-width: 543px){
     .xa-logo{
         position: relative;
-        left: 15px;
+        left: 54px;
         width: 100%;
-        text-align: center;
+        text-align: right;
         top: -50px;
     }
     .xa-phone2{
