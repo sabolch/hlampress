@@ -182,14 +182,23 @@
 }
 // CENI******************************************
 .ah-ceniiimg{
-	display: none;
+	// display: none;
+	// position: absolute;
+	// background: none;
+	// width: 261px;
+	// height: 207px;
+	// top: -12px;
+	// right: 0px;
+	// padding: 41px 57px 10px 10px;
+	display: block;
 	position: absolute;
-	background: none;
+	background: url(../img/ah-ceniiimg.png) center center no-repeat;
 	width: 261px;
 	height: 207px;
-	top: -12px;
-	right: 0px;
-	padding: 41px 57px 10px 10px; 
+	// top: calc(0% + 27%); //12%
+	right: 44%;
+	padding: 41px 57px 10px 10px;
+	transform: translate(50%, 0);
 }
 .ah-br{
 	display: none;
@@ -220,6 +229,7 @@
 	color: #202020;
 	font-size: 48px !important;
 	line-height: 48px;
+	// margin-bottom: calc(0% + 100%); //50%
 }
 .ah-ceni-title:before{
 	display: none;
@@ -387,19 +397,42 @@
 
 
 @media only screen and (min-width : 320px) {
+	.ah-ceniiimg{
+		top: calc(0% + 22%) !important;
+	}
 	.ah-ceni-title{
+		margin-bottom: calc(0% + 70%) !important;
 		font-size: 44px;
 	}
 }
 
 @media only screen and (min-width : 480px) {
+	.ah-ceniiimg{
+		top: calc(0% + 12%) !important;
+		right: 46% !important;
+	}
+	.ah-ceni-title{
+		margin-bottom: calc(0% + 40%) !important;
+	}
 }
 
 @media only screen and (min-width : 768px) {
+	.ah-ceniiimg{
+		top: calc(0% + 12%) !important;
+		// top: 17% !important;
+		right: 46%;
+	}
+	.ah-ceni-title{
+		margin-bottom: calc(0% + 40%) !important;
+	}
 	
 }
 
 @media only screen and (min-width : 992px) {
+	.ah-ceni-title{
+		font-size: 48px !important;
+		margin-bottom: 0 !important;
+	}
 	#zvonok{
 		max-width: unset;
 		width: unset;
@@ -480,9 +513,10 @@
 		background: url(../img/ah-ceniiimg.png) center center no-repeat;
 		width: 261px;
 		height: 207px;
-		top: -12px;
-		right: 0px;
-		padding: 41px 57px 10px 10px; 
+		top: -12px !important;
+		right: 0px !important;
+		padding: 41px 57px 10px 10px;
+		transform: none;
 	}
 	.ah-ceni-title:before{
 		display: block;
