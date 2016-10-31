@@ -325,17 +325,30 @@ footer{
     .xa-logo{
         position: relative;
         left: 15px;
-        width: 80%;
+        width: 100%;
         text-align: center;
+        top: -50px;
     }
     .xa-phone2{
         width: 100% !important;
         text-align: center;
         position: relative;
-        left: 22px;
+        top: -50px;
+    }
+    .navbar-toggle{
+        position: relative;
+        left: -30px;
+    }
+    .navbar-header{
+        height: 100px;
     }
     
   }
+@media only screen and (max-width: 543px){
+    .xa-logo{
+        left: 20px;
+    }
+}
  @media only screen and (max-width: 768px){
 	.xa-osush{
 		padding-top: 250px;
