@@ -100,14 +100,20 @@ $(document).ready(function(){
             top = $(id).offset().top;
 
         $('body,html').animate({scrollTop: top}, 1500);
-        //var x = $(".navbar-toggle").addClass("collapsed");
-        var x = $(".navbar-collapse").css("display","none"); 
+
+        $(".navbar-collapse").removeClass("in");
+        $(".navbar-toggle").addClass("collapsed");
+        
+        //var x = $(".navbar-collapse").toggle();
 
     });
 
-    $(".navbar-collapse").on("click",function (event) {
-        var x = $(".xa-magic").css("display","block"); 
-    }
+
+
+    // $(".navbar-collapse").on("click",function (event) {
+    //     var x = $(".xa-magic").css("display","block"); 
+    //     }
+    // );
 
  });
 

@@ -26,7 +26,7 @@ define('DB_NAME', 'hlam');
 define('DB_USER', 'root');
 
 /** Пароль к базе данных MySQL */
-define('DB_PASSWORD', '');
+define('DB_PASSWORD', '0118756507');
 
 /** Имя сервера MySQL */
 define('DB_HOST', 'localhost');
